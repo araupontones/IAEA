@@ -1,0 +1,131 @@
+---
+title: "Social and Economic Impact Assessment of the RCA Programme"
+subtitle: "Non Destructive Testing"
+output: 
+  word_document: 
+  #bookdown::word_document2: default # for cross-reference
+    reference_docx: "template.docx"
+    toc: true
+  bookdown::word_document2: default
+---
+
+\newpage
+
+```{r set_up, echo=FALSE, warning=FALSE, message=FALSE}
+  
+  library(rio)
+  
+  user <- Sys.getenv("USERNAME")
+  
+  if(user == "andre"){
+    
+    dropbox <- "C:/Users/andre/Dropbox/Kate and Julian IAEA 2019/Non destructive testing/Survey"
+  }
+  
+  dir_master <- dirname(getwd()) #directory of this evaluation
+  
+  file.copy(from = file.path(dropbox, "/."), to = dir_master, recursive = T)
+  
+  
+  dir_reference <- file.path(dropbox, "data/reference")
+  dir_indicators <- file.path(dropbox, "indicators")
+  
+  #load tables from dropbox
+  tbl_acronym <- import(file.path(dir_reference, "acronyms.xlsx"))
+  tbl_criterion1 <- import(file.path(dir_indicators, "indicators.xlsx"), sheet = "Criterion1")
+  tbl_criterion2 <- import(file.path(dir_indicators, "indicators.xlsx"), sheet = "Criterion2")
+  
+  #set up opcions of kable
+  opts <- options(knitr.kable.NA = "")
+
+  
+```
+
+###### Report Information
+
++:-------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Prepared for | International Atomic Energy Agency                                                                                                                                                                                        |
++--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Prepared by  | Julian King, Kate McKegg, Andres Arau, Aaron Schiff, Martina Garcia Aisa                                                                                                                                                  |
++--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Cover image  |                                                                                                                                                                                                                           |
++--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Citation     | King,J., McKegg, K., Arau, A., Schiff, A., Garcia Aisa, M. (2020). *Social and Economic Impact Assessment of the RCA Programme: Non Destructive Testing Case Study.* Vienna, Austria: International Atomic Energy Agency. |
++--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+## Disclaimer
+
+Disclaimer: The information in this document is presented in good faith using the information available to us at the time of preparation. It is provided on the basis that the authors of the document are not liable to any person or organisation for any damage or loss which may occur in relation to taking or not taking action in respect of any information or advice within this document
+
+## Acknowledgements
+
+The authors are grateful for the close and effective assistance of the Technical Cooperation division for Asia-Pacific (TCAP) and Technical Cooperation Division of Programme Support and Coordination (TCPC) of the International Atomic Energy Agency (IAEA), and the experts from the X participating GPs in the X Regional Cooperative Agreement (RCA):
+
+\newpage
+
+# Acronyms
+
+`r knitr::kable(tbl_acronym)`
+
+# Executive Summary
+
+\newpage
+
+# Introduction
+
+## Non Destructive Testing
+
+## Social and economic impact assessment methods
+
+\newpage
+
+# Social and economic impacts
+
+## Improved NDT capacity and capability
+
+## Increased scope and scale of NDT demand and use
+
+## Improved health and safety
+
+## Economic value (Aaron)
+
+\newpage
+
+# Conclusion
+
+# Annex: Case studies
+
+# Annex B: Survey Analysis
+
+## Introduction
+
+X GPs are part of the agreement, findings include analysis of data collected from X experts.
+
+Add Description of how the standards and criterion were define
+
+## Criterion 1: **Improved NDT capacity and capability**
+
+Brief description of relevance and background of this criteria  **Julian**
+
+`r knitr::kable(tbl_criterion1, caption = "Table 1: Key evidence for criterion 1")`
+
+
+## Criterion 2: **Increased scope and scale of NDT demand and use**
+
+
+Note: Remember to include a note saying that all the indicators refer to the result of having participated in the RCA programme of IAEA.
+
+`r knitr::kable(tbl_criterion2, caption = "Table 1: Key evidence for criterion 2")`
+
+
+## Criterion 3: **Improved health and safety**
+
+[Brief description of relevance and background of this criteria] \*Julian
+
+# Annex C: Economic Analysis
+
+# Annex D: Theory of Change
+
+# Annex E: Criteria and standards
+
+# Work cited
