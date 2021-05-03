@@ -17,22 +17,26 @@ output:
   
   user <- Sys.getenv("USERNAME")
   
+  #define dropbox directory (in case different users interact with the report)
   if(user == "andre"){
     
     dropbox <- "C:/Users/andre/Dropbox/Kate and Julian IAEA 2019/Non destructive testing/Survey"
   }
   
+  #directory of the repositary
   dir_master <- dirname(getwd()) #directory of this evaluation
   
+  #copy files from dropbox into repo (because some files are used by the team in dropbox)
   file.copy(from = file.path(dropbox, "/."), to = dir_master, recursive = T)
   
   
-  dir_reference <- file.path(dropbox, "data/reference")
+  #define directories
+  dir_reference <- file.path(dropbox, "data/0.reference")
   dir_indicators <- file.path(dropbox, "indicators")
   
   #load tables from dropbox
-  tbl_acronym <- import(file.path(dir_reference, "acronyms.xlsx"))
-  tbl_criterion1 <- import(file.path(dir_indicators, "indicators.xlsx"), sheet = "Criterion1")
+  tbl_acronym <- import(file.path(dir_reference, "acronyms.xlsx")) #acronims for the report
+  tbl_criterion1 <- import(file.path(dir_indicators, "indicators.xlsx"), sheet = "Criterion1") #list of indicators for criterons
   tbl_criterion2 <- import(file.path(dir_indicators, "indicators.xlsx"), sheet = "Criterion2")
   
   #set up opcions of kable
