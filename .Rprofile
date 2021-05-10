@@ -34,3 +34,5 @@ dir_master <- getwd() #directory of this evaluation
 #define directories
 ndt_dir_reference <- file.path(dropbox_NDT, "data/0.reference")
 ndt_dir_indicators <- file.path(dropbox_NDT, "indicators")
+ndt_dir_combobx <- file.path(dropbox_NDT, "data/1.ComboBoxes") #comboboxes of quesitionnaire
+ndt_dir_ass <- file.path(dropbox_NDT, "data/2.Assignments") #Look Up questionnaires 
