@@ -22,6 +22,9 @@ if(user == "andre"){
 }
 
 dropbox_NDT <- file.path(dropbox, "Non destructive testing/Survey")
+dropbox_RT <- file.path(dropbox, "Radiotherapy/Survey")
+  
+  
 
 #directory of the repositary
 dir_master <- getwd() #directory of this evaluation
@@ -36,3 +39,7 @@ ndt_dir_reference <- file.path(dropbox_NDT, "data/0.reference")
 ndt_dir_indicators <- file.path(dropbox_NDT, "indicators")
 ndt_dir_combobx <- file.path(dropbox_NDT, "data/1.ComboBoxes") #comboboxes of quesitionnaire
 ndt_dir_ass <- file.path(dropbox_NDT, "data/2.Assignments") #Look Up questionnaires 
+
+rt_dir_ass <- file.path(dropbox_RT, "data/2.Assignments") #Look Up questionnaires 
+
+

@@ -15,7 +15,7 @@ experts_ass <- countries_ref %>%
          country = ID_country) %>%
   mutate(`_webmode` = 1,
          `_quantity`= 1,
-          `_responsible` = "Andres_Arau",
+          `_responsible` = "andres_int",
          `_password` = paste0("A",country,"A",round(runif(nrow(.)) * 10^6, digits = 0))
           )
 
