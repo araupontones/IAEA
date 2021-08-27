@@ -1,6 +1,9 @@
 ```{r load_centres}
 
 text_centres <- import(file.path(dir_text, "1.criterion/centre_text.rds" ))
+txt_cont_cert <- import(file.path(dir_text, "1.criterion/contribution_cert.rds" ))
+txt_cont_centres <- import(file.path(dir_text, "1.criterion/contribution_centres.rds" ))
+
 
 ```
 
@@ -13,9 +16,9 @@ This section presents the main findings in terms of Infrastructure, Inspection c
 
 ## Infrastructure 
 
-The assessment of the status of infrastructure is defined as the extent to which the GPs have fullfiled the MRA requirements of ICNDT and the status of the NDT infrastructure at the national level.  
+For this evaluation, an excellent performance in terms of infrastructure is defined as the extent to which a GPs has fullfiled the MRA requirements of ICNDT and the status of the NDT infrastructure at the national level.  
 
-Figure \@ref(fig:cert-standards) shows the level of NDT infrastructure that each GP has in its country and the evaluation standards for each: out of the 20 countries that participated in the online survey, only Nepal and Myanmar do not have established a National Certification Scheme yet; Almost all countries but Laos, Cambodia, Nepal, and Myanmar have registered their NDT society in the Asia Pacific Federation of NDT (APFNDT); and for 10 out of the 20 GPS, their NCB for NDT has been accredited to ISO 17024.
+Figure \@ref(fig:cert-standards) shows the level of NDT infrastructure that each GP has in its country and the evaluation standards for each: out of the 20 countries that participated in the online survey, only Nepal and Myanmar do not have established a National Certification Scheme yet; Almost all countries but Laos, Cambodia, Nepal, and Myanmar have registered their NDT society in the Asia Pacific Federation of NDT (APFNDT); and for 10 out of the 20 GPs, their NCB for NDT has been accredited to ISO 17024.
 
 Based on the criterion developed by RCA to assess the performance of GPs in terms of infrastructure, Australia, China, Malaysia, Singapore, and South Korea have excellent standards on this dimension. (See criterion and standards in Annex X)
 
@@ -27,15 +30,31 @@ knitr::include_graphics(file.path(dir_plots, "1.criterion/cert_standards.png"))
 
 ```
 
+### Contribution of RCA in GP's infrastructure
+
+To asses the contribution of RCA in the stablishement of NCBs and Naitonal Certification Schemes, the participants of the online survey were asked the extent to which they believe that the RCA NDT programme has contributed to the establishment of this infrastructure in their countries.
+
+As it can be seen in the Table \@ref(tab:cert-contribution), `r txt_cont_cert$num_alot` GPs **(`r txt_cont_cert$a_lot`) perceived that the RCA programme has contributed to a great extent in the establishment of their national NCB**. Only `r txt_cont_cert$not` perceived that the establishment of their RCA could have been achieved without the support from the RCA programme.
+
+
+```{r cert-contribution}
+
+
+table_cont_cert <- rio::import(file.path("indicators/1.criterion/contribution_RCA_cert.rds"))
+knitr::kable(table_cont_cert, caption = "Contribution of RCA programme in GP's infrastructure")
+
+```
+
+
 
 
 ## Inspection companies and training centers
 
-Self reliance in NDT is a function of countries having the capacity to conduct inspection and train personnel with out depending on external stakeholders. An assessment to map whether GPs have inspection and training centers own locally or by foreigners was conducted to assess the level of self-reliance that each GP has. According to the criterion developed, a GP is considered to have an excellent standard (or to have achieved increased self-reliance) if their local inspection and training centres offer their services abroad. On the other hand, the self-reliance of a GP is considered inadequate if it does not have both training and certification centres owned by local or foreign firms.
+Self reliance in NDT is a function of countries having the capacity to conduct inspection and train personnel without depending on external stakeholders. An assessment to map whether GPs have inspection and training centers owned locally or by foreigners was conducted to estimate the level of self-reliance that each GP has. According to the criterion developed, a GP is considered to have an excellent standard (or to have achieved increased self-reliance) if their local inspection and training centres offer their services abroad. On the other hand, the self-reliance of a GP is considered inadequate if it does not have both training and certification centres owned either by local or foreign firms.
 
 
 
-As it can be seen in Figure \@ref(fig:centre-standards) that displays the criterion and standards for this dimenssion. `r text_centres$excellent_num` countries (`r text_centres$excellent_text`) offer both training and inspection abroad.  `r text_centres$inadequate_text` do have access to inspection centres (either owned locally or by foreigners) but they do not have training centres offering services in their countries.
+As it can be seen in Figure \@ref(fig:centre-standards) that displays the criterion and standards for this dimension. `r text_centres$excellent_num` countries (`r text_centres$excellent_text`) offer both training and inspection abroad. Moreover, `r text_centres$inadequate_text` do have access to inspection centres (either owned locally or by foreigners) but they do not have training centres offering services in their countries.
 
 ```{r centre-standards, out.width="100%", fig.cap="GP's inspection and training centers: standards for self-reliance"}
 
@@ -44,8 +63,43 @@ knitr::include_graphics(file.path(dir_plots, "1.criterion/centre_standards.png")
 ```
 
 
+Figure  \@ref(fig:centre-by-country) below shows the number of **inspection centres** owned by local and foreign firms in each RCA country. 
 
-An assessment of the level the level of self-reliance in NDT was conducted. Figure X...
+```{r centre-by-country, out.width="100%", fig.cap="Number of inspection centres by type of ownership and country"}
+
+knitr::include_graphics(file.path(dir_plots,"1.criterion/inspec_centres_by_country.png"))
+
+```
 
 
-### Certified personnel
+Figure  \@ref(fig:trainingcenter-by-country) below shows the number of **training centres** own by local and foreign firms in each RCA country. 
+
+```{r trainingcenter-by-country, out.width="100%", fig.cap="Number of inspection centres by type of ownership and country"}
+
+knitr::include_graphics(file.path(dir_plots,"1.criterion/training_centres_by_country.png"))
+
+```
+
+
+### Contribution of RCA in the development of local inspection and training centers
+
+
+According to the own perception of the GPs that participated in the online survey, **the RCA NDT programme has contributed to a great extent in the establishment of inspection centres in `r txt_cont_centres$alot_inspec_num` of the 22 countries that are part of the programme** (`r txt_cont_centres$alot_inspec`); in  `r txt_cont_centres$yes_investment` countries RCA has facilitated the investment in local investment centres; And, `r txt_cont_centres$alot_training_num` countries perceived that RCA has contributed to a great extent in the establishment of local training centres (See Table  \@ref(tab:centres-contribution))
+
+  
+
+```{r centres-contribution}
+
+
+table_cont_centres <- rio::import(file.path("indicators/1.criterion/contribution_RCA_centres.rds"))
+knitr::kable(table_cont_centres, caption = "Contribution of RCA programme to the establishment of local inspection and training companies.")
+
+```
+
+
+
+
+## Certified personnel
+
+This section introduces the findings on the extent in wich the support in establishing GPs' NDT infrastructure through the RCA programme has enabled GPs to produce certified personnel in advanced techniques (RT-D, PAUT, TOFD, PEC, etc), in addition to the conventional methods (RT, UT, MT, PT, ET).
+

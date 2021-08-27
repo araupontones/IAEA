@@ -22,6 +22,7 @@ dir_data_db <- file.path(dropbox, "Survey_NDT_RT/iaea_ndt")
 #directory of the repositary -----------------------------------------------
 dir_text <- "text"
 dir_plots <- "plots"
+dir_indicators <- "indicators"
 
 dir_subject <- dirname(getwd()) #directory of this evaluation
 

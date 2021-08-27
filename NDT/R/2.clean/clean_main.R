@@ -22,16 +22,17 @@ labelvars <- c("country", "interview__status", "currency",
                #certification
                "cert_schm", 
                "cert_society","cert_society_APPFNDT" , "cert_society_ICNDT", "cert_society_APPFNDT",
-               "cert_ncb", "cert_ncb_ICNDT", "cert_ncb_iso17024",
+               "cert_ncb", "cert_ncb_ICNDT", "cert_ncb_iso17024", "cert_body_lkrt", "cert_society_lkrt",
                #inspection companies
-               "inspec_local_abroad","inspec_profit",
+               "inspec_local_abroad","inspec_profit", "impact_inspection", "impact_inspinvest",
                
                #training centres
-               "traincen_local_abroad",
+               "traincen_local_abroad", "traincen_local_lkrt",
                
                #impact
-               "impact_inspection", "impact_inspinvest","inspec_inspinvestval"
+               "impact_inspection", "impact_inspinvest"
                )
+
 
 
 label_main <- raw_main %>%

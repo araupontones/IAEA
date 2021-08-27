@@ -8,7 +8,7 @@ param <- parameters(mode = survey,
 exfile <- file.path(param$dir_clean_s, "inspection_firms.rds")
 
 main_qn <- import(file.path(param$dir_clean_s, paste0(survey,".rds")))
-
+View(main_qn)
 
 #import rosters of inspection firms -------------------------------------------
 inspec_raw <- import(param$file_raw) %>%

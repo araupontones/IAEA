@@ -25,6 +25,8 @@ gray_light <- "#F2F2F2"
 color_inadequate <- '#BDC2C6'
 color_adequate <- '#7F99A5'
 
+grid_color <- "#B7B7B7"
+
 
 
 
@@ -33,15 +35,36 @@ theme_iaea <- function(){
   theme(text = element_text(family = "Open Sans Light", colour = gray_dark ),
         #axis
         axis.ticks = element_blank(),
+        axis.text.y = element_text(hjust = 0),
+        axis.title.x.top =element_text(margin = margin(b = 10), size = 12),
+        axis.title.x.bottom = element_text(margin = margin(t = 10), size = 12),
         #background
         plot.background = element_rect(fill = 'white'),
-        panel.background =  element_rect(fill = 'white')
+        panel.background =  element_rect(fill = 'white'),
+        
+        #legend
+        legend.text = element_text(size = 9)
+        
         
         
         )
         
 }
 
+
+#===============================================================================
+
+theme_stacked_bar <- function(){
+  
+  theme(
+  
+  panel.grid.major = element_line(color = grid_color, linetype = "dotted", size = .5),
+  legend.position = 'bottom'
+)
+}
+
+
+theme_stacked_bar
 
 #===============================================================================
 theme_map <- function(){

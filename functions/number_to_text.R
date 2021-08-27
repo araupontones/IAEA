@@ -10,6 +10,9 @@ to_text <- function(x){
             x == 7 ~ "seve",
             x == 8 ~ "eight",
             x == 9 ~ "nine",
+            x == 10 ~ "ten",
+            x == 11 ~ "eleven",
+            x == 12 ~ "twelve",
             T ~ "Other"
   )
   

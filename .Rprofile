@@ -99,5 +99,5 @@ suppressWarnings({
 
 #load costumed functions
 gmdacr::load_functions("functions")
-
+caption = "Data: IAEA's NDT online survey, 2021"
 
