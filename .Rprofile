@@ -1,17 +1,37 @@
-message("Welcome to IAEA's Social and Economic Impact Assessment of the RCA Programme")
+cli::cli_alert_success("Welcome to IAEA's Social and Economic Impact Assessment of the RCA Programme")
 
-
-##load libraries
-library(dplyr) # for data carpinery
-library(ggplot2) #to create charts and load country polygons
-library(rio) #to read and export files
-library(sf) #to map
-library(stringr) # to manipulate strings
+options("scipen"=100, digits = 2)
 
 
 
+libraries <- c(
+  
+  #html
+  "httr", "jsonlite", "susor",
+  
+  #ggplot
+  "ggplot2",
+  
+  #maps
+  "sf",
+  
+  #tidyverse
+  "dplyr", "tidyr", "stringr",
+  
+  #carpintery
+  "gmdacr", "lubridate", "janitor", "forcats",
 
-#define paths
+  
+  #other
+  "rio", "glue"
+  
+)
+
+
+
+
+
+#define paths -----------------------------------------------------------------
 #define dropbox directory (in case different users interact with the report)
 user <- Sys.getenv("USERNAME")
 
@@ -40,6 +60,44 @@ ndt_dir_indicators <- file.path(dropbox_NDT, "indicators")
 ndt_dir_combobx <- file.path(dropbox_NDT, "data/1.ComboBoxes") #comboboxes of quesitionnaire
 ndt_dir_ass <- file.path(dropbox_NDT, "data/2.Assignments") #Look Up questionnaires 
 
+
 rt_dir_ass <- file.path(dropbox_RT, "data/2.Assignments") #Look Up questionnaires 
+rt_dir_reference <- file.path(dropbox_RT, "data/0.reference")
+
+dir_survey <- file.path(dropbox, "Survey_NDT_RT")
+dir_reference <- file.path(dir_survey, "0.reference")
+dir_downloads <- file.path(dir_survey, "1.downloads")
+dir_raw <- file.path(dir_survey, "2.raw")
+dir_clean <- file.path(dir_survey, "3.clean")
+dir_docs <- file.path(dir_survey, "docs")
+
+
+dir_report_NDT <- "NDT/report"
+dir_plots_NDT <- file.path(dir_report_NDT, "plots")
+dir_text_NDT <- file.path(dir_report_NDT, "text")
+dir_indicators_NDT <- file.path(dir_report_NDT, "indicators")
+
+
+################################################################################
+
+
+#===============================================================================
+#load packages (decide if pacman vs default pachages) -------------------------
+
+gmdacr::check.installed(libraries)
+
+
+suppressWarnings({
+  options(defaultPackages=c(getOption("defaultPackages"),
+                            
+                            libraries
+  )
+  )
+})
+
+
+
+#load costumed functions
+gmdacr::load_functions("functions")
 
 

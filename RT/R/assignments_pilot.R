@@ -2,11 +2,14 @@
 
 #experts_ref <- import(file.path(ndt_dir_reference, "experts.xlsx")) 
 countries_ref <- import(file.path(ndt_dir_reference, "countries.xlsx")) 
+experts_pilot <- import(file.path(rt_dir_reference, "experts_pilot.xlsx")) 
+
 
 names(countries_ref)
-
 #create file for assignments
-experts_ass <- countries_ref %>%
+experts_ass <- experts_pilot %>%
+  select(Country)%>%
+  left_join(select(countries_ref, ID_country, Country), by= c("Country")) %>%
   #dplyr::filter(pilot == "T") %>%
   select(ID_country) %>%
   #left_join(countries_ref, by=c("country"="Country")) %>%

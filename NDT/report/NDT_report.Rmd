@@ -2,48 +2,38 @@
 title: "Social and Economic Impact Assessment of the RCA Programme"
 subtitle: "Non Destructive Testing"
 output: 
-  word_document: 
+  bookdown::word_document2:
   #bookdown::word_document2: default # for cross-reference
     reference_docx: "template.docx"
     toc: true
-  bookdown::word_document2: default
+    reference_num: true
+    number_sections: false
+    fig_caption: yes
+    
+ 
 ---
 
-\newpage
 
-```{r set_up, echo=FALSE, warning=FALSE, message=FALSE}
-  
-  library(rio)
-  
-  user <- Sys.getenv("USERNAME")
-  
-  #define dropbox directory (in case different users interact with the report)
-  if(user == "andre"){
-    
-    dropbox <- "C:/Users/andre/Dropbox/Kate and Julian IAEA 2019/Non destructive testing/Survey"
-  }
-  
-  #directory of the repositary
-  dir_master <- dirname(getwd()) #directory of this evaluation
-  
-  #copy files from dropbox into repo (because some files are used by the team in dropbox)
-  file.copy(from = file.path(dropbox, "/."), to = dir_master, recursive = T)
+```{r include = FALSE}
+
+knitr::opts_chunk$set(echo = F, warning = F, message = F, fig.pos= "h")
+
+
+```
+
+
+```{r set_up}
   
   
-  #define directories
-  dir_reference <- file.path(dropbox, "data/0.reference")
-  dir_indicators <- file.path(dropbox, "indicators")
-  
-  #load tables from dropbox
-  tbl_acronym <- import(file.path(dir_reference, "acronyms.xlsx")) #acronims for the report
-  tbl_criterion1 <- import(file.path(dir_indicators, "indicators.xlsx"), sheet = "Criterion1") #list of indicators for criterons
-  tbl_criterion2 <- import(file.path(dir_indicators, "indicators.xlsx"), sheet = "Criterion2")
-  
-  #set up opcions of kable
-  opts <- options(knitr.kable.NA = "")
+  source("parameters.R", local = knitr::knit_global())
 
   
 ```
+
+
+\newpage
+
+
 
 ###### Report Information
 
@@ -54,7 +44,7 @@ output:
 +--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Cover image  |                                                                                                                                                                                                                           |
 +--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Citation     | King,J., McKegg, K., Arau, A., Schiff, A., Garcia Aisa, M. (2020). *Social and Economic Impact Assessment of the RCA Programme: Non Destructive Testing Case Study.* Vienna, Austria: International Atomic Energy Agency. |
+| Citation     | King,J., McKegg, K., Arau, A., Schiff, A., Garcia Aisa, M. (2021). *Social and Economic Impact Assessment of the RCA Programme: Non Destructive Testing Case Study.* Vienna, Austria: International Atomic Energy Agency. |
 +--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 ## Disclaimer
@@ -75,7 +65,10 @@ The authors are grateful for the close and effective assistance of the Technical
 
 \newpage
 
-# Introduction
+
+```{r, child=c('1.intro.Rmd')}
+```
+
 
 ## Non Destructive Testing
 
@@ -87,9 +80,19 @@ The authors are grateful for the close and effective assistance of the Technical
 
 ## Improved NDT capacity and capability
 
+```{r, child=c('2.1.criterion1_table.rmd','2.criterion1.rmd')}
+```
+
+
+
 ## Increased scope and scale of NDT demand and use
 
+### Awareness, interest, and application
+
+### Research & Development
+
 ## Improved health and safety
+
 
 ## Economic value (Aaron)
 
