@@ -16,6 +16,7 @@ main_qn <- import(file.path(param$dir_clean_s, paste0(survey, ".rds"))) %>%
 
 
 
+View(main_qn)
 #View(centres_1)
 #Indicators=====================================================================
 
