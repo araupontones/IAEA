@@ -9,6 +9,7 @@ plot_standards <- function(db,
                            data_label,
                            x = indicator,
                            y = country,
+                           caption = caption,
                            fill = value,
                            color_fill, 
                            color_text = c('#BDC2C6',blue_navy, blue_light)) {
@@ -37,13 +38,17 @@ plot_standards <- function(db,
               #color = gmdacr::un_colors("gray_dark")
               
     )  +
+    
     scale_fill_gradient(low = gray_light, high = color_fill) +
     scale_color_manual(values = color_text)  +
-    labs(caption = "Data: IAEA's NDT online survey, 2021") +
+    labs(x = "",
+         y = "",
+         caption = caption) +
     theme_iaea() +
     theme(axis.text.x = element_text(angle = 40, vjust = 1, hjust = 1),
           legend.position = 'none',
           axis.title = element_blank(),
+          axis.title.x = element_blank()
     )
   
   

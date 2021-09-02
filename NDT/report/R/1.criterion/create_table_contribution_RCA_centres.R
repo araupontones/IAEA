@@ -1,3 +1,7 @@
+cli::cli_alert_success("Table RCA contribution establishment centers")
+cli::cli_alert_info(glue('Saved: {file.path(dir_indicators_NDT, "1.criterion/contribution_RCA_centres.rds")}'))
+
+
 #clean main quesitonnaire
 survey <- "iaea_ndt"
 module <- "inspection_firms"
@@ -33,7 +37,7 @@ main <- import(file.path(param$dir_clean_s, "iaea_ndt.rds")) %>%
 
 #create table to vis the contribution of RCA in certification -----------------
 cert_ind <- import(infile) %>%
-  left_join(main) %>%
+  left_join(main, Joining, by = "country") %>%
   mutate(across(c(`centres_Inspection companies (local)`,  `centres_Training centres (local)`),True_to_YesNo)) %>%
   select(Country = country,
          `Has local inspection companies` = `centres_Inspection companies (local)`,
@@ -44,7 +48,7 @@ cert_ind <- import(infile) %>%
          `RCA standard` = centres_standard
   ) %>%
   arrange(Country)
-View(cert_ind)
+#View(cert_ind)
 
 #View(cert_ind)
 

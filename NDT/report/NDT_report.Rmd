@@ -80,7 +80,7 @@ The authors are grateful for the close and effective assistance of the Technical
 
 ## Improved NDT capacity and capability
 
-```{r, child=c('2.1.criterion1_table.rmd','2.criterion1.rmd')}
+```{r, child=c('2.criterion1.rmd')}
 ```
 
 

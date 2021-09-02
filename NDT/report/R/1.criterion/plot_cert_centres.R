@@ -1,3 +1,7 @@
+cli::cli_alert_success("Plot # of inspection centres")
+cli::cli_alert_info(glue('Saved: {file.path(dir_plots_NDT, "1.criterion/inspec_centres_by_country.png")}'))
+
+
 survey <- "iaea_ndt"
 module <- "inspec"
 #get parameters to import and export file
@@ -45,11 +49,14 @@ plot_stacked(data = data_plot,
              fill_palete = c(blue_sky, blue_navy))
 
 
+
+
+
 ggsave(exfile,
        last_plot(),
        width = width_plot,
        height = height_plot + 1,
        units = 'cm',
-       dpi = 360)
+       dpi = dpi_report)
 
 

@@ -1,3 +1,7 @@
+cli::cli_alert_success("indicators certification")
+cli::cli_alert_info(glue('Saved: {file.path(dir_indicators_NDT, "1.criterion/indicators_cert.rds")}'))
+
+
 #create indicators for certification ------------------------------------------
 survey <- "iaea_ndt"
 module <- "iaea_ndt"
@@ -35,12 +39,12 @@ indicators_cert <- clean_data %>%
                           cert_ncb_ICNDT)
        )
 
-
+#View(indicators_cert)
 
 #export ========================================================================
 export(indicators_cert, exfile)
 
 
-
+#View(indicators_cert)
 
 

@@ -1,3 +1,7 @@
+cli::cli_alert_success("Text training and facility centres")
+cli::cli_alert_info(glue('Saved: {file.path(dir_text_NDT, "1.criterion/centre_text.rds")}'))
+
+
 infile <- file.path(dir_indicators_NDT, "1.criterion/indicators_centres.rds")
 exfile <- file.path(dir_text_NDT,"1.criterion/centre_text.rds" )
 

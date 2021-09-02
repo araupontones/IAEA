@@ -14,7 +14,7 @@ cert_vars <- c(
   "cert_ncb" = "NCB",
   #excellent
   "cert_society_APPFNDT" = "Society in APFNDT", 
-  "cert_society_ICNDT" = "Signatory to ICNDT",
+  "cert_society_ICNDT" = "Society signatory to ICNDT",
   "cert_ncb_iso17024" = "NCB ISO 9712",
   "cert_ncb_ICNDT" = "NCB in ICNDT"
 ),

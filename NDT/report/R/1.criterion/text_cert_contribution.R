@@ -1,3 +1,7 @@
+cli::cli_alert_success("Text contribution to certification")
+cli::cli_alert_info(glue('Saved: {file.path(dir_text_NDT, "1.criterion/contribution_RCA_cert.rds")}'))
+
+
 infile <- file.path(dir_indicators_NDT, "1.criterion/contribution_RCA_cert.rds")
 exfile <- file.path(dir_text_NDT, "1.criterion/contribution_cert.rds")
 

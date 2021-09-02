@@ -1,3 +1,8 @@
+cli::cli_alert_success("Plot # of training centres")
+cli::cli_alert_info(glue('Saved: {file.path(dir_plots_NDT, "1.criterion/training_centres_by_country.png")}'))
+
+
+
 survey <- "iaea_ndt"
 module <- "inspec"
 #get parameters to import and export file
@@ -14,7 +19,7 @@ main <- import(file.path(param$dir_clean_s, "iaea_ndt.rds")) %>%
          traincen_local = NA_to_cero(traincen_local))
 
 
-View(main)
+#View(main)
 
 
 
@@ -49,6 +54,6 @@ ggsave(exfile,
        width = width_plot,
        height = height_plot + 1,
        units = 'cm',
-       dpi = 360)
+       dpi = dpi_report)
 
 

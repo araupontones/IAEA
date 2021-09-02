@@ -1,8 +1,11 @@
+cli::cli_alert_success("indicators training & inspection centres")
+cli::cli_alert_info(glue('Saved: {file.path(dir_indicators_NDT, "1.criterion/indicators_centres.rds")}'))
+
 #clean main quesitonnaire
 survey <- "iaea_ndt"
 module <- "inspection_firms"
 exfile <- file.path(dir_indicators_NDT, "1.criterion/indicators_centres.rds")
-exfile
+
 
 #get parameters to import and export file
 
@@ -16,7 +19,7 @@ main_qn <- import(file.path(param$dir_clean_s, paste0(survey, ".rds"))) %>%
 
 
 
-View(main_qn)
+
 #View(centres_1)
 #Indicators=====================================================================
 
@@ -25,7 +28,7 @@ centres_1 <- inspection %>%
   mutate(inspect_foreign = inspec_foreign_firms > 0,
          inspect_local = inspec_local_firms >0) %>%
   select(country, inspect_local, inspect_foreign) %>%
-  left_join(main_qn) %>%
+  left_join(main_qn,  by = "country") %>%
   mutate(
     #training centres
     traincen_foreign = traincen - traincen_local,

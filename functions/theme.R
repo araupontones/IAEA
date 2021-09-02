@@ -4,13 +4,17 @@ extrafont::loadfonts(dev = 'win')
 
 extrafont::fonts()
 
-
+dpi_report <- 100
 
 height_map <- 0
 widt_map <- 0
 
 height_plot <- 10
 width_plot <- 13
+
+#higer to fit countries
+height_standards <- height_plot + 4
+width_standards <- width_plot + 2
 
 
 
@@ -21,7 +25,11 @@ blue_sky <- "#007DBC"
 blue_light <- "#00AED9"
 gray_dark <- "#4D4D4D" 
 gray_light <- "#F2F2F2"
+purple_bright <- "#E11484"
+yellow <- "#FDB713"
 
+
+color_good <- blue_light
 color_inadequate <- '#BDC2C6'
 color_adequate <- '#7F99A5'
 
@@ -78,4 +86,29 @@ theme_map <- function(){
         panel.background = element_rect(fill = '#f7fafe'),
         panel.grid = element_blank())
   
+}
+
+#==============================================================================
+
+theme_strip <- function(){
+  theme(
+    
+    panel.grid.major.x =  element_line(color = grid_color, linetype = "dotted"),
+    panel.border = element_rect(colour = gray_light, fill=NA, size=.5),
+    #legend
+    legend.position = 'bottom',
+    legend.text = element_text(size = 16),
+    legend.title = element_blank(),
+    #strip
+    strip.text = element_text(hjust = 0, size = 16, face = "bold"),
+    strip.background = element_rect(fill = gray_light),
+    
+    #text
+    plot.title = element_text(hjust = .5, size = 16, margin = margin(b = 10)),
+    plot.caption = element_text(size = 13),
+    axis.title.y = element_text(margin = margin(r = 10), size = 14),
+    axis.text = element_text(size = 14),
+    axis.text.x = element_text(hjust = 1),
+    
+  )
 }

@@ -1,3 +1,7 @@
+cli::cli_alert_success("Text contribution to establishment of centres")
+cli::cli_alert_info(glue('Saved: {file.path(dir_text_NDT, "1.criterion/contribution_centres.rds")}'))
+
+
 infile <- file.path(dir_indicators_NDT, "1.criterion/contribution_RCA_centres.rds")
 exfile <- file.path(dir_text_NDT, "1.criterion/contribution_centres.rds")
 
@@ -41,5 +45,5 @@ texto <- list(
 )
 
 
-exfile
+#exfile
 export(texto, exfile)

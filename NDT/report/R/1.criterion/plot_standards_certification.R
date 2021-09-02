@@ -6,12 +6,14 @@ exfile <- file.path(dir_plots_NDT,"1.criterion/cert_standards.png" )
 indicators_cert <- import(infile)
 cert_vars<-criterion_1_vars()$cert_vars
 
+
+
 #View(indicators_cert)
 #plot certification ----------------------------------------------------------
 long <- indicators_cert %>%
   mutate(country = fct_reorder(country, cert_total)) %>%
   select(-matches("total")) %>%
-  pivot_longer(-c(country, cert_Standard),
+  pivot_longer(-c(country, cert_standard),
                names_to = "indicator") %>%
   mutate(indicator = str_remove_all(indicator,"cert_"),
          indicator = factor(indicator,
@@ -19,15 +21,28 @@ long <- indicators_cert %>%
          value = case_when(value ~ 1,
                            T ~ 0)
          
-  )
+  ) %>%
+  mutate(p = value)
 
 
 
 
 
-annotate_label <- long %>% get_standard_label(standard = cert_Standard)
+annotate_label <- long %>% get_standard_label(standard = cert_standard)
+
+color_inadequate <- '#BDC2C6'
+color_adequate <- '#7F99A5'
 
 
+
+plot_standards(db = long,
+               x = indicator,
+               y = country,
+               caption = caption,
+               fill = p,
+               data_label = annotate_label,
+               color_fill = "red",
+               color_text = c("#7F99A5", blue_navy, blue_light, '#BDC2C6'))
 
 
 
@@ -54,7 +69,8 @@ ggplot(data = long,
   )  +
   scale_fill_gradient(low = gray_light, high = blue_navy) +
   scale_color_manual(values = c("#7F99A5", blue_navy, blue_light, '#BDC2C6'))  +
-  labs(caption = "Data: IAEA's NDT online survey, 2021") +
+  labs(caption = "Data: IAEA's NDT online survey, 2021",
+       x = "") +
   theme_iaea() +
   theme(axis.text.x = element_text(angle = 40, vjust = 1, hjust = 1),
         legend.position = 'none',
@@ -62,14 +78,14 @@ ggplot(data = long,
   )
 
 
-
+#exfile
 #export
 ggsave(exfile,
        last_plot(),
-       height = height_plot,
-       width = width_plot, 
+       height = height_standards,
+       width = width_standards, 
        units = 'cm',
-       dpi = 360)
+       dpi = dpi_report)
 
 #adequate:---------------------------
 

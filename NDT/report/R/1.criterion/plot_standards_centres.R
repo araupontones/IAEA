@@ -1,5 +1,8 @@
 #create chart for standards of criterion 1 certification
 
+cli::cli_alert_success("Plot standard centres")
+cli::cli_alert_info(glue('Saved: {file.path(dir_plots_NDT, "1.criterion/centre_standards.png")}'))
+
 infile <- file.path(dir_indicators_NDT, "1.criterion/indicators_centres.rds")
 exfile <- file.path(dir_plots_NDT,"1.criterion/centre_standards.png" )
 
@@ -27,6 +30,7 @@ annotate_label <- data_plot %>% get_standard_label(standard = centres_standard)
 
 
 plot_standards(db = data_plot,
+               caption = caption,
                data_label = annotate_label,
                color_fill = blue_navy,
                color_text = c(blue_navy, blue_light, color_inadequate))
@@ -34,10 +38,11 @@ plot_standards(db = data_plot,
 
 ggsave(exfile,
        last_plot(),
-       height = height_plot + .5,
-       width = width_plot + .5,
+       height = height_standards,
+       width = width_standards,
        units = 'cm',
-       dpi = 360)
+       dpi = dpi_report)
+
 
 
 
