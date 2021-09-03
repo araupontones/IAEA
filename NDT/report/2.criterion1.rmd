@@ -4,7 +4,7 @@ text_centres <- import(file.path(dir_text, "1.criterion/centre_text.rds" ))
 txt_cont_cert <- import(file.path(dir_text, "1.criterion/contribution_cert.rds" ))
 txt_cont_centres <- import(file.path(dir_text, "1.criterion/contribution_centres.rds" ))
 txt_cert_pers <- import(file.path(dir_text, "1.criterion/number_certified_personel.rds"))
-
+txt_std_psnl <- import(file.path(dir_text, "1.criterion/stndrs_cert_pers.rds"))
 
 ```
 
@@ -24,19 +24,6 @@ For this evaluation, an excellent performance in terms of infrastructure is defi
 
 
 
-```{r cert-standards, out.width="100%", fig.cap="NDT infrastructure at the national level and assessment standards."}
-
-knitr::include_graphics(file.path(dir_plots, "1.criterion/cert_standards.png"))
-
-```
-
-
-Figure \@ref(fig:cert-standards) shows the level of NDT infrastructure that each GP has in its country and the evaluation standards for each: out of the 20 countries that participated in the online survey, only Nepal and Myanmar do not have established a National Certification Scheme yet; Almost all countries but Laos, Cambodia, Nepal, and Myanmar have registered their NDT society in the Asia Pacific Federation of NDT (APFNDT); and for 10 out of the 20 GPs, their NCB for NDT has been accredited to ISO 17024.
-
-Based on the criterion developed by RCA to assess the performance of GPs in terms of infrastructure, Australia, China, Malaysia, Singapore, and South Korea have excellent standards on this dimension. (See criterion and standards in Annex X)
-
-
-
 ### Contribution of RCA in GP's infrastructure
 
 To asses the contribution of RCA in the stablishement of NCBs and Naitonal Certification Schemes, the participants of the online survey were asked the extent to which they believe that the RCA NDT programme has contributed to the establishment of this infrastructure in their countries.
@@ -53,21 +40,26 @@ knitr::kable(table_cont_cert, caption = "Contribution of RCA programme in GP's i
 ```
 
 
+### Evaluation standards on infrastructure 
+
+```{r cert-standards, out.width="100%", fig.cap="NDT infrastructure at the national level and assessment standards."}
+
+knitr::include_graphics(file.path(dir_plots, "1.criterion/cert_standards.png"))
+
+```
 
 
-## Inspection companies and training centers
+Figure \@ref(fig:cert-standards) shows the level of NDT infrastructure that each GP has in its country and the evaluation standards for each: out of the 20 countries that participated in the online survey, only Nepal and Myanmar do not have established a National Certification Scheme yet; Almost all countries but Laos, Cambodia, Nepal, and Myanmar have registered their NDT society in the Asia Pacific Federation of NDT (APFNDT); and for 10 out of the 20 GPs, their NCB for NDT has been accredited to ISO 17024.
+
+Based on the criterion developed by RCA to assess the performance of GPs in terms of infrastructure, Australia, China, Malaysia, Singapore, and South Korea have excellent standards on this dimension. (See criterion and standards in Annex X)
+
+
+
+
+## Self reliance in NDT
 
 Self reliance in NDT is a function of countries having the capacity to conduct inspection and train personnel without depending on external stakeholders. An assessment to map whether GPs have inspection and training centers owned locally or by foreigners was conducted to estimate the level of self-reliance that each GP has. According to the criterion developed, a GP is considered to have an excellent standard (or to have achieved increased self-reliance) if their local inspection and training centres offer their services abroad. On the other hand, the self-reliance of a GP is considered inadequate if it does not have both training and certification centres owned either by local or foreign firms.
 
-
-
-As it can be seen in Figure \@ref(fig:centre-standards) that displays the criterion and standards for this dimension. `r text_centres$excellent_num` countries (`r text_centres$excellent_text`) offer both training and inspection abroad. Moreover, `r text_centres$inadequate_text` do have access to inspection centres (either owned locally or by foreigners) but they do not have training centres offering services in their countries.
-
-```{r centre-standards, out.width="100%", fig.cap="GP's inspection and training centers: standards for self-reliance"}
-
-knitr::include_graphics(file.path(dir_plots, "1.criterion/centre_standards.png"))
-
-```
 
 
 Figure  \@ref(fig:centre-by-country) below shows the number of **inspection centres** owned by local and foreign firms in each RCA country. 
@@ -104,16 +96,42 @@ knitr::kable(table_cont_centres, caption = "Contribution of RCA programme to the
 ```
 
 
+### Evaluation standards of self-reliance
+
+As it can be seen in Figure \@ref(fig:centre-standards) that displays the criterion and standards for this dimension. `r text_centres$excellent_num` countries (`r text_centres$excellent_text`) offer both training and inspection abroad. Moreover, `r text_centres$inadequate_text` do have access to inspection centres (either owned locally or by foreigners) but they do not have training centres offering services in their countries.
+
+```{r centre-standards, out.width="100%", fig.cap="GP's inspection and training centers: standards for self-reliance"}
+
+knitr::include_graphics(file.path(dir_plots, "1.criterion/centre_standards.png"))
+
+```
+
 
 
 ## Certified personnel
 
-This section introduces the findings on the extent in which the support in establishing GPs' NDT infrastructure through the RCA programme has enabled GPs to produce certified personnel in advanced techniques (RT-D, PAUT, TOFD, PEC, etc), in addition to the conventional methods (RT, UT, MT, PT, ET).
+This section presents the findings on the extent in which the support in establishing GPs' NDT **infrastructure through the RCA programme has enabled GPs to produce certified personnel in conventional methods (RT, UT, MT, PT, ET) and in advanced techniques** (RT-D, PAUT, TOFD, PEC, etc).
 
 
-Since 2020, the NDT RCA programme has contributed to the certification of `r txt_cert_pers$total_certified`  personnel by local NDT Accredited Training Centres in `r txt_cert_pers$certified_number_countries` countries (`r txt_cert_pers$certified_names_countries`). From the total certified personnel, `r txt_cert_pers$perc_certified_women` are female. 
+### Contribution of RCA in the certification of personnel 
 
-The method for which RCA has contributed the most to the certification of personnel is `r txt_cert_pers$certified_top_method_name` (`r txt_cert_pers$certified_top_method_num` personnel trained), followed by `r txt_cert_pers$certified_second_method_name` and `r txt_cert_pers$certified_third_method_name`. The total number of certified personnel under the RCA programme by country and sex is presented in Figure \@ref(fig:certified-personnel-plot) below.
+As it can be seen in Table \@ref(tab:certified-pers-method), **since 2020, the NDT RCA programme has contributed to the certification of `r txt_cert_pers$total_certified`  personnel by local NDT Accredited Training Centres in `r txt_cert_pers$certified_number_countries`** countries (`r txt_cert_pers$certified_names_countries`). From the total certified personnel, `r txt_cert_pers$perc_certified_women` are female. 
+
+The method for which RCA has contributed the most to the certification of personnel is `r txt_cert_pers$certified_top_method_name` (`r txt_cert_pers$certified_top_method_num` personnel trained), followed by `r txt_cert_pers$certified_second_method_name` and `r txt_cert_pers$certified_third_method_name`. 
+
+
+
+```{r certified-pers-method}
+
+
+table_cert_pers <- rio::import(file.path("indicators/1.criterion/certified_personel_by_method.rds"))
+knitr::kable(table_cert_pers, caption = "Number by certified personnel by technique")
+
+```
+
+
+
+The total number of certified personnel under the RCA programme by country, technique, and sex is presented in Figure \@ref(fig:certified-personnel-plot) below.
 
 
 
@@ -123,5 +141,22 @@ The method for which RCA has contributed the most to the certification of person
 knitr::include_graphics(file.path(dir_plots,"1.criterion/number_certified_personel.png"))
 
 ```
+
+
+### Evaluation standards of certified personnel
+
+According to the methodology of the evaluation, an excellent performance for this dimension is given if the RCA NDT programme has enabled a GP to produce certified personnel in all conventional and advance techniques, a good and adequate performance is considered if the support has enabled to produce certified personnel in all conventional or at least one conventional technique respectively.
+
+Figure \@ref(fig:standards-pers-certified) shows that based on this criteria, `r txt_std_psnl$ctres_excel_num` countries have met an excellent standard (`r txt_std_psnl$ctres_excel`) because RCA NDT has contributed or facilitated the introduction of all methods and techniques to their personnel, `r txt_std_psnl$ctres_gd_num` GPs met a good standard (`r txt_std_psnl$ctres_gd`) because the RCA NDT programme has facilitated the certification of their personnel in all the conventional techniques. 
+
+`r txt_std_psnl$ctres_iq`  are consider to have an inadequate standard because, according to responses provided by their experts, RCA NDT has not necesarily contributed to the certification of their personnel in any of these techniques. 
+
+```{r standards-pers-certified, out.width="100%", fig.cap="Personnel certified by methods: standards for self-reliance"}
+
+knitr::include_graphics(file.path(dir_plots,"1.criterion/cert_pers_standards.png"))
+
+```
+
+
 
 

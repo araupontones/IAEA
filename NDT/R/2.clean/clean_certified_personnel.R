@@ -44,8 +44,12 @@ certi_raw <- import(file.path(param$dir_raw_s, "cert_advanced.dta")) %>%
          cert_women = cert_per * cert_fem,
          cert_total_20 = cert_per * 20,
          cert_total_20_women = cert_women * 20
-         ) %>%
-  select(-starts_with("interview")) 
+         ) %>% 
+  select(-starts_with("interview"))
+  #filter(country == "South Korea")
+  #filter(cert_per == 0)
+
+#View(certi_raw)
 
 
 
@@ -59,8 +63,14 @@ certi_raw <- import(file.path(param$dir_raw_s, "cert_advanced.dta")) %>%
 #export(certi_raw, excheck_japan)
 #excheck_india <- "C:/Users/andre/Dropbox/Kate and Julian IAEA 2019/Survey_NDT_RT/docs/NDT_checks/India_trained_personel.xlsx"
 #export(certi_raw, excheck_india)
-
-
+#excheck_thailand<- "C:/Users/andre/Dropbox/Kate and Julian IAEA 2019/Survey_NDT_RT/docs/NDT_checks/Thailand_trained_personel.xlsx"
+#export(certi_raw, excheck_thailand, overwrite = T)
+#excheck_singapore<- "C:/Users/andre/Dropbox/Kate and Julian IAEA 2019/Survey_NDT_RT/docs/NDT_checks/Singapore_trained_personel.xlsx"
+#export(certi_raw, excheck_singapore, overwrite = T)
+# excheck_china<- "C:/Users/andre/Dropbox/Kate and Julian IAEA 2019/Survey_NDT_RT/docs/NDT_checks/China_trained_personel.xlsx"
+# export(certi_raw, excheck_china, overwrite = T)
+#excheck_sk<- "C:/Users/andre/Dropbox/Kate and Julian IAEA 2019/Survey_NDT_RT/docs/NDT_checks/South Korea_trained_personel.xlsx"
+#export(certi_raw, excheck_sk, overwrite = T)
 
 export(certi_raw, exfile)
 

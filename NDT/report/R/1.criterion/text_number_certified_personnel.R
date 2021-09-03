@@ -29,7 +29,7 @@ perc_certified_women <- paste0(round(total_certified_w/total_certified, 3) *100,
 total_certified <- prettyNum(total_certified, big.mark = ",")
 
 
-
+countries <- unique(personnel$country)
 certified_number_countries <- length(countries)
 certified_names_countries <- knitr::combine_words(sort(countries))
 
@@ -69,7 +69,7 @@ list_text <- list(
 )
 
 
-list_text$certified_third_method_name
+#list_text$certified_third_method_name
 
 export(list_text, exfile)
 

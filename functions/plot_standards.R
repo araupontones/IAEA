@@ -12,6 +12,7 @@ plot_standards <- function(db,
                            caption = caption,
                            fill = value,
                            color_fill, 
+                           vars_dimension ,
                            color_text = c('#BDC2C6',blue_navy, blue_light)) {
   
   ggplot(data = db,
@@ -23,7 +24,7 @@ plot_standards <- function(db,
   geom_tile(color = "white",
             aes(fill = {{fill}})
   ) +
-    xlim(c(centre_vars, "RCA Standard", "")) +
+    xlim(c(vars_dimension, "RCA Standard", "")) +
     coord_equal(ratio = .3) +
     geom_text(data = data_label,
               aes(x = "RCA Standard",

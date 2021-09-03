@@ -38,45 +38,46 @@ color_adequate <- '#7F99A5'
 plot_standards(db = long,
                x = indicator,
                y = country,
+               vars_dimension = cert_vars,
                caption = caption,
                fill = p,
                data_label = annotate_label,
-               color_fill = "red",
+               color_fill = blue_navy,
                color_text = c("#7F99A5", blue_navy, blue_light, '#BDC2C6'))
-
-
-
-ggplot(data = long,
-       aes(y = country,
-           x =indicator
-       ))+
-  geom_tile(color = "white",
-            aes(fill = value)) +
-  xlim(c(cert_vars, "RCA Standard", "")) +
-  coord_equal(ratio = .3) +
-  geom_text(data = annotate_label,
-            aes(x = "RCA Standard",
-                y = country,
-                label = label,
-                color = label
-            ),
-            hjust = 0,
-            nudge_x = -.4,
-            family ="Open Sans Light",
-            size = 3
-            #color = gmdacr::un_colors("gray_dark")
-            
-  )  +
-  scale_fill_gradient(low = gray_light, high = blue_navy) +
-  scale_color_manual(values = c("#7F99A5", blue_navy, blue_light, '#BDC2C6'))  +
-  labs(caption = "Data: IAEA's NDT online survey, 2021",
-       x = "") +
-  theme_iaea() +
-  theme(axis.text.x = element_text(angle = 40, vjust = 1, hjust = 1),
-        legend.position = 'none',
-        axis.title = element_blank(),
-  )
-
+# 
+# 
+# 
+# ggplot(data = long,
+#        aes(y = country,
+#            x =indicator
+#        ))+
+#   geom_tile(color = "white",
+#             aes(fill = value)) +
+#   xlim(c(cert_vars, "RCA Standard", "")) +
+#   coord_equal(ratio = .3) +
+#   geom_text(data = annotate_label,
+#             aes(x = "RCA Standard",
+#                 y = country,
+#                 label = label,
+#                 color = label
+#             ),
+#             hjust = 0,
+#             nudge_x = -.4,
+#             family ="Open Sans Light",
+#             size = 3
+#             #color = gmdacr::un_colors("gray_dark")
+#             
+#   )  +
+#   scale_fill_gradient(low = gray_light, high = blue_navy) +
+#   scale_color_manual(values = c("#7F99A5", blue_navy, blue_light, '#BDC2C6'))  +
+#   labs(caption = "Data: IAEA's NDT online survey, 2021",
+#        x = "") +
+#   theme_iaea() +
+#   theme(axis.text.x = element_text(angle = 40, vjust = 1, hjust = 1),
+#         legend.position = 'none',
+#         axis.title = element_blank(),
+#   )
+# 
 
 #exfile
 #export

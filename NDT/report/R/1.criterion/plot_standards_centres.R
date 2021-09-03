@@ -32,6 +32,7 @@ annotate_label <- data_plot %>% get_standard_label(standard = centres_standard)
 plot_standards(db = data_plot,
                caption = caption,
                data_label = annotate_label,
+               vars_dimension = centre_vars,
                color_fill = blue_navy,
                color_text = c(blue_navy, blue_light, color_inadequate))
 
