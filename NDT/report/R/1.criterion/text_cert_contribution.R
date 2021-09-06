@@ -12,6 +12,13 @@ contribution_cert <- import(infile)
 
 
 
+#View(contribution_cert)
+
+has_NCB <- contribution_cert$Country[contribution_cert$`Has NCB` == "Yes"]
+has_NCB_num <- length(has_NCB) %>% to_text()
+
+
+
 countries_NCB <- contribution_cert$Country[contribution_cert$`RCA contribution to establish NCB` == "To a great extent"]
 countries_NCB <- countries_NCB[!is.na(countries_NCB)]
 
@@ -26,7 +33,8 @@ texto <- list(
   
   a_lot = NCB_text_alot,
   num_alot = countries_NCB_num,
-  not = NCB_text_not
+  not = NCB_text_not,
+  has_NCB_num = has_NCB_num
   
 )
 

@@ -35,6 +35,7 @@ annotate_label <- data_plot %>% get_standard_label(standard = cert_pers_standard
 
 
 plot_standards(db = data_plot,
+               x_title = "Evaluation Criteria Certified Personnel",
                vars_dimension = pers_vars,
                caption = caption,
                data_label = annotate_label,

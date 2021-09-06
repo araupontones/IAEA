@@ -30,6 +30,7 @@ annotate_label <- data_plot %>% get_standard_label(standard = centres_standard)
 
 
 plot_standards(db = data_plot,
+               x_title = "Evaluation Criteria Self-Reliance",
                caption = caption,
                data_label = annotate_label,
                vars_dimension = centre_vars,

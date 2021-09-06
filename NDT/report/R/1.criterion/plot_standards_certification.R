@@ -38,12 +38,15 @@ color_adequate <- '#7F99A5'
 plot_standards(db = long,
                x = indicator,
                y = country,
+               x_title = "Evaluation Criteria MRA",
                vars_dimension = cert_vars,
                caption = caption,
                fill = p,
                data_label = annotate_label,
                color_fill = blue_navy,
                color_text = c("#7F99A5", blue_navy, blue_light, '#BDC2C6'))
+
+
 # 
 # 
 # 

@@ -13,6 +13,8 @@ to_text <- function(x){
             x == 10 ~ "ten",
             x == 11 ~ "eleven",
             x == 12 ~ "twelve",
+            x == 13 ~ "thirteen",
+            x == 14 ~ "fourteen",
             T ~ "Other"
   )
   

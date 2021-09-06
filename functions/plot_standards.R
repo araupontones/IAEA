@@ -9,6 +9,7 @@ plot_standards <- function(db,
                            data_label,
                            x = indicator,
                            y = country,
+                           x_title,
                            caption = caption,
                            fill = value,
                            color_fill, 
@@ -24,10 +25,10 @@ plot_standards <- function(db,
   geom_tile(color = "white",
             aes(fill = {{fill}})
   ) +
-    xlim(c(vars_dimension, "RCA Standard", "")) +
+    xlim(c(vars_dimension, "RCA Performance Standard", "")) +
     coord_equal(ratio = .3) +
     geom_text(data = data_label,
-              aes(x = "RCA Standard",
+              aes(x = "RCA Performance Standard",
                   y = country,
                   label = label,
                   color = label
@@ -42,7 +43,7 @@ plot_standards <- function(db,
     
     scale_fill_gradient(low = gray_light, high = color_fill) +
     scale_color_manual(values = color_text)  +
-    labs(x = "",
+    labs(x = x_title,
          y = "",
          caption = caption) +
     theme_iaea() +
