@@ -16,8 +16,9 @@ contribution_cert <- import(infile)
 
 has_NCB <- contribution_cert$Country[contribution_cert$`Has NCB` == "Yes"]
 has_NCB_num <- length(has_NCB) %>% to_text()
+has_NCB_perc <-  paste0(length(has_NCB) / 20 *100,"%")
 
-
+has_cerSch_perc  <- paste0(mean(contribution_cert$`Has NDT certification scheme` == "Yes") * 100, "%")
 
 countries_NCB <- contribution_cert$Country[contribution_cert$`RCA contribution to establish NCB` == "To a great extent"]
 countries_NCB <- countries_NCB[!is.na(countries_NCB)]
@@ -34,7 +35,9 @@ texto <- list(
   a_lot = NCB_text_alot,
   num_alot = countries_NCB_num,
   not = NCB_text_not,
-  has_NCB_num = has_NCB_num
+  has_NCB_num = has_NCB_num,
+  has_NCB_perc = has_NCB_perc,
+  has_cerSch_perc = has_cerSch_perc
   
 )
 

@@ -1,0 +1,77 @@
+
+This section presents the findings of the contribution of the NDT RCA programme on the increased scope and scale of NDT demand and use of the Government Parties. Particularly, the analysis aims to understand the extent to which the support of the NDT programme has contributed to the enhancement of:
+
+1. Awareness, interest, and application of NDT technology in the industrial sectors for the QA and QC of industrial components; and
+2. Knowledge developed through R&D by publishing research articles, organising international and national seminars and conferences.
+
+<br>
+
+```{r, child=c('2.1.key_indicators_criterion1.rmd')}
+```
+
+<br>
+Moreover, figure \@ref(fig:standards-c2-sum) below shows the performance standards of the impact of NDT RCA programme on the increased scope and scale of NDT demand and use of the Government Parties. Further details on he criterion and standards for this dimension are presented in Annex E.
+
+
+```{r standards-c2-sum, out.width="100%", fig.cap="Capacity and capability of the Government Parties (GPs): Performance standard by criterion and country"}
+
+#knitr::include_graphics(file.path(dir_plots,"1.criterion/standards_crit1.png"))
+
+```
+
+
+The detailed analysis of each sub-criterion under improved NDT capacity and capability is presented in the sections below.
+
+
+### Sub-criterion 2.1: Awareness, interest, and application
+
+
+This sub-criterion explores the extent into which participation in the RCA programme results in GPs **applying NDT technology** in the industrial sectors for the QA and QC of industrial components: achieving better controlled manufacturing, lower production costs, ensuring material quality, and/or greater product integrity.
+
+
+
+#### Performance standards of "Awareness, interest, and application of NDT technologies"
+
+An *excellent* performance in terms of Awareness, interest, and application of NDT technologies is considered if participating in the RCA programme results in GPs applying NDT technology in the industrial sectors for the QA and QC of industrial components - achieving better controlled manufacturing, lower production costs, ensuring material quality, and/or greater product integrity-; a *good* performance is met if as a result of being part of the NDT RCA programme, GPs become more concerned and interested into applying NDT technology in the industrial sectors; and an *adequate* standard is when the NDT RCA programme has contributed to GPs initiating activities to create awareness among industrial organisations about the benefits of NDT technology for QA and QC.
+
+Figure \@ref(tab:standards-aws) shows the criterion and standards for this sub-dimension. The detailed methodology and criteria is presented in Annex E.
+
+
+```{r standards-aws, out.width="100%", fig.cap="Performance standards: Awareness, interest, and application of NDT technology in the industrial sectors for the QA and QC of industrial components"}
+
+knitr::include_graphics(file.path(dir_plots,"2.criterion/standards_aws.png"))
+
+```
+
+
+
+** which awareness (table) (awareness_which)
+
+
+** level practice (practice_level)
+
+** productivity (table based on idicators clean/practice.rds)
+
+
+#### Contribution of the NDT RCA in Awareness, interest, and application of NDT technologies
+
+The following questions are about the extent to which the introduced NDT technology by the RCA programme led to improved manufacturing processes, lower production costs, enhanced material quality, and greater product integrity in each industrial sector.
+
+productivity_cost
+
+
+<br>
+
+
+### Sub-criterion 2.2: Research and Development 
+
+An *"excellent"* performance of this sub-criterion is considered if as a result of participating in the NDT RCA programme, GPs have managed to support the utilisation of the technology by industry and disseminate the knowledge developed through R&D by publishing research articles, organising international and national seminars and conferences; a *"good"* performance is met if the support of the NDT RCA programme has enable GPs to have successfully applied the NDT technology to local industry, and established R&D activities; and an *adequate* performance means that the GPs have successfully managed to train personnel in the introduced NDT technology. 
+
+
+
+
+#### Performance standards of "Research and Development"
+
+
+#### Contribution of the NDT RCA in Research and Development 
+

@@ -4,6 +4,8 @@ extrafont::loadfonts(dev = 'win')
 
 extrafont::fonts()
 
+caption = "Data: IAEA's NDT online survey, 2021"
+
 dpi_report <- 100
 
 height_map <- 0
@@ -46,6 +48,7 @@ theme_iaea <- function(){
         axis.text.y = element_text(hjust = 0),
         axis.title.x.top =element_text(margin = margin(b = 10), size = 12),
         axis.title.x.bottom = element_text(margin = margin(t = 10), size = 12),
+        axis.title.y = element_text(margin = margin(r = 10), size = 12),
         #background
         plot.background = element_rect(fill = 'white'),
         panel.background =  element_rect(fill = 'white'),
@@ -72,7 +75,7 @@ theme_stacked_bar <- function(){
 }
 
 
-theme_stacked_bar
+
 
 #===============================================================================
 theme_map <- function(){
@@ -106,9 +109,28 @@ theme_strip <- function(){
     #text
     plot.title = element_text(hjust = .5, size = 16, margin = margin(b = 10)),
     plot.caption = element_text(size = 13),
-    axis.title.y = element_text(margin = margin(r = 10), size = 14),
+  
     axis.text = element_text(size = 14),
     axis.text.x = element_text(hjust = 1),
     
   )
+}
+
+
+#===============================================================================
+theme_standards_sum <- function(){
+  
+  theme(text = element_text(size = 14),
+        #axis
+        axis.text.x = element_text(angle = 90, hjust = 0),
+        axis.text = element_text(size = 18),
+        #legend
+        legend.position = 'bottom',
+        legend.margin = margin(t = -2, b = 10),
+        legend.text = element_text(size = 18),
+        legend.title = element_text(size = 16)
+        
+        )
+  
+  
 }

@@ -17,7 +17,7 @@ param <- parameters(mode = survey,
 #import main ------------------------------------------------------------------
 
 raw_main <- import(param$file_raw)
-
+names(raw_main)
 
 #label variables ---------------------------------------------------------------
 
@@ -33,7 +33,10 @@ labelvars <- c("country", "interview__status", "currency",
                "traincen_local_abroad", "traincen_local_lkrt",
                
                #impact
-               "impact_inspection", "impact_inspinvest"
+               "impact_inspection", "impact_inspinvest",
+               
+               #awareness
+               "awareness", "concern", "practice_level"
                )
 
 
@@ -45,7 +48,7 @@ label_main <- raw_main %>%
 
 names(label_main)
 label_main %>%
-  tabyl(cert_ncb_ICNDT)
+  tabyl(practice_level)
 
 
 #clean file -------------------------------------------------------------------
