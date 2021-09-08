@@ -2,7 +2,7 @@
 |--------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------|
 | Awareness, interest, and application of NDT technology | \% of GPs that have taken actions to create awareness among industrial organisations about the benefits of NDT technology for Quality Assurance and Quality Control | `r text_aws$aws_perc`       |
 | Awareness, interest, and application of NDT technology | \% of GPs that have applied NDT technology for Quality Assurance and Quality Control in at least one industrial sector                                              | `r text_practice$ctrs_perc` |
-| Knowledge developed through R&D                        | \% of GPS that have established any R&D activities related to NDT                                                                                                   |                             |
-| Knowledge developed through R&D                        | Number of publications related to NDT that have been published since 2000 in as a result of being part of the RCA NDT programme                                     |                             |
+| Knowledge developed through R&D                        | \% of GPS that have established any R&D activities related to NDT                                                                                                   | `r text_rd_c$activities`    |
+| Knowledge developed through R&D                        | Number of publications related to NDT that have been published since 2000 in as a result of being part of the RCA NDT programme                                     | `r text_rd_c$publications`  |
 
 : Key evidence for criterion 2: Increased scope and scale of NDT demand and use

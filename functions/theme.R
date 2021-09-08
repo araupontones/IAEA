@@ -58,8 +58,8 @@ theme_iaea <- function(){
         
         
         
-        )
-        
+  )
+  
 }
 
 
@@ -68,10 +68,10 @@ theme_iaea <- function(){
 theme_stacked_bar <- function(){
   
   theme(
-  
-  panel.grid.major = element_line(color = grid_color, linetype = "dotted", size = .5),
-  legend.position = 'bottom'
-)
+    
+    panel.grid.major = element_line(color = grid_color, linetype = "dotted", size = .5),
+    legend.position = 'bottom'
+  )
 }
 
 
@@ -109,7 +109,7 @@ theme_strip <- function(){
     #text
     plot.title = element_text(hjust = .5, size = 16, margin = margin(b = 10)),
     plot.caption = element_text(size = 13),
-  
+    
     axis.text = element_text(size = 14),
     axis.text.x = element_text(hjust = 1),
     
@@ -130,7 +130,14 @@ theme_standards_sum <- function(){
         legend.text = element_text(size = 18),
         legend.title = element_text(size = 16)
         
-        )
+  )
   
   
+}
+
+#================================================================================
+theme_bar <- function(){
+  theme(panel.grid.major.x = element_line(linetype = "dotted", color = grid_color),
+        axis.title.x.bottom =  element_text(size = 9, hjust = 0)
+  )
 }

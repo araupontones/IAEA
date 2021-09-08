@@ -25,28 +25,18 @@ prct_plot <- prct %>%
 
 
 
-#plot ==========================================================================
-prct_plot %>%
-  ggplot(aes(x = industries,
-             y = country,
-             label = industries)
-         ) +
-  geom_col(fill = blue_navy,
-           width = .7) +
-  geom_text(hjust = -.5,
-            color =gray_dark,
-            size = 3) +
-  #xlim(c(0,12))+
-  scale_x_continuous(
-    limits = c(0,12),
-    labels = function(x)round(x)) +
-  labs(y = "",
-       x = "Number of industrial sectors in which NDT has been applied",
-       caption = caption) +
-  theme_iaea() +
-  theme(panel.grid.major.x = element_line(linetype = "dotted", color = grid_color),
-        axis.title.x.bottom =  element_text(size = 9, hjust = 0)
-        )
+#plot ----------------------------------------------------------------------
+
+bar_plot(
+  db = prct_plot,
+  x_var = industries,
+  y_var = country,
+  x_title = "Number of industrial sectors in which NDT has been applied",
+  limits = c(0,12),
+  label = industries
+)
+
+
 
 #export(text_aws, exfile)
 #exfile

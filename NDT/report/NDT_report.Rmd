@@ -111,6 +111,11 @@ txt_num_centres <- import(file.path(dir_text, "1.criterion/number_centres.rds"))
 
 text_aws <- import(file.path(dir_text, "2.criterion/tx_standards_aws.rds" ))
 text_practice <- import(file.path(dir_text, "2.criterion/number_industries.rds" ))
+text_rd_c <- import(file.path(dir_text, "2.criterion/rd_tx_c.rds"))
+text_rd_s <- import(file.path(dir_text, "2.criterion/txt_rd_s.rds"))
+
+
+
 
 # txt_cont_cert <- import(file.path(dir_text, "1.criterion/contribution_cert.rds" ))
 # txt_cont_centres <- import(file.path(dir_text, "1.criterion/contribution_centres.rds" ))
@@ -179,6 +184,20 @@ Note: Remember to include a note saying that all the indicators refer to the res
 
 ```{r, child=c('X.Annex_criterion1.rmd', 'X.Annex_criterion2.rmd')}
 ```
+
+# Annex F: Implementation of NDT technology by industrial sector
+
+
+
+```{r practice-table}
+
+
+table_practice <- rio::import(file.path("indicators/2.criterion/contribution_practice.rds"))
+
+knitr::kable(table_practice, caption = "Extent to which the introduced NDT technology by the RCA programme led to improved manufacturing processes")
+
+```
+
 
 
 # Work cited

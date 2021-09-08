@@ -34,6 +34,6 @@ export(main_qn, exfile)
 
 
 
-View(main_qn)
+
 
 #export

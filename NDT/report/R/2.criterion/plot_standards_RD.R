@@ -25,7 +25,6 @@ data_plot <- indicators_rd %>%
 
 
 
-View(data_plot)
 
 #View(data_plot)
 #data_plot$country
