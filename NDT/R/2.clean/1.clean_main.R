@@ -36,7 +36,10 @@ labelvars <- c("country", "interview__status", "currency",
                "impact_inspection", "impact_inspinvest",
                
                #awareness
-               "awareness", "concern", "practice_level"
+               "awareness", "concern", "practice_level",
+               
+               #R&D
+               "rd_acttrain"
                )
 
 

@@ -102,7 +102,29 @@ txt_num_centres <- import(file.path(dir_text, "1.criterion/number_centres.rds"))
 
 
 
+
+\newpage
+
 ## Criterion 2: Increased scope and scale of NDT demand and use
+
+```{r load_tx_c2}
+
+text_aws <- import(file.path(dir_text, "2.criterion/tx_standards_aws.rds" ))
+text_practice <- import(file.path(dir_text, "2.criterion/number_industries.rds" ))
+
+# txt_cont_cert <- import(file.path(dir_text, "1.criterion/contribution_cert.rds" ))
+# txt_cont_centres <- import(file.path(dir_text, "1.criterion/contribution_centres.rds" ))
+# txt_cert_pers <- import(file.path(dir_text, "1.criterion/number_certified_personel.rds"))
+# txt_std_psnl <- import(file.path(dir_text, "1.criterion/stndrs_cert_pers.rds"))
+# txt_num_centres <- import(file.path(dir_text, "1.criterion/number_centres.rds"))
+  
+  
+
+```
+
+
+
+
 
 
 ```{r, child=c('3.criterion2.rmd')}
@@ -112,6 +134,7 @@ txt_num_centres <- import(file.path(dir_text, "1.criterion/number_centres.rds"))
 
 ## Criterion 3: Improved health and safety
 
+\newpage
 
 ## Economic value (Aaron)
 

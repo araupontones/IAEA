@@ -69,6 +69,7 @@ dir_reference <- file.path(dir_survey, "0.reference")
 dir_downloads <- file.path(dir_survey, "1.downloads")
 dir_raw <- file.path(dir_survey, "2.raw")
 dir_clean <- file.path(dir_survey, "3.clean")
+  dir_clean_ndt <- file.path(dir_clean, "iaea_ndt")
 dir_docs <- file.path(dir_survey, "docs")
 
 

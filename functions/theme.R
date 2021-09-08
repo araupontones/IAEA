@@ -2,7 +2,7 @@ library(extrafont)
 library(ggplot2)
 extrafont::loadfonts(dev = 'win')
 
-extrafont::fonts()
+#extrafont::fonts()
 
 caption = "Data: IAEA's NDT online survey, 2021"
 
