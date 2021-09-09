@@ -10,13 +10,13 @@ cert_vars <- c(
   #aequate
   "cert_schm" = "Nat. Certification scheme", 
   #good
-  "cert_society" = "NDT Society",
-  "cert_ncb" = "NCB",
+  "cert_society" = "Established NDT Society",
+  "cert_ncb" = "Established NCB",
   #excellent
-  "cert_society_APPFNDT" = "Society in APFNDT", 
+  "cert_society_APPFNDT" = "NDT Society in APFNDT", 
   "cert_society_ICNDT" = "Society signatory to ICNDT",
-  "cert_ncb_iso17024" = "NCB ISO 9712",
-  "cert_ncb_ICNDT" = "NCB in ICNDT"
+  "cert_ncb_iso17024" = "NCB accredited ISO 17024",
+  "cert_ncb_ICNDT" = "NCB registered in ICNDT"
 ),
 
 centres_vars <- c(

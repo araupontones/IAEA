@@ -1,0 +1,30 @@
+The  assessment involved pre-defining agreed performance criteria (aspects of social and economic impacts that were the focus of the evaluation) and standards (narratives describing four levels of performance – excellent, good, adequate, and inadequate). These criteria and standards provided a transparent and robust framework for rating the impact of the mutation breeding RCA 
+
+
+To understand the contribution of the NDT RCA programme on social and economic indicators, the study analyses the extent into which being part of the programme has enabled the GPs to: 
+
+1.	Fulfill the Multilateral Recognition Agreement (MRA) requirements of the International Committee on Non-destructive Testing (ICNDT) as a result of the support under the NDT RCA programme;
+
+2.	Establish GPs’ NDT infrastructure to produce certified personnel in advanced techniques (RT-D, PAUT, TOFD, PEC, etc), in addition to the conventional methods (RT, UT, MT, PT, ET); 
+
+3.	Achieve self-reliance in NDT, including offering training and inspection activities to local industries as well as abroad;
+
+4.	Enhance awareness, interest, and application of NDT technology in the industrial sectors for the QA and QC of industrial components;
+
+5.	Develop knowledge developed through R&D by publishing research articles, organising international and national seminars and conferences; and
+
+6. Improve health and safety by applying NDT technology in the industrial sectors.
+
+
+Figure \@ref(fig:standards-sum) summarises the criteria (aspects of performance) and standards (levels of performance) of each GP.
+
+
+
+```{r standards-sum, out.width="100%", fig.cap="Performance standard by criterion and country"}
+
+knitr::include_graphics(file.path(dir_plots,"intro/standard.png"))
+
+```
+
+
+The complete analysis for all the aspects of performance is presented in the next sections. 

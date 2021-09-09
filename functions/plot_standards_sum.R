@@ -1,6 +1,7 @@
 #'plot standards_sum
 
-plot_standards_sum <- function(.data){
+plot_standards_sum <- function(.data,
+                               pallete = c("#e7e9ea", color_inadequate, color_good, blue_navy)){
   
   .data %>%
     ggplot(aes(x = country,
@@ -8,7 +9,7 @@ plot_standards_sum <- function(.data){
                fill = standard))+
     geom_tile(color = "white") +
     coord_equal() +
-    scale_fill_manual(values = c("#e7e9ea", color_inadequate, color_good, blue_navy),
+    scale_fill_manual(values = pallete,
                       name = "Performance Standard",
                       guide = guide_legend(title.position = 'top', title.hjust = .5)) +
     scale_x_discrete(position = 'top')+

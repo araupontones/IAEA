@@ -78,6 +78,14 @@ The authors are grateful for the close and effective assistance of the Technical
 
 # Social and economic impacts
 
+
+
+
+```{r, child=c('socio-economic.rmd')}
+```
+
+\newpage
+
 ## Criterion 1: Improved NDT capacity and capability
 
 ```{r load_centres}
@@ -116,30 +124,50 @@ text_rd_s <- import(file.path(dir_text, "2.criterion/txt_rd_s.rds"))
 
 
 
-
-# txt_cont_cert <- import(file.path(dir_text, "1.criterion/contribution_cert.rds" ))
-# txt_cont_centres <- import(file.path(dir_text, "1.criterion/contribution_centres.rds" ))
-# txt_cert_pers <- import(file.path(dir_text, "1.criterion/number_certified_personel.rds"))
-# txt_std_psnl <- import(file.path(dir_text, "1.criterion/stndrs_cert_pers.rds"))
-# txt_num_centres <- import(file.path(dir_text, "1.criterion/number_centres.rds"))
-  
-  
-
 ```
-
-
 
 
 
 
 ```{r, child=c('3.criterion2.rmd')}
 ```
-
+\newpage
 
 
 ## Criterion 3: Improved health and safety
 
+
+```{r load_tx_c3}
+
+text_hs <- import(file.path(dir_text, "3.criterion/txt_hs_s.rds" ))
+
+```
+
+
+```{r, child=c('4.criterion3.rmd')}
+```
+
+
 \newpage
+
+
+## Overall impact of the NDT RCA programme
+
+
+```{r load_impact}
+
+text_impact <- import(file.path(dir_text, "4.impact/impact_tx.rds" ))
+
+  
+
+```
+
+
+
+```{r, child=c('5.impact.rmd')}
+```
+
+
 
 ## Economic value (Aaron)
 
@@ -182,7 +210,7 @@ Note: Remember to include a note saying that all the indicators refer to the res
 
 # Annex E: Criteria and standards
 
-```{r, child=c('X.Annex_criterion1.rmd', 'X.Annex_criterion2.rmd')}
+```{r, child=c('X.Annex_criterion1.rmd', 'X.Annex_criterion2.rmd', 'X.Annex_criterion3.rmd')}
 ```
 
 # Annex F: Implementation of NDT technology by industrial sector

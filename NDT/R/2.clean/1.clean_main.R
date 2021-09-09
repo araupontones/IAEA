@@ -34,22 +34,30 @@ labelvars <- c("country", "interview__status", "currency",
                
                #impact
                "impact_inspection", "impact_inspinvest",
+               "impact_speed", "impact_speeddet", "impact_adopt", "impact_adoptdet","impact_product", 'impact_productdet', 
+               "impact_assessment",
                
                #awareness
                "awareness", "concern", "practice_level",
                
                #R&D
-               "rd_acttrain"
+               "rd_acttrain",
+               
+               #health
+               "hs_awareness", "hs_applying"
                )
 
 
 
 label_main <- raw_main %>%
   mutate(across(all_of(labelvars), susor::susor_get_stata_labels)) %>%
-  mutate(across(all_of(labelvars), as.character))
+  mutate(across(all_of(labelvars), as.character))%>%
+  rename(benefits = impact_benefits) 
+  #mutate(across(matches("impact_"), susor::susor_get_stata_labels))
 
+#head(label_main$benefits)
 
-names(label_main)
+#names(label_main)
 label_main %>%
   tabyl(practice_level)
 
@@ -66,4 +74,4 @@ clean_main <- label_main
 
 export(clean_main, param$file_clean)
 
-param$file_clean
+

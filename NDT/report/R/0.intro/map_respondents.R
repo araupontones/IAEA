@@ -20,7 +20,7 @@ clean_main <- import(importfile) %>%
 unique(clean_main$country)
 
 world_sf <- import(file.path(dir_reference, "world_sf.rds")) %>%
-  left_join(select(clean_main, c(country, responded))) %>%
+  left_join(select(clean_main, c(country, responded)), by = "country") %>%
   mutate(responded = case_when(responded ~ T,
                                T ~ F))
 
@@ -58,43 +58,47 @@ map <- ggplot(data = data_plot,
   coord_sf(crs = 4326, 
            xlim = c(42, 180), ylim = c(65, -58)
   ) +
-  #names of big countries *to avoid overlapping -------------------------------
-stat_sf_coordinates(data = filter(data_plot, name1 ==T),
-                    geom = "text",
-                    color = "black",
-                    aes(label = country),
-                    family = "Open Sans Light",
-                    size = 2
-)+ 
-  #points of other countries ---------------------------------------------------
-stat_sf_coordinates(
-  data = subset(data_plot, name2),
-  geom = "point",
-  size = .5
-) +
-  #names of small countries -------------------------------------------------
-stat_sf_coordinates(data = filter(data_plot, name2 ==T),
-                    geom = "text_repel",
-                    aes(label = country),
-                    direction = c("both"),
-                    min.segment.length = 0, 
-                    box.padding = .5,
-                    family = "Open Sans Light",
-                    max.overlaps = Inf, 
-                    size = 2,
-                    segment.size = .2
-                    
-) +
+#   #names of big countries *to avoid overlapping -------------------------------
+# stat_sf_coordinates(data = filter(data_plot, name1 ==T),
+#                     geom = "text",
+#                     color = "black",
+#                     aes(label = country),
+#                     family = "Open Sans Light",
+#                     size = 2
+#  )+ 
+#   #points of other countries ---------------------------------------------------
+# stat_sf_coordinates(
+#   data = subset(data_plot, name2),
+#   geom = "point",
+#   size = .5
+# ) +
+#   #names of small countries -------------------------------------------------
+# stat_sf_coordinates(data = filter(data_plot, name2 ==T),
+#                     geom = "text_repel",
+#                     aes(label = country),
+#                     direction = c("both"),
+#                     min.segment.length = 0, 
+#                     box.padding = .5,
+#                     family = "Open Sans Light",
+#                     max.overlaps = Inf, 
+#                     size = 2,
+#                     segment.size = .2
+#                     
+# ) +
+  labs(x = "",
+       y = "")+
   #styles and labels ----------------------------------------------------------
-scale_fill_manual(values = c("#CCCCCC", "#8CC63E"))+
+scale_fill_manual(values = c("#CCCCCC", blue_navy))+
   labs(caption = "Data: online survey, 2021") +
   
   #theme -----------------------------------------------------------------------
-theme_iaea() +
-theme_map()
-
+theme(axis.text.y = element_blank()) +
+#theme_iaea() 
+theme_map() 
 
 #map
+
+
 
 #export -------------------------------------------------------------------------
 exdir <- file.path(dir_plots_NDT, "intro")
@@ -113,4 +117,3 @@ ggsave(exfile,
        dpi = 360)
 
 
-w

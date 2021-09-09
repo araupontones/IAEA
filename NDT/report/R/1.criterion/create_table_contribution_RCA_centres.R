@@ -44,8 +44,8 @@ cert_ind <- import(infile) %>%
          `RCA contribution to establish local inspection centres` = impact_inspection,
          `RCA contributed to facilitate investment in inspection centres` = impact_inspinvest,
          `Has local training centres` = `centres_Training centres (local)`, 
-         `RCA contribution to establish local training centres` = traincen_local_lkrt,
-         `RCA standard` = centres_standard
+         `RCA contribution to establish local training centres` = traincen_local_lkrt
+         #`RCA standard` = centres_standard
   ) %>%
   arrange(Country)
 #View(cert_ind)

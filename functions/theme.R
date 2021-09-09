@@ -87,7 +87,8 @@ theme_map <- function(){
         legend.position = 'none',
         plot.background = element_rect(fill = 'white'),
         panel.background = element_rect(fill = '#f7fafe'),
-        panel.grid = element_blank())
+        panel.grid = element_blank()
+  )
   
 }
 

@@ -19,7 +19,7 @@ run_scripts(cleaning_scripts)
 dir_intro_NDT <- file.path(dir_report_NDT, "R/0.intro")
 
 intro_scripts <- list.files(dir_intro_NDT, full.names = T)
-run_scripts(cleaning_scripts)
+run_scripts(intro_scripts)
 
 
 #4. Indicators  & plotscriterion 1 =====================================================
@@ -42,15 +42,25 @@ scripts_c2_NDT <- list.files(dir_c2_NDT, full.names = T)
 run_scripts(scripts_c2_NDT)
 
 
+#4. Indicators  & plotscriterion 3 =====================================================
+
+dir_c3_NDT <- file.path(dir_report_NDT, "R/3.criterion")
+message("Criterion 3")
+
+scripts_c3_NDT <- list.files(dir_c3_NDT, full.names = T)
+
+run_scripts(scripts_c3_NDT)
+
+
+#5. Impact =====================================================
+
+dir_ip_NDT <- file.path(dir_report_NDT, "R/4.impact")
+message("Impact")
+
+scripts_ip_NDT <- list.files(dir_ip_NDT, full.names = T)
+
+run_scripts(scripts_ip_NDT)
 
 
 
 
-# 
-# 
-# 
-# 
-# knitr::knit(file.path(dir_report_NDT, "NDT_report.Rmd"))
-# 
-# 
-# knit

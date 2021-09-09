@@ -26,19 +26,21 @@ impact_vars <- c(
 )
 
 main <- import(file.path(param$dir_clean_s, "iaea_ndt.rds")) %>%
-  select(country, all_of(impact_vars))
-
-
+  select(country, all_of(impact_vars)) 
 #create table to vis the contribution of RCA in certification
 cert_ind <- import(infile) %>%
   left_join(main,  by = "country") %>%
-  mutate(across(c(cert_NCB,  `cert_NDT Society`),True_to_YesNo)) %>%
+
+
+
+
+  mutate(across(c(`cert_Established NCB`,`cert_Established NDT Society`),True_to_YesNo)) %>%
   select(Country = country,
-         `Has NCB` = cert_NCB,
+         `Has NCB` = `cert_Established NCB`,
          `RCA contribution to establish NCB` = cert_body_lkrt,
-         `Has NDT certification scheme` = `cert_NDT Society`, 
-         `RCA contribution to establish NDT certification scheme` = cert_society_lkrt,
-         `RCA standard` = cert_standard
+         `Has NDT certification scheme` = `cert_Established NDT Society`, 
+         `RCA contribution to establish NDT certification scheme` = cert_society_lkrt
+         #`RCA standard` = cert_standard
   ) %>%
   arrange(Country)
 
