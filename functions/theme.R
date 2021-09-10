@@ -1,10 +1,11 @@
 library(extrafont)
 library(ggplot2)
 extrafont::loadfonts(dev = 'win')
-
-#extrafont::fonts()
+extrafont::fonts()
 
 caption = "Data: IAEA's NDT online survey, 2021"
+font_main <- "Calibri"
+font_light <- "Calibri Light"
 
 dpi_report <- 100
 
@@ -42,7 +43,7 @@ grid_color <- "#B7B7B7"
 
 theme_iaea <- function(){
   
-  theme(text = element_text(family = "Open Sans Light", colour = gray_dark ),
+  theme(text = element_text(family = font_main, colour = gray_dark ),
         #axis
         axis.ticks = element_blank(),
         axis.text.y = element_text(hjust = 0),
@@ -80,7 +81,7 @@ theme_stacked_bar <- function(){
 #===============================================================================
 theme_map <- function(){
   
-  theme(text = element_text(family = "Open Sans Light"),
+  theme(text = element_text(family = font_main),
         axis.text = element_blank(),
         axis.ticks = element_blank(),
         axis.title = element_blank(),

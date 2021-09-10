@@ -16,6 +16,13 @@ Table \@ref(tab:impact-table) shows the perception of the GPs on the role that R
 
 According to the own perception of the experts who participated in the online survey, **for `r text_impact$speed_y_perc` of the GPs, RCA NDT has helped to speed up the adoption of NDT technologies in their country since 2000**. For `r text_impact$cts_y1` the adoption occurred 1-3 years faster. Moreover, `r text_impact$cts_y2` perceive that NDT RCA contributed for the adoption of NDT technologies to happen 4-5 years faster; and **`r text_impact$cts_y2` think that the adoption occurred  6-10 years faster than with out the support of IAEA.**
 
+
+Additionally, **`r text_impact$adopt_perc` of the GPs perceive that NDT RCA has contributed to the adoption of NDT technologies by private business in their countries since 2000**. From these countries, **50% estimate that the proportion of the total activity in their NDT sector can be attributed to RCA at least 25% or more.** 
+
+`r text_impact$c_25` estimate that between 25% - 50% of total activity in the NDT sector in 2020 can be attributed to the RCA NDT. And `r text_impact$c_50` that between 51% - 75%, 
+
+
+
 The table also displays the perception on the role of IAEA/RCA activities in achieving the general objectives and benefits.
 
 
@@ -31,5 +38,4 @@ knitr::kable(table_impact, caption = "Contribution of IAEA/RCA activities in ach
 
 
 
-#### Performance standards of "Improved Health and Safety"
 

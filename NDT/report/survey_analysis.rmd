@@ -1,0 +1,207 @@
+---
+title: "Survey Analysis"
+subtitle: "Non Destructive Testing"
+output: 
+  bookdown::word_document2:
+  #bookdown::word_document2: default # for cross-reference
+    reference_docx: "template.docx"
+    toc: true
+    reference_num: true
+    number_sections: false
+    fig_caption: yes
+    
+ 
+---
+
+
+```{r include = FALSE}
+
+knitr::opts_chunk$set(echo = F, warning = F, message = F, fig.pos= "h")
+
+
+```
+
+
+```{r set_up}
+  
+  
+  source("parameters.R", local = knitr::knit_global())
+
+  
+```
+
+```{r load_tx_int}
+
+text_intro <- import(file.path(dir_text, "intro/texto_intro.rds" ))
+
+```
+
+
+```{r load_centres}
+
+text_centres <- import(file.path(dir_text, "1.criterion/centre_text.rds" ))
+txt_cont_cert <- import(file.path(dir_text, "1.criterion/contribution_cert.rds" ))
+txt_cont_centres <- import(file.path(dir_text, "1.criterion/contribution_centres.rds" ))
+txt_cert_pers <- import(file.path(dir_text, "1.criterion/number_certified_personel.rds"))
+txt_std_psnl <- import(file.path(dir_text, "1.criterion/stndrs_cert_pers.rds"))
+txt_num_centres <- import(file.path(dir_text, "1.criterion/number_centres.rds"))
+  
+  
+
+```
+
+```{r load_tx_c2}
+
+text_aws <- import(file.path(dir_text, "2.criterion/tx_standards_aws.rds" ))
+text_practice <- import(file.path(dir_text, "2.criterion/number_industries.rds" ))
+text_rd_c <- import(file.path(dir_text, "2.criterion/rd_tx_c.rds"))
+text_rd_s <- import(file.path(dir_text, "2.criterion/txt_rd_s.rds"))
+
+
+
+```
+
+
+
+```{r load_tx_c3}
+
+text_hs <- import(file.path(dir_text, "3.criterion/txt_hs_s.rds" ))
+
+```
+
+
+```{r load_impact}
+
+text_impact <- import(file.path(dir_text, "4.impact/impact_tx.rds" ))
+
+  
+
+```
+
+
+
+\newpage
+
+
+
+###### Report Information
+
++:-------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Prepared for | International Atomic Energy Agency                                                                                                                                                                                        |
++--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Prepared by  | Julian King, Kate McKegg, Andres Arau, Aaron Schiff, Martina Garcia Aisa                                                                                                                                                  |
++--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Cover image  |                                                                                                                                                                                                                           |
++--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Citation     | King,J., McKegg, K., Arau, A., Schiff, A., Garcia Aisa, M. (2021). *Social and Economic Impact Assessment of the RCA Programme: Non Destructive Testing Case Study.* Vienna, Austria: International Atomic Energy Agency. |
++--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+## Disclaimer
+
+Disclaimer: The information in this document is presented in good faith using the information available to us at the time of preparation. It is provided on the basis that the authors of the document are not liable to any person or organisation for any damage or loss which may occur in relation to taking or not taking action in respect of any information or advice within this document
+
+## Acknowledgements
+
+The authors are grateful for the close and effective assistance of the Technical Cooperation division for Asia-Pacific (TCAP) and Technical Cooperation Division of Programme Support and Coordination (TCPC) of the International Atomic Energy Agency (IAEA), and the experts from the 22 participating countries in the the Non-Destructive Testing Regional Cooperative Agreement (RCA): Australia, Bangladesh, Cambodia, China, Fiji, India, Indonesia, Japan, Laos, Malaysia, Mongolia, Myanmar, Nepal, New Zealand, Pakistan, Palau, Philippines, Singapore, South Korea, Sri Lanka, Thailand, and Viet Nam
+
+\newpage
+
+
+# Acronyms
+
+`r knitr::kable(tbl_acronym)`
+
+
+
+
+\newpage
+
+# Main findings 
+
+
+```{r, child=c('6.findings.rmd')}
+```
+
+
+
+
+# Introduction
+
+```{r, child=c('1.intro.Rmd')}
+```
+
+```{r, child=c('socio-economic.rmd')}
+```
+
+
+\newpage
+
+# Criterion 1: Improved NDT capacity and capability
+
+
+
+
+```{r, child=c('2.criterion1.rmd')}
+```
+
+
+
+
+\newpage
+
+# Criterion 2: Increased scope and scale of NDT demand and use
+
+
+
+```{r, child=c('3.criterion2.rmd')}
+```
+\newpage
+
+
+# Criterion 3: Improved health and safety
+
+
+
+```{r, child=c('4.criterion3.rmd')}
+```
+
+
+\newpage
+
+
+# Overall impact of the NDT RCA programme
+
+
+
+
+
+
+```{r, child=c('5.impact.rmd')}
+```
+
+
+
+
+
+
+# Annex A: Criteria and standards
+
+```{r, child=c('X.Annex_criterion1.rmd', 'X.Annex_criterion2.rmd', 'X.Annex_criterion3.rmd')}
+```
+
+# Annex B: Implementation of NDT technology by industrial sector
+
+
+
+```{r practice-table}
+
+
+table_practice <- rio::import(file.path("indicators/2.criterion/contribution_practice.rds"))
+
+knitr::kable(table_practice, caption = "Extent to which the introduced NDT technology by the RCA programme led to improved manufacturing processes")
+
+```
+
+
+
+

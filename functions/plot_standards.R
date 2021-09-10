@@ -25,17 +25,17 @@ plot_standards <- function(db,
   geom_tile(color = "white",
             aes(fill = {{fill}})
   ) +
-    xlim(c(vars_dimension, "RCA Performance Standard", "")) +
+    xlim(c(vars_dimension, "RCA Performance", "")) +
     coord_equal(ratio = .3) +
     geom_text(data = data_label,
-              aes(x = "RCA Performance Standard",
+              aes(x = "RCA Performance",
                   y = country,
                   label = label,
                   color = label
               ),
               hjust = 0,
               nudge_x = -.4,
-              family ="Open Sans Light",
+              family =font_main,
               size = 3
               #color = gmdacr::un_colors("gray_dark")
               
@@ -43,11 +43,14 @@ plot_standards <- function(db,
     
     scale_fill_gradient(low = gray_light, high = color_fill) +
     scale_color_manual(values = color_text)  +
-    labs(x = x_title,
+    labs(x = "",
          y = "",
+         title = x_title,
          caption = caption) +
     theme_iaea() +
     theme(axis.text.x = element_text(angle = 40, vjust = 1, hjust = 1),
+          plot.title.position = "plot",
+          plot.title = element_text(size = 12, hjust = .5),
           legend.position = 'none',
           axis.title = element_blank(),
           axis.title.x = element_blank()

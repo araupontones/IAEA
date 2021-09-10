@@ -10,7 +10,7 @@ plot_standards_sum <- function(.data,
     geom_tile(color = "white") +
     coord_equal() +
     scale_fill_manual(values = pallete,
-                      name = "Performance Standard",
+                      name = "Level of performance",
                       guide = guide_legend(title.position = 'top', title.hjust = .5)) +
     scale_x_discrete(position = 'top')+
     labs(y = "",

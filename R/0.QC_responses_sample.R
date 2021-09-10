@@ -39,6 +39,8 @@ interviews_ndt.2 <- links_ndt %>%
                             T ~ Status)
          ) 
 
+#rio::export(interviews_ndt.2, file.path(dir_docs, "links_ndt.xlsx"))
+
 
 interviews_ndt.2 %>%
   tabyl(Status)

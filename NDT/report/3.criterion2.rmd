@@ -11,7 +11,7 @@ This section presents the findings of the contribution of the NDT RCA programme 
 
 <br>
 
-Moreover, figure \@ref(fig:standards-c2-sum) below shows the performance standards of the impact of NDT RCA programme on the increased scope and scale of NDT demand and use of the Government Parties. Further details on the criterion and standards for this dimension are presented in Annex E.
+Moreover, figure \@ref(fig:standards-c2-sum) below shows the performance standards of the impact of NDT RCA programme on the increased scope and scale of NDT demand and use of the Government Parties. Further details on the criterion and standards for this dimension are presented in Annex A.
 
 
 ```{r standards-c2-sum, out.width="100%", fig.cap="Increased scope and scale of NDT demand and use: Performance standard by criterion and country"}
@@ -24,7 +24,7 @@ knitr::include_graphics(file.path(dir_plots,"2.criterion/standards_crit2.png"))
 The detailed analysis of each sub-criterion under improved NDT capacity and capability is presented in the sections below.
 
 
-### Sub-criterion 2.1: Awareness, interest, and application
+## Sub-criterion 2.1: Awareness, interest, and application
 
 
 This sub-criterion explores **the extent into which participation in the RCA programme results in GPs applying NDT technology in the industrial sectors for the QA and QC** of industrial components: achieving better controlled manufacturing, lower production costs, ensuring material quality, and/or greater product integrity.
@@ -42,15 +42,10 @@ This sub-criterion explores **the extent into which participation in the RCA pro
 
 
 
-#### Performance standards of "Awareness, interest, and application of NDT technologies"
+### Performance standards of "Awareness, interest, and application of NDT technologies"
 
 
-`r text_aws$ctrs_ex_tx` are considered to have met an excellent performance in this sub-criterion because, as a result of applying NDT technology, positive improvements have been achieved in terms of *controlled manufacturing, lower production costs, ensuring material quality or greater productivity for at least one industrial sector* (all the positive improvements by country and industrial sector is presented in the next section). 
-
-Moreover, these  **`r text_aws$ctrs_ex_num` GPs have taken actions to create awareness among industrial organisations about the benefits of NDT technology**. For all these GPS, being part of the RCA NDT programme has also contributed to increase the concern/interest about applying NDT technologies for Quality Assurance and Quality Control in their industrial sector.
-
-
-Figure \@ref(fig:standards-aws) shows the criterion and standards for this sub-dimension. The detailed methodology and criteria is presented in Annex E.
+**`r text_aws$ctrs_ex_tx` are considered to have met an excellent performance** in this sub-criterion because, as a result of applying NDT technology, positive improvements have been achieved in terms of *controlled manufacturing, lower production costs, ensuring material quality or greater productivity for at least one industrial sector* (all the positive improvements by country and industrial sector is presented in the next section). 
 
 
 ```{r standards-aws, out.width="100%", fig.cap="Performance standards: Awareness, interest, and application of NDT technology in the industrial sectors for the QA and QC of industrial components"}
@@ -59,14 +54,18 @@ knitr::include_graphics(file.path(dir_plots,"2.criterion/standards_aws.png"))
 
 ```
 
+Moreover, the  **`r text_aws$ctrs_ex_num` that met an excellent standards GPs have taken actions to create awareness among industrial organisations about the benefits of NDT technology**. For all these GPS, being part of the RCA NDT programme has also contributed to increase the concern/interest about applying NDT technologies for Quality Assurance and Quality Control in their industrial sector.
+
+
+Figure \@ref(fig:standards-aws) shows the criterion and standards for this sub-dimension. The detailed methodology and criteria is presented in Annex A.
 
 
 
 
-#### Contribution of the NDT RCA in Awareness, interest, and application of NDT technologies
+### Contribution of the NDT RCA in Awareness, interest, and application of NDT technologies
 
 
-Table \@ref(tab:aws-table) shows that `r text_aws$ctrs_ex_num` of the GPs have taken actions to create awareness among industrial organisations about the benefits of NDT technology for Quality Assurance and Quality Control. The table also shows the of actions taken by these GPs.
+Table \@ref(tab:aws-table) shows that **`r text_aws$ctrs_ex_num` of the GPs have taken actions to create awareness among industrial organisations about the benefits of NDT technology for Quality Assurance and Quality Control**. The table also shows the of actions taken by these GPs.
 
 
 ```{r aws-table}
@@ -91,7 +90,7 @@ knitr::include_graphics(file.path(dir_plots,"2.criterion/number_industries.png")
 
 <br>
 
-The extent to which the introduced NDT technology by the RCA programme led to improved manufacturing processes, lower production costs, enhanced material quality, and greater product integrity in each industrial sector is presented in Annex F. *For some countries, the information is incomplete because they did not provide this information in the online survey*
+The extent to which the introduced NDT technology by the RCA programme led to improved manufacturing processes, lower production costs, enhanced material quality, and greater product integrity in each industrial sector is presented in Annex B. *For some countries, the information is missing because they did not provide this information in the online survey*
 
 
 
@@ -101,7 +100,7 @@ The extent to which the introduced NDT technology by the RCA programme led to im
 <br>
 
 
-### Sub-criterion 2.2: Research and Development 
+## Sub-criterion 2.2: Research and Development 
 
 This section aims to understand the extent into which the NDT RCA programme has contributed to the dissemination the knowledge developed through R&D.
 
@@ -118,11 +117,11 @@ The standards for this criterion are the following:
 
 
 
-#### Performance standards of "Research and Development"
+### Performance standards of "Research and Development"
 
 
 
-From the 20 GPs that participated in the study, `r text_rd_s$ex_num` GPs (`r text_rd_s$ex_tx`) met an excellent performance in R&D because as a result of participating in the NDT RCA programme, they have published research articles, and have organized international and national seminars and conferences. 
+**From the 20 GPs that participated in the study, `r text_rd_s$ex_num` GPs (`r text_rd_s$ex_tx`) met an excellent performance in R&D** because as a result of participating in the NDT RCA programme, they have published research articles, and have organized international and national seminars and conferences. 
 
 Because `r text_rd_s$g_tx` have established R&D activities but have not published or organized seminars, their performance is considered to be good. 
 
@@ -138,7 +137,7 @@ knitr::include_graphics(file.path(dir_plots,"2.criterion/standards_RD.png"))
 
 
 
-#### Contribution of the NDT RCA in Research and Development 
+### Contribution of the NDT RCA in Research and Development 
 
 **A total `r text_rd_c$trained` personnel has been trained in NDT under the RCA NDT programme**. Figure \@ref(fig:train-rd) shows the number of personnel who have been trained in NDT under the RCA NDT programme by country
 
@@ -163,7 +162,7 @@ knitr::include_graphics(file.path(dir_plots,"2.criterion/RD_publications.png"))
 <br>
 
 
-`r text_rd_c$seminars` seminars/conferences related to NDT have been organised since 2000 as a result of GPs being part of the RCA NDT programme. (See figure \@ref(fig:seminars-rd)). 
+**`r text_rd_c$seminars` seminars/conferences related to NDT have been organised since 2000 as a result of GPs being part of the RCA NDT programme**. (See figure \@ref(fig:seminars-rd)). 
 
 
 ```{r seminars-rd, out.width="100%", fig.cap="Number of seminars/conferences related to NDT have been organised 2000 as a result of being part of the RCA NDT programme."}

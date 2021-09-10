@@ -45,8 +45,7 @@ certi_raw <- import(file.path(param$dir_raw_s, "cert_advanced.dta")) %>%
          cert_total_20 = cert_per * 20,
          cert_total_20_women = cert_women * 20
          ) %>% 
-  select(-starts_with("interview"))
-  #filter(country == "South Korea")
+  select(-starts_with("interview")) 
   #filter(cert_per == 0)
 
 #View(certi_raw)
@@ -54,23 +53,32 @@ certi_raw <- import(file.path(param$dir_raw_s, "cert_advanced.dta")) %>%
 
 
 
-
+certi_raw %>%
+  tabyl(country)
 
 #export ========================================================================
-#excheck_mongolia <- "C:/Users/andre/Dropbox/Kate and Julian IAEA 2019/Survey_NDT_RT/docs/NDT_checks/Mongolia_trained_personel.xlsx"
-#export(certi_raw, excheck_mongolia)
-#excheck_japan <- "C:/Users/andre/Dropbox/Kate and Julian IAEA 2019/Survey_NDT_RT/docs/NDT_checks/Japan_trained_personel.xlsx"
-#export(certi_raw, excheck_japan)
-#excheck_india <- "C:/Users/andre/Dropbox/Kate and Julian IAEA 2019/Survey_NDT_RT/docs/NDT_checks/India_trained_personel.xlsx"
-#export(certi_raw, excheck_india)
-#excheck_thailand<- "C:/Users/andre/Dropbox/Kate and Julian IAEA 2019/Survey_NDT_RT/docs/NDT_checks/Thailand_trained_personel.xlsx"
-#export(certi_raw, excheck_thailand, overwrite = T)
-#excheck_singapore<- "C:/Users/andre/Dropbox/Kate and Julian IAEA 2019/Survey_NDT_RT/docs/NDT_checks/Singapore_trained_personel.xlsx"
-#export(certi_raw, excheck_singapore, overwrite = T)
-# excheck_china<- "C:/Users/andre/Dropbox/Kate and Julian IAEA 2019/Survey_NDT_RT/docs/NDT_checks/China_trained_personel.xlsx"
-# export(certi_raw, excheck_china, overwrite = T)
-#excheck_sk<- "C:/Users/andre/Dropbox/Kate and Julian IAEA 2019/Survey_NDT_RT/docs/NDT_checks/South Korea_trained_personel.xlsx"
-#export(certi_raw, excheck_sk, overwrite = T)
+
+
+exportar <- function(pais){
+  
+  d <- certi_raw %>%
+    filter(country == pais) %>%
+    select(`How many personnel was certified by local NDT Accredited Training Centres as a result of participating in the RCA NDT programme, per year, for the period of 2000 to 2020?` = cert_per,
+            `% of female certified personnel` = cert_fem, 
+           method, 
+           accronym)
+  
+  print(names(d))
+  excheck_sk<- glue("C:/Users/andre/Dropbox/Kate and Julian IAEA 2019/Survey_NDT_RT/docs/NDT_checks/{pais}_trained_personel.xlsx")
+  export(d, excheck_sk, overwrite = T)
+  
+}
+
+
+#exportar("Vietnam")
+
+
+
 
 export(certi_raw, exfile)
 

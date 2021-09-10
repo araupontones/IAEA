@@ -1,7 +1,12 @@
-The  assessment involved pre-defining agreed performance criteria (aspects of social and economic impacts that were the focus of the evaluation) and standards (narratives describing four levels of performance – excellent, good, adequate, and inadequate). These criteria and standards provided a transparent and robust framework for rating the impact of the mutation breeding RCA 
+
+<br>
+
+The  assessment of the social and economic impacts of the NDT RCA programme involved pre-defining agreed performance criteria (aspects of social and economic impacts that were the focus of the evaluation) and standards (narratives describing four levels of performance – excellent, good, adequate, and inadequate). These criteria and standards provided a transparent and robust framework for rating the impact of the mutation breeding RCA 
 
 
 To understand the contribution of the NDT RCA programme on social and economic indicators, the study analyses the extent into which being part of the programme has enabled the GPs to: 
+
+**Improve NDT capacity and capability**
 
 1.	Fulfill the Multilateral Recognition Agreement (MRA) requirements of the International Committee on Non-destructive Testing (ICNDT) as a result of the support under the NDT RCA programme;
 
@@ -9,9 +14,13 @@ To understand the contribution of the NDT RCA programme on social and economic i
 
 3.	Achieve self-reliance in NDT, including offering training and inspection activities to local industries as well as abroad;
 
+**Increase scope and scale of NDT demand and use**
+
 4.	Enhance awareness, interest, and application of NDT technology in the industrial sectors for the QA and QC of industrial components;
 
 5.	Develop knowledge developed through R&D by publishing research articles, organising international and national seminars and conferences; and
+
+**Improved health and safety**
 
 6. Improve health and safety by applying NDT technology in the industrial sectors.
 

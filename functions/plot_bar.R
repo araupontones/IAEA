@@ -17,7 +17,8 @@ bar_plot <- function(db,
              width = .7) +
     geom_text(hjust = -.5,
               color =gray_dark,
-              size = 3) +
+              size = 3,
+              family = font_main) +
     #xlim(c(0,12))+
     scale_x_continuous(
       limits = limits,

@@ -23,6 +23,14 @@ has_cerSch_perc  <- paste0(mean(contribution_cert$`Has NDT certification scheme`
 countries_NCB <- contribution_cert$Country[contribution_cert$`RCA contribution to establish NCB` == "To a great extent"]
 countries_NCB <- countries_NCB[!is.na(countries_NCB)]
 
+
+NCS_ <- contribution_cert$Country[contribution_cert$`RCA contribution to establish NDT certification scheme` == "To a great extent"]
+NCS_ <- NCS_[!is.na(NCS_)]
+
+
+ncs_perc <- paste0(length(NCS_) /20 *100, "%")
+
+
 countries_NCB_not <- contribution_cert$Country[contribution_cert$`RCA contribution to establish NCB` == "Not at all"]
 
 countries_NCB_num <- to_text(length(countries_NCB))
@@ -37,10 +45,12 @@ texto <- list(
   not = NCB_text_not,
   has_NCB_num = has_NCB_num,
   has_NCB_perc = has_NCB_perc,
-  has_cerSch_perc = has_cerSch_perc
+  has_cerSch_perc = has_cerSch_perc,
+  ncs_perc = ncs_perc
   
 )
 
 
 
 export(texto, exfile)
+

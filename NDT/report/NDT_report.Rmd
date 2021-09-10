@@ -53,7 +53,7 @@ Disclaimer: The information in this document is presented in good faith using th
 
 ## Acknowledgements
 
-The authors are grateful for the close and effective assistance of the Technical Cooperation division for Asia-Pacific (TCAP) and Technical Cooperation Division of Programme Support and Coordination (TCPC) of the International Atomic Energy Agency (IAEA), and the experts from the X participating GPs in the X Regional Cooperative Agreement (RCA):
+The authors are grateful for the close and effective assistance of the Technical Cooperation division for Asia-Pacific (TCAP) and Technical Cooperation Division of Programme Support and Coordination (TCPC) of the International Atomic Energy Agency (IAEA), and the experts from the 22 participating countries in the the Non-Destructive Testing Regional Cooperative Agreement (RCA): Australia, Bangladesh, Cambodia, China, Fiji, India, Indonesia, Japan, Laos, Malaysia, Mongolia, Myanmar, Nepal, New Zealand, Pakistan, Palau, Philippines, Singapore, South Korea, Sri Lanka, Thailand, and Viet Nam
 
 \newpage
 
