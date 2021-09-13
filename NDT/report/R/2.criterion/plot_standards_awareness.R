@@ -23,6 +23,14 @@ data_plot <- indicators_aws %>%
                       prefix = "aws_")
 
 
+data_plot_c <- data_plot %>%
+  #this is because Australia did not provide this information
+  mutate(not_answered = case_when(country == "Australia" & !str_detect(indicator, "Aware|apply") ~ "N/A",
+                                  country == "Indonesia" & !str_detect(indicator, "Aware|apply") ~ "N/A",
+                            T ~ ""))
+
+
+#View(data_plot_c)
 
 
 #View(data_plot)
@@ -40,10 +48,18 @@ annotate_label <- data_plot %>% get_standard_label(standard = aws_standard)
 plot_standards(db = data_plot,
                x_title = "Evaluation Criteria Awareness Interest, and Application",
                vars_dimension = aws_vars,
-               caption = caption,
+               caption = glue('The "N/A" indicates that information was not provided during the online survey.\n{caption}'),
                data_label = annotate_label,
                color_fill = blue_navy,
-               color_text = c(color_adequate, blue_navy ,blue_light, color_inadequate))
+               color_text = c(color_adequate, blue_navy ,blue_light, color_inadequate)) +
+  geom_text(data = data_plot_c,
+            aes(x = indicator,
+                y = country,
+                label = not_answered),
+            family = font_main,
+            fontface = "italic",
+            size = 3)
+  
 #exfile
 
 

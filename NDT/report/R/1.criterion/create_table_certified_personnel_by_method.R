@@ -54,8 +54,8 @@ personnel_table <- rbind(personnel, total) %>%
   rename(Method = method,
          Accronym = accronym,
          `Type of technique` = type,
-         `Persnonnel certified per year under RCA` = avg_year,
-         `Personnel certified from 2000 to 2020 under RCA` = total_20,
+         `Average number of personnel certified per year under RCA` = avg_year,
+         `Approximate number of personnel certified from 2000 to 2020 under RCA` = total_20,
          `(%) of Certified female personnel` = women_20,
          `Countries supported by RCA NDT` = countries
          )

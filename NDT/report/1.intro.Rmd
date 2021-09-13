@@ -8,7 +8,7 @@ text_intro <- import(file.path(dir_text, "intro/texto_intro.rds" ))
 
 ```
 
-This report presents the findings of the Social and Economic Impact Assessment of Non Destructive Testing (NDT) of the RCA in Asia and the Pacific. The data that informs the analysis was collected through an online survey that was designed and piloted in May 2021 and deployed between June and August 2021. The respondents of the survey were national experts on the field of NDT from `r text_intro$number` countries whom provided relevant information about the equipment, training centres, certified personal, and health and safety impacts of the RCA programme in their country. 
+This report presents the findings of the Social and Economic Impact Assessment of Non Destructive Testing (NDT) of the RCA in Asia and the Pacific. The data that informs the analysis was collected through an online survey that was designed and piloted in May 2021 and deployed between June and August 2021. The respondents to the survey were national experts on the field of NDT. They provided relevant information about the equipment, training centres, certified personnel, and the health and safety impacts of the RCA programme in their country. 
 
 
 From the 22 countries that are part of the Cooperative Agreement for Research (RCA), `r text_intro$number` participated in the survey: `r text_intro$names`
@@ -17,7 +17,7 @@ From the 22 countries that are part of the Cooperative Agreement for Research (R
 Figure: \@ref(fig:map-png) below shows the countries that participated in this study
 
 
-```{r map-png, out.width="100%", fig.cap="Map of the 20 countries that partipicated in the online survey."}
+```{r map-png, out.width="100%", fig.cap="Map of the 20 countries that participated in the online survey."}
 
 knitr::include_graphics(file.path(dir_plots, "intro/map.png"))
 

@@ -2,24 +2,24 @@
 
 This section aims to summarise the overall role of IAEA/RCA activities in achieving the general objectives and benefits of NDT on socio economic impact through industrial growth in each GP that is part of the programme.
 
-Table \@ref(tab:impact-table) shows the perception of the GPs on the role that RCA has had to:
+Table \@ref(tab:impact-table) shows the perception of the GP respondents on the role that RCA has had to:
 
 * Help speed up the adoption of NDT technologies since 2000.
 
 * Contribute to the adoption of NDT technologies by private businesses since 2000.
 
-* The proportion of total activity in the NDT sector in 2020 can be attributed to the programme.
+* The proportion of total activity in the NDT sector in 2020 that can be attributed to the programme.
 
 * The productivity of NDT inspections (reduction of the average time to complete an inspection).
 
 
 
-According to the own perception of the experts who participated in the online survey, **for `r text_impact$speed_y_perc` of the GPs, RCA NDT has helped to speed up the adoption of NDT technologies in their country since 2000**. For `r text_impact$cts_y1` the adoption occurred 1-3 years faster. Moreover, `r text_impact$cts_y2` perceive that NDT RCA contributed for the adoption of NDT technologies to happen 4-5 years faster; and **`r text_impact$cts_y2` think that the adoption occurred  6-10 years faster than with out the support of IAEA.**
+According to experts who participated in the online survey, **for `r text_impact$speed_y_perc` of the GPs, RCA NDT has helped to speed up the adoption of NDT technologies in their country since 2000**. For `r text_impact$cts_y1` the adoption occurred 1-3 years faster. Moreover, `r text_impact$cts_y2` reported that NDT RCA contributed for the adoption of NDT technologies to happen 4-5 years faster; and **`r text_impact$cts_y2` considered that the adoption occurred  6-10 years faster than with out the support of IAEA.**
 
 
-Additionally, **`r text_impact$adopt_perc` of the GPs perceive that NDT RCA has contributed to the adoption of NDT technologies by private business in their countries since 2000**. From these countries, **50% estimate that the proportion of the total activity in their NDT sector can be attributed to RCA at least 25% or more.** 
+Additionally, **`r text_impact$adopt_perc` of the GPs reported  that NDT RCA contributed to the adoption of NDT technologies by private business in their countries since 2000**. From these countries, **50% estimated that the proportion of the total activity in their NDT sector can be attributed to RCA at least 25% or more.** 
 
-`r text_impact$c_25` estimate that between 25% - 50% of total activity in the NDT sector in 2020 can be attributed to the RCA NDT. And `r text_impact$c_50` that between 51% - 75%, 
+`r text_impact$c_25` estimated that between 25% - 50% of total activity in the NDT sector in 2020 can be attributed to the RCA. And `r text_impact$c_50` estimated that between 51% - 75% can be attributed to the RCA. 
 
 
 

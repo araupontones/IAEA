@@ -25,9 +25,10 @@ main_qn <- import(file.path(param$dir_clean_s, paste0(survey, ".rds"))) %>%
 practice <- import(file.path(param$dir_clean_s, "practice.rds")) %>%
   select(-c(industry, productivity_cost)) %>%
   group_by(country) %>%
-  summarise_all(max) %>%
+  summarise_all(max, na.rm = T) %>%
   mutate(across(where(is.numeric), function(x) case_when(x == 1 ~ TRUE,
                                                          T ~ FALSE))) 
+
 
 
 
@@ -37,7 +38,9 @@ joint <- main_qn %>%
   left_join(practice, by = "country") %>%
   mutate(across(where(is.logical), function(x)case_when(is.na(x) ~ F,
                                                         T ~x))
-  )
+  ) %>%
+  mutate(concern = case_when(country == "Australia" ~ TRUE,
+                             T ~ concern))
 
 
 

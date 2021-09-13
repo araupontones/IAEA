@@ -1,27 +1,27 @@
 
 <br>
 
-* From the 22 countries that are part of the Cooperative Agreement for Research (RCA), `r text_intro$number` participated in the online survey: `r text_intro$names` **The support and cooperation of country representatives and IAEA staff during these unusual circumstances is gratefully acknowledged**.
+* From the 22 countries that are part of the Regional Cooperative Agreement (RCA) for Research (Development and Training in Non-Destructive Testing (NDT) in Asia and the Pacific), , `r text_intro$number` participated in the online survey: `r text_intro$names` **The support and cooperation of country representatives and IAEA staff during these unusual circumstances is gratefully acknowledged**.
 
 
-* `r txt_cont_cert$has_NCB_perc` of the Government Parties (GPs) have established a National Certification Body (NCB), 60% of them perceived that the RCA programme has contributed to a great extent in the establishment of their body.
+* `r txt_cont_cert$has_NCB_perc` of the Government Parties (GPs) have established a National Certification Body (NCB), and 60% of them perceived that the RCA programme has contributed to a great extent in the establishment of their body.
 
 * Since 2020, the NDT RCA programme has contributed to the certification of `r txt_cert_pers$total_certified`  personnel by local NDT Accredited Training Centres in `r txt_cert_pers$certified_number_countries` countries. From the total certified personnel, `r txt_cert_pers$perc_certified_women` are female.
 
 * The method for which RCA has contributed the most to the certification of personnel is `r txt_cert_pers$certified_top_method_name` (`r txt_cert_pers$certified_top_method_num` personnel trained), followed by `r txt_cert_pers$certified_second_method_name` and `r txt_cert_pers$certified_third_method_name`. 
 
-* There are over `r txt_num_centres$local_inspec_ct` inspection centres owned by local firms across all the GPs that participate in the NDT RCA programme. According to the own perception of the GPs, the RCA NDT programme has contributed to a great extent in the establishment of inspection centres in `r txt_cont_centres$alot_inspec_num` of the twenty-two countries that are part of the programme.
+* There are over `r txt_num_centres$local_inspec_ct` inspection centres owned by local firms across all the GPs that participate in the NDT RCA programme. According to respondents from the GPs, the RCA NDT programme has contributed to a great extent in the establishment of inspection centres in `r txt_cont_centres$alot_inspec_num` of the twenty-two countries that are part of the programme.
 
-* `r text_rd_c$activities` of GPS that have established any R&D activities related to NDT and `r text_rd_c$publications` publications related to NDT that have been published since 2000 as a result of being part of the RCA NDT programme.
+* `r text_rd_c$activities` of GPs that have established any R&D activities related to NDT and `r text_rd_c$publications` publications related to NDT that have been published since 2000 are result of being part of the RCA NDT programme.
 
-* `r text_hs$ap_perc` of GPs perceive that the RCA NDT programme contributed to applying NDT technologies for safer operations of nuclear and other industrial installations.
+* `r text_hs$ap_perc` of GPs reported that the RCA NDT programme contributed to NDT technologies being applied for safer operations of nuclear and other industrial installations.
 
 * For `r text_impact$speed_y_perc` of the GPs, RCA NDT has helped to speed up the adoption of NDT technologies in their country.
 
-* `r text_impact$adopt_perc` of the GPs perceive that NDT RCA has contributed to the adoption of NDT technologies by private business in their countries since 2000, from these countries, 50% estimate that the proportion of the total activity in their NDT sector can be attributed to being involved in the NDT RCA programme is 25% or more.
+* `r text_impact$adopt_perc` of the GPs reported that NDT RCA has contributed to the adoption of NDT technologies by private business in their countries since 2000. Half of these countries estimated that 25% or more of the total activity in their NDT sector can be attributed to being involved in the NDT RCA programme.
 
 
-* 75% of the GPs consider that the the role of IAEA/RCA activities in achieving the general objectives and benefits of NDT on socio-economic impact through industrial growth in their countries is excellent or good. 
+* 75% of the GPs consider that the role of IAEA/RCA activities in achieving the general objectives and benefits of NDT on socio-economic impact through industrial growth in their countries is excellent or good. 
 
 
 

@@ -1,6 +1,8 @@
 
-The aim of this section is to understand **the extent to which participating in the NDT RCA program**  of IAEA has enable GPs in **applying NDT technology** in the industrial sectors as set by countries’ industrial laws for the QA and QC of industrial components and whether it has **resulted in  improved health and safety outcomes** (i.e. fewer deaths and injuries) and/or reduced environmental pollution. 
+The aim of this section is to understand **the extent to which participating in the NDT RCA program**  has enabled GPs to **apply NDT technology** in the industrial sectors as set by countries’ industrial laws for the QA and QC of industrial components and whether it has **resulted in  improved health and safety outcomes** (i.e. fewer deaths and injuries) and/or reduced environmental pollution. 
 
+
+Key evidence is presented as follows. GPs were unable to provide estimates for some of the figures requested.
 
 
 <br>
@@ -10,7 +12,7 @@ The aim of this section is to understand **the extent to which participating in 
 
 <br>
 
-Moreover, figure \@ref(fig:standards-c2-sum) below shows the performance standards of the impact of NDT RCA programme on the Improved health and safety criteria. Further details on the criterion and standards for this dimension are presented in Annex E.
+Moreover, figure \@ref(fig:standards-c2-sum) below shows the performance standards of the impact of NDT RCA programme on the Improved health and safety criteria. 
 
 
 ```{r standards-c3-sum, out.width="100%", fig.cap="Improved health and safety: Performance standard by criterion and country"}
@@ -29,16 +31,16 @@ The detailed analysis of each sub-criterion under improved NDT capacity and capa
 ### Performance standards of "Improved Health and Safety"
 
 
-* **Adequate:** Participation in the RCA program of IAEA results in GPs becoming more aware of the benefits of NDT technology for safer operation of nuclear and other industrial installations. 
+* **Adequate:** Participation in the RCA program results in GPs becoming more aware of the benefits of NDT technology for safer operation of nuclear and other industrial installations. 
 
 
-* **Good:** Participation in the RCA program of IAEA results in GPs applying NDT technology for safer operation of nuclear and other industrial installations. 
+* **Good:** Participation in the RCA program results in GPs applying NDT technology for safer operation of nuclear and other industrial installations. 
 
 
-* **Excellent:** As a result of participation in the RCA program of IAEA, GPs have been applying NDT technology in the industrial sectors as set by countries’ industrial laws for the QA and QC of industrial components, resulting in  improved health and safety outcomes (i.e. fewer deaths and injuries) and/or reduced environmental pollution. 
+* **Excellent:** As a result of participation in the RCA program, GPs have been applying NDT technology in the industrial sectors as set by countries’ industrial laws for the QA and QC of industrial components, resulting in  improved health and safety outcomes (i.e. fewer deaths and injuries) and/or reduced environmental pollution. 
 
 
-Figure \@ref(fig:standards-c3) shows the criterion and standards for this dimension. It is worth mentioning that all the countries except for Vietnam and Indonesia reported that their country does not have an approximation of the reduction of chemical waste, reduced injuries, or reduced deaths.
+Figure \@ref(fig:standards-c3) shows the standards met for this dimension. It is worth mentioning that all the countries except for Vietnam and Indonesia reported that their country does not have an approximation of the reduction of chemical waste, reduced injuries, or reduced deaths.
 
 
 
@@ -56,9 +58,9 @@ knitr::include_graphics(file.path(dir_plots,"3.criterion/standards_HS.png"))
 ### Contribution of the NDT RCA in Improved Health and Safety 
 
 
-* **`r text_hs$aw_perc` of the GP's perceive that being part of the RCA NDT programme  contributed to the AWARENESS of the benefits of using NDT technologies for safer operations** of nuclear and other industrial installations in their country.
+* **`r text_hs$aw_perc` of the GP's reported that being part of the RCA NDT programme  contributed to the aeareness of the benefits of using NDT technologies for safer operations** of nuclear and other industrial installations in their country.
 
-* **`r text_hs$ap_perc` of the GP's perceive that being part of the RCA NDT programme contributed to applying NDT technologies for safer operations** of nuclear and other industrial installations in their country.
+* **`r text_hs$ap_perc` of the GP's reported that being part of the RCA NDT programme contributed to applying NDT technologies for safer operations** of nuclear and other industrial installations in their country.
 
 
 * All GPs but two reported that their country does not have an approximation of the reduction of chemical waste, reduced injuries, or reduced deaths.
