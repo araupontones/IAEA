@@ -14,6 +14,7 @@ hs_vars <- criterion_3_vars()$hs_vars
 #View(indicators_centre)
 
 data_plot <- indicators_hs %>%
+  filter(!country %in% support_countries) %>%
   long_data_standards(var_total = hs_total,
                       var_standard = hs_standard,
                       vars_criterion = hs_vars,
@@ -39,7 +40,7 @@ plot_standards(db = data_plot,
                caption = caption,
                data_label = annotate_label,
                color_fill = blue_navy,
-               color_text = c(color_adequate, blue_navy ,blue_light, color_inadequate))
+               color_text = c(blue_navy,blue_light,color_adequate, color_inadequate))
 #exfile
 
 

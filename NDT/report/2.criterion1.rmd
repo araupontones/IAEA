@@ -43,7 +43,7 @@ This criterion aims to understand the the extent to which a GP has fulfilled the
 
 ### Performance standards of "Fulfillment of the Multilateral Recognition Agreement"
 
-From the 20 countries that participated in the study, only Nepal and Myanmar have not established a National Certification Scheme yet; Almost all countries but Laos, Cambodia, Nepal, and Myanmar have registered their NDT society in the Asia Pacific Federation of NDT (APFNDT); and for 10 out of the 20 GPs, their NCB for NDT has been accredited to ISO 17024.
+From the 18 countries that act as recipients of RCA, only Nepal and Myanmar have not established a National Certification Scheme yet; Almost all countries but Laos, Cambodia, Nepal, and Myanmar have registered their NDT society in the Asia Pacific Federation of NDT (APFNDT); and for 8 out of the 18 recipient GPs, their NCB for NDT has been accredited to ISO 17024.
 
 
 ```{r cert-standards, out.width="100%", fig.cap="NDT infrastructure at the national level and assessment standards."}
@@ -52,29 +52,27 @@ knitr::include_graphics(file.path(dir_plots, "1.criterion/cert_standards.png"))
 
 ```
 
-Based on the criterion developed with IAEA to assess the performance of GPs in terms of Fulfillment of the Multilateral Recognition Agreement, Australia, China, Malaysia, Singapore, and South Korea met excellent performance standards on this criterion (See criterion and standards in Annex A)
+Based on the criterion developed with IAEA to assess the performance of GPs in terms of Fulfillment of the Multilateral Recognition Agreement, China, Malaysia, Singapore, and South Korea met excellent performance standards on this criterion (See criterion and standards in Annex A)
 
 
-Figure \@ref(fig:cert-standards) above shows the level of NDT infrastructure that each GP has established and the performance for this criterion.
+Figure \@ref(fig:cert-standards) above shows the level of NDT infrastructure that each recipient GP has established and the performance for this criterion.
 
 ### Contribution of the NDT RCA in GP's establishing a NCB and NCS
 
 To assess the contribution of RCA in the establishment of a National Certification Body (NCB) and National Certification Schemes (NCS), the participants of the online survey were asked the extent to which they perceive that the RCA NDT programme has contributed to the establishment of this infrastructure in their countries.
 
-As it can be seen in the Table \@ref(tab:cert-contribution) below,  from the `r txt_cont_cert$has_NCB_num` GPs that have established a NCB, `r txt_cont_cert$num_alot` **(`r txt_cont_cert$a_lot`) perceived that the RCA programme has contributed to a great extent in the establishment of their body**. Only `r txt_cont_cert$not` perceive that the establishment of their NCB could have been achieved without the support of the RCA programme.
+As it can be seen in the Figure \@ref(fig:cert-contribution) below,  from the `r txt_cont_cert$has_NCB_num` GPs that have established a NCB under RCA, `r txt_cont_cert$num_alot` **(`r txt_cont_cert$a_lot`) perceived that the RCA programme has contributed to a great extent in the establishment of their body**. As it was expected (because of their historical role as non-recipient countries), only Australia, Japan, and New Zealand  perceive that the establishment of their NCB could have been achieved without the support of the RCA programme.
 
-Moreover  **50% of the GPs that are part of the programme, perceive that RCA has contributed to a great extent in the establishment of the certification scheme of their countries**. 
-
-
+Moreover  **58% of the GPs that are recipients of the programme, perceive that RCA has contributed to a great extent in the establishment of the certification scheme of their countries**. 
 
 
-```{r cert-contribution}
+```{r cert-contribution, out.width="100%", fig.cap="Contribution of RCA in GP's infrastructure."}
 
-
-table_cont_cert <- rio::import(file.path("indicators/1.criterion/contribution_RCA_cert.rds"))
-knitr::kable(table_cont_cert, caption = "Contribution of RCA programme in GP's infrastructure")
+knitr::include_graphics(file.path(dir_plots, "1.criterion/contribution_RCA_cert.png"))
 
 ```
+
+
 
 <br>
 
@@ -93,9 +91,9 @@ This section presents the findings on the extent to which the **NDT RCA has supp
 ### Performance standards of "NDT infrastructure to produce certified personnel"
 
 
-Figure \@ref(fig:standards-pers-certified) shows that based on the criterion developed with IAEA, `r txt_std_psnl$ctres_excel_num` countries have met an excellent standard (`r txt_std_psnl$ctres_excel`) because RCA NDT has contributed or facilitated the introduction of all methods and techniques to their personnel, and `r txt_std_psnl$ctres_gd_num` GPs met a good standard (`r txt_std_psnl$ctres_gd`) because the RCA NDT programme has facilitated the certification of their personnel in all the conventional techniques. 
+Figure \@ref(fig:standards-pers-certified) shows that based on the criterion developed with IAEA, **`r txt_std_psnl$ctres_excel_num` countries have met an excellent standard (`r txt_std_psnl$ctres_excel`) because RCA NDT has contributed or facilitated the introduction of all methods and techniques to their personnel**, and `r txt_std_psnl$ctres_gd_num` GPs met a good standard (`r txt_std_psnl$ctres_gd`) because the RCA NDT programme has facilitated the certification of their personnel in all the conventional techniques. 
 
-`r txt_std_psnl$ctres_iq`  are considered to have an inadequate performance because, according to responses provided by their experts, RCA NDT has not necessarily contributed to the certification of their personnel in any of these techniques. 
+Laos, Myanmar, and Nepal are considered to have an inadequate performance because, according to responses provided by their experts, RCA NDT has not necessarily contributed to the certification of their personnel in any of these techniques. 
 
 ```{r standards-pers-certified, out.width="100%", fig.cap="Personnel certified by methods: standards for self-reliance"}
 
@@ -105,7 +103,7 @@ knitr::include_graphics(file.path(dir_plots,"1.criterion/cert_pers_standards.png
 
 ### Contribution of the NDT RCA in the certification of personnel 
 
-As it can be seen in Table \@ref(tab:certified-pers-method), **since 2020, the NDT RCA programme has contributed to the certification of `r txt_cert_pers$total_certified`  personnel by local NDT Accredited Training Centres in `r txt_cert_pers$certified_number_countries` countries** (`r txt_cert_pers$certified_names_countries`). From the total certified personnel, **`r txt_cert_pers$perc_certified_women` are female**. 
+As it can be seen in Table \@ref(tab:certified-pers-method), **From 2000 to 2020, the NDT RCA programme has contributed, yearly, to the certification of roughly `r txt_cert_pers$tot_year`  personnel by local NDT Accredited Training Centres in `r txt_cert_pers$certified_number_countries` countries** (`r txt_cert_pers$certified_names_countries`). From the total certified personnel, **`r txt_cert_pers$perc_certified_women` are female**. 
 
 The method for which RCA has contributed the most to the certification of personnel is `r txt_cert_pers$certified_top_method_name` (`r txt_cert_pers$certified_top_method_num` personnel trained), followed by `r txt_cert_pers$certified_second_method_name` and `r txt_cert_pers$certified_third_method_name`. 
 
@@ -147,7 +145,7 @@ The levels of performance for this criterion are the following:
 
 ### Performance standards of "Self-reliance in NDT"
 
-As it can be seen in Figure \@ref(fig:centre-standards). `r text_centres$excellent_num` countries (`r text_centres$excellent_text`) offer both training and inspection abroad. Moreover, `r text_centres$inadequate_text` do have access to inspection centres (either owned locally or by foreigners) but they do not have training centres offering services in their countries.
+As it can be seen in Figure \@ref(fig:centre-standards). Out of the 18 recipient countries, 5 (Malaysia, Pakistan, Singapore, South Korea, and Vietnam) offer both training and inspection abroad. Moreover, `r text_centres$inadequate_text` do have access to inspection centres (either owned locally or by foreigners) but they do not have training centres offering services in their countries.
 
 ```{r centre-standards, out.width="100%", fig.cap="GP's inspection and training centers: standards for self-reliance"}
 
@@ -158,16 +156,18 @@ knitr::include_graphics(file.path(dir_plots, "1.criterion/centre_standards.png")
 ### Contribution of RCA in the development of local inspection and training centers
 
 
-According to the perception of respondents from the GPs, **the RCA NDT programme has contributed to a great extent in the establishment of inspection centres in `r txt_cont_centres$alot_inspec_num` of the twenty-two countries that are part of the programme** (`r txt_cont_centres$alot_inspec`); **in  `r txt_cont_centres$yes_investment` countries RCA has facilitated the investment in local inspection centres**; and, `r txt_cont_centres$alot_training_num` countries perceived that RCA has contributed to a great extent in the establishment of local training centres (See Table  \@ref(tab:centres-contribution))
+According to the perception of respondents from the GPs, **the RCA NDT programme has contributed to a great extent in the establishment of inspection centres in `r txt_cont_centres$alot_inspec_num` of the twenty-two countries that are part of the programme** (`r txt_cont_centres$alot_inspec`); **in  `r txt_cont_centres$yes_investment` countries RCA has facilitated the investment in local inspection centres**; and, `r txt_cont_centres$alot_training_num` countries perceived that RCA has contributed to a great extent in the establishment of local training centres (See Figure  \@ref(fig:centres-contribution)). An interesting finding is that although New Zealand has been an historical non-recipient country, their perception is that RCA has contributed to a great extent in the establishment of local training centres in their country.
+
+The white asterisk in the figure below indicates that RCA has facilitated the investment in local inspection centres in those countries. 
 
 
-```{r centres-contribution}
+```{r centres-contribution, out.width="100%", fig.cap="Contribution of the NDT RCA programme to the establishment of local inspection and training centres."}
 
-
-table_cont_centres <- rio::import(file.path("indicators/1.criterion/contribution_RCA_centres.rds"))
-knitr::kable(table_cont_centres, caption = "Contribution of the NDT RCA programme to the establishment of local inspection and training centres.")
+knitr::include_graphics(file.path(dir_plots, "1.criterion/contribution_centres.png"))
 
 ```
+
+
 <br>
 
 

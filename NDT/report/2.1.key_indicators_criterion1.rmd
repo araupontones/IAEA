@@ -1,9 +1,9 @@
-| Sub-criterion                                     | Evidence                                                                                    | Finding                             |
-|---------------------------------------------------|---------------------------------------------------------------------------------------------|-------------------------------------|
-| Fulfillment of MRA                                | \% of GPs that have established a National Certification Body                               | `r txt_cont_cert$has_NCB_perc`      |
-| Fulfillment of MRA                                | \% of GPs that have established a National Certification Scheme                             | `r txt_cont_cert$has_cerSch_perc`   |
-| NDT infrastructure to produce certified personnel | Personnel certified in conventional and advanced techniques from 2000 to 2020 under NDT RCA | `r txt_cert_pers$total_certified`   |
-| Self-reliance in NDT                              | Inspection centres owned by local firms                                                     | `r txt_num_centres$local_inspec_ct` |
-| Self-reliance in NDT                              | Training centres owned by local firms                                                       | `r txt_num_centres$local_train_ct`  |
+| Sub-criterion                                     | Evidence                                                                                                               | Finding                             |
+|---------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|-------------------------------------|
+| Fulfillment of MRA                                | \% Of recipient GPs that have established a National Certification Body                                                | `r txt_cont_cert$has_NCB_perc`      |
+| Fulfillment of MRA                                | \% Of recipient GPs that have established a National Certification Scheme                                              | `r txt_cont_cert$has_cerSch_perc`   |
+| NDT infrastructure to produce certified personnel | Average personnel certified in conventional and advanced techniques under NDT RCA per year for the period 2000 to 2020 | `r txt_cert_pers$tot_year`          |
+| Self-reliance in NDT                              | Inspection centres owned by local firms                                                                                | `r txt_num_centres$local_inspec_ct` |
+| Self-reliance in NDT                              | Training centres owned by local firms                                                                                  | `r txt_num_centres$local_train_ct`  |
 
 : Key evidence for criterion 1: Improved NDT capacity and capability

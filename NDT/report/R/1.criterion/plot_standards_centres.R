@@ -16,6 +16,7 @@ centre_vars <- criterion_1_vars()$centres_vars
 #View(indicators_centre)
 
 data_plot <- indicators_centre %>%
+  filter(!country %in% support_countries) %>%
   long_data_standards(var_total = centres_total,
                       var_standard = centres_standard,
                       vars_criterion = centre_vars,

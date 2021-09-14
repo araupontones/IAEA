@@ -63,6 +63,7 @@ ind_vct <- c("cert_standard" = "Fulfillment MRA",
 
 
 data_plot <- files_app %>% 
+  filter(!country %in% support_countries) %>%
   select(country, ends_with("standard")) %>%
   data_plot_standards_sum(ind_vct = ind_vct) %>%
   group_by(country)
@@ -78,7 +79,7 @@ data_plot <- files_app %>%
 exfile
 ggsave(exfile,
        last_plot(),
-       height = height_plot,
+       height = height_plot - 3.5,
        width = width_plot,
        dpi = dpi_report)
 

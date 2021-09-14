@@ -18,14 +18,15 @@ exfile <- file.path(dir_plots_NDT, "1.criterion/number_certified_personel.png")
 
 #prepare data for plot =========================================================
 
-cert_pers <- import(infile) %>%
+cert_pers <- import(infile) %>% 
   filter(cert_per > 0) %>%
-  select(country, accronym, cert_total_20, cert_total_20_women) %>%
+  select(country, accronym, cert_per, cert_women) %>%
   pivot_longer(-c(country, accronym),
                names_to = "sex") %>%
   mutate(sex = case_when(str_detect(sex, "women") ~ "Female",
                          T ~ "Male"))
 
+  #View(cert_pers)
 
 #plot ==========================================================================
 ggplot(data = cert_pers,
@@ -35,7 +36,9 @@ ggplot(data = cert_pers,
        fill = sex)
        ) +
   geom_col(width = .7) +
-  facet_wrap(~country, scales = "free_x", shrink = T) +
+  facet_wrap(~country, 
+             scales = "free_x", 
+             shrink = T) +
   
   #define scales -----------------------------------------------------------
   scale_fill_manual(values = c(blue, purple_bright),
@@ -43,7 +46,7 @@ ggplot(data = cert_pers,
                     ) +
   scale_x_continuous(breaks = function(x) seq(from = 0,to = max(x), length.out = 3),
                      labels = function(x) {y = round(seq(from = 0,to = max(x), length.out = 3) / 10, 0) * 10
-                     z = prettyNum(x,big.mark = ",")
+                     z = prettyNum(y,big.mark = ",")
                      z[z=="0"] <- ""
                      return(z)}
                        #function(x) prettyNum(seq(from = 0,to = max(x), length.out = 3), big.mark = ",")
@@ -54,7 +57,7 @@ ggplot(data = cert_pers,
   labs(caption = caption,
        y = "NDT certifications",
        x = "",
-       title = "Number of Certified personnel under the RCA NDT programme") +
+       title = "Average number of Certified personnel per year under RCA") +
   theme_iaea() +
   theme_strip()
   

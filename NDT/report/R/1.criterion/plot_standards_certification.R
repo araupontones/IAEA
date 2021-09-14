@@ -11,6 +11,7 @@ cert_vars<-criterion_1_vars()$cert_vars
 #View(indicators_cert)
 #plot certification ----------------------------------------------------------
 long <- indicators_cert %>%
+  filter(!country %in% support_countries) %>%
   mutate(country = fct_reorder(country, cert_total)) %>%
   select(-matches("total")) %>%
   pivot_longer(-c(country, cert_standard),
@@ -47,43 +48,7 @@ plot_standards(db = long,
                color_text = c("#7F99A5", blue_navy, blue_light, '#BDC2C6'))
 
 
-# 
-# 
-# 
-# ggplot(data = long,
-#        aes(y = country,
-#            x =indicator
-#        ))+
-#   geom_tile(color = "white",
-#             aes(fill = value)) +
-#   xlim(c(cert_vars, "RCA Standard", "")) +
-#   coord_equal(ratio = .3) +
-#   geom_text(data = annotate_label,
-#             aes(x = "RCA Standard",
-#                 y = country,
-#                 label = label,
-#                 color = label
-#             ),
-#             hjust = 0,
-#             nudge_x = -.4,
-#             family ="Open Sans Light",
-#             size = 3
-#             #color = gmdacr::un_colors("gray_dark")
-#             
-#   )  +
-#   scale_fill_gradient(low = gray_light, high = blue_navy) +
-#   scale_color_manual(values = c("#7F99A5", blue_navy, blue_light, '#BDC2C6'))  +
-#   labs(caption = "Data: IAEA's NDT online survey, 2021",
-#        x = "") +
-#   theme_iaea() +
-#   theme(axis.text.x = element_text(angle = 40, vjust = 1, hjust = 1),
-#         legend.position = 'none',
-#         axis.title = element_blank(),
-#   )
-# 
 
-#exfile
-#export
 ggsave(exfile,
        last_plot(),
        height = height_standards,

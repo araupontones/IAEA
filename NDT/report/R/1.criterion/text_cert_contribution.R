@@ -7,8 +7,10 @@ exfile <- file.path(dir_text_NDT, "1.criterion/contribution_cert.rds")
 
 
 
-contribution_cert <- import(infile)
+contribution_cert <- import(infile) %>%
+  filter(!Country %in% support_countries)
 
+#contribution_cert %>%tabyl(Country)
 
 
 
@@ -16,7 +18,11 @@ contribution_cert <- import(infile)
 
 has_NCB <- contribution_cert$Country[contribution_cert$`Has NCB` == "Yes"]
 has_NCB_num <- length(has_NCB) %>% to_text()
-has_NCB_perc <-  paste0(length(has_NCB) / 20 *100,"%")
+has_NCB_perc <-  paste0(round(length(has_NCB) / receipient_num *100,0),"%")
+
+# contribution_cert %>%
+#   tabyl(`RCA contribution to establish NCB`)
+  
 
 has_cerSch_perc  <- paste0(mean(contribution_cert$`Has NDT certification scheme` == "Yes") * 100, "%")
 

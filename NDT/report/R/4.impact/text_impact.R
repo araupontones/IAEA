@@ -9,16 +9,22 @@ ip_vars <- impact_vars()$ip_vars
 
 
 
+
 ip <- import(infile) %>%
   arrange(country) %>%
-  select(country, init_year,all_of(names(ip_vars)))
+  select(country, init_year,all_of(names(ip_vars))) %>%
+  filter(!country %in% support_countries)
 
 #View(ipct)
 
+names(ip)
+ip%>%tabyl(impact_assessment)
 
 speed_y <- ip$country[ip$impact_speed == "Yes"]
 speed_y<- speed_y[!is.na(speed_y)]
-speed_y_perc <- paste0(length(speed_y)/20 *100, "%")
+speed_y_perc <- paste0(round(length(speed_y)/receipient_num *100, 0), "%")
+
+
 
 
 
@@ -36,7 +42,10 @@ ft_3<- ft_3[!is.na(ft_3)]
 #have adopted
 adopt <- ip$country[ip$impact_adopt == "Yes" & !is.na(ip$impact_adopt)]
 adopt_n <- length(adopt)
-adopt_perc <- paste0(adopt_n / 20 * 100, "%")
+adopt_perc <- paste0(round(adopt_n / receipient_num * 100,0), "%")
+
+
+
 
 a_25_m_c <- ip$country[ip$impact_adoptdet == "Between 25% - 50%" & !is.na(ip$impact_adoptdet)]
 a_50_m_c <- ip$country[ip$impact_adoptdet == "Between 51% - 75%" & !is.na(ip$impact_adoptdet)]

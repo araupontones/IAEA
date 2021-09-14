@@ -17,6 +17,7 @@ aws_vars <- criterion_2_vars()$awareness_vars
 #View(indicators_centre)
 
 data_plot <- indicators_aws %>%
+  filter(!country %in% support_countries) %>%
   long_data_standards(var_total = aws_total,
                       var_standard = aws_standard,
                       vars_criterion = aws_vars,
@@ -60,7 +61,7 @@ plot_standards(db = data_plot,
             fontface = "italic",
             size = 3)
   
-#exfile
+exfile
 
 
 

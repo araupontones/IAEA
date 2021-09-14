@@ -58,9 +58,9 @@ knitr::include_graphics(file.path(dir_plots,"3.criterion/standards_HS.png"))
 ### Contribution of the NDT RCA in Improved Health and Safety 
 
 
-* **`r text_hs$aw_perc` of the GP's reported that being part of the RCA NDT programme  contributed to the aeareness of the benefits of using NDT technologies for safer operations** of nuclear and other industrial installations in their country.
+* **`r text_hs$aw_perc` of all the GP's reported that being part of the RCA NDT programme  contributed to the aeareness of the benefits of using NDT technologies for safer operations** of nuclear and other industrial installations in their country.
 
-* **`r text_hs$ap_perc` of the GP's reported that being part of the RCA NDT programme contributed to applying NDT technologies for safer operations** of nuclear and other industrial installations in their country.
+* **`r text_hs$ap_perc` of all  the recipient GP's reported that being part of the RCA NDT programme contributed to applying NDT technologies for safer operations** of nuclear and other industrial installations in their country.
 
 
 * All GPs but two reported that their country does not have an approximation of the reduction of chemical waste, reduced injuries, or reduced deaths.

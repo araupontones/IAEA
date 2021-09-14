@@ -32,6 +32,7 @@ ind_vct <- c("hs_standard" = "Health and Safety")
 
 
 data_plot <- files_app %>% 
+  filter(!country %in% support_countries) %>%
   select(country, ends_with("standard")) %>%
   data_plot_standards_sum(ind_vct = ind_vct)
 
@@ -47,7 +48,7 @@ data_plot <- files_app %>%
 
 ggsave(exfile,
        last_plot(),
-       height = height_plot - 4,
+       height = height_plot - 6,
        width = width_plot,
        dpi = dpi_report)
 

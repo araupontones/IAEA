@@ -14,7 +14,8 @@ exfile <- file.path(dir_plots_NDT,"1.criterion/standards_crit1.png" )
 
 #join tables
 files <- lapply(dims, read_dims)
-files_app <- plyr::join_all(files, by = "country", type = 'left')
+files_app <- plyr::join_all(files, by = "country", type = 'left') %>%
+  filter(!country %in% support_countries)
 
 
 
@@ -39,7 +40,7 @@ data_plot <- files_app %>% data_plot_standards_sum(ind_vct = ind_vct)
 
   plot_standards_sum(data_plot)
 
-
+exfile
 
 ggsave(exfile,
        last_plot(),

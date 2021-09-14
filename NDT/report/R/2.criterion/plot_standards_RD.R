@@ -17,6 +17,7 @@ names(indicators_rd)
 #View(indicators_centre)
 
 data_plot <- indicators_rd %>%
+  filter(!country %in% support_countries) %>%
   long_data_standards(var_total = rd_total,
                       var_standard = rd_standard,
                       vars_criterion = rd_vars,

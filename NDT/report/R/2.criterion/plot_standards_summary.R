@@ -17,7 +17,8 @@ rd <- import(file.path(dir_indicators_NDT, "2.criterion/RD.rds"))
 
 #join tables
 files <- lapply(dims, read_dims)
-files_app <- plyr::join_all(list(aws, rd), by = "country", type = 'left')
+files_app <- plyr::join_all(list(aws, rd), by = "country", type = 'left') %>%
+  filter(!country %in% support_countries) 
 
 
 
@@ -25,7 +26,7 @@ files_app <- plyr::join_all(list(aws, rd), by = "country", type = 'left')
 #prepare data for plot ========================================================
 
 #define indicators
-ind_vct <- c("aws_standard" = "Awareness, interest, and application of NDT tech.",
+ind_vct <- c("aws_standard" = "Awareness, interest, and application",
              'rd_standard' = "Knowledge developed through R&D")
 
 
@@ -43,11 +44,11 @@ data_plot <- files_app %>%
 
   plot_standards_sum(data_plot)
 
-
+exfile
 
 ggsave(exfile,
        last_plot(),
-       height = height_plot - 4,
+       height = height_plot - 6,
        width = width_plot,
        dpi = dpi_report)
 

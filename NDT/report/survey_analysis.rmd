@@ -98,7 +98,7 @@ text_impact <- import(file.path(dir_text, "4.impact/impact_tx.rds" ))
 
 ## Disclaimer
 
-Disclaimer: The information in this document is presented in good faith using the information available to us at the time of preparation. It is provided on the basis that the authors of the document are not liable to any person or organisation for any damage or loss which may occur in relation to taking or not taking action in respect of any information or advice within this document
+The information in this document is presented in good faith using the information available to us at the time of preparation. It is provided on the basis that the authors of the document are not liable to any person or organisation for any damage or loss which may occur in relation to taking or not taking action in respect of any information or advice within this document
 
 ## Acknowledgements
 
