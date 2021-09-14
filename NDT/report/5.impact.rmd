@@ -14,7 +14,7 @@ Table \@ref(tab:impact-table) shows the perception of the GP respondents on the 
 
 
 
-According to experts who participated in the online survey, **for `r text_impact$speed_y_perc` of the GPs, RCA NDT has helped to speed up the adoption of NDT technologies in their country since 2000**. For `r text_impact$cts_y1` the adoption occurred 1-3 years faster. Moreover, `r text_impact$cts_y2` reported that NDT RCA contributed for the adoption of NDT technologies to happen 4-5 years faster; and **`r text_impact$cts_y2` considered that the adoption occurred  6-10 years faster than with out the support of IAEA.**
+According to experts who participated in the online survey, **for `r text_impact$speed_y_perc` of recipient the GPs, RCA NDT has helped to speed up the adoption of NDT technologies in their country since 2000**. For `r text_impact$cts_y1` the adoption occurred 1-3 years faster. Moreover, `r text_impact$cts_y2` reported that NDT RCA contributed for the adoption of NDT technologies to happen 4-5 years faster; and **`r text_impact$cts_y2` considered that the adoption occurred  6-10 years faster than with out the support of IAEA.**
 
 
 Additionally, **`r text_impact$adopt_perc` of the GPs reported  that NDT RCA contributed to the adoption of NDT technologies by private business in their countries since 2000**. From these countries, **50% estimated that the proportion of the total activity in their NDT sector can be attributed to RCA at least 25% or more.** 

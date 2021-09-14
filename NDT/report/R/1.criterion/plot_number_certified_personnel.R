@@ -44,11 +44,12 @@ ggplot(data = cert_pers,
   scale_fill_manual(values = c(blue, purple_bright),
                     breaks = c("Male", "Female")
                     ) +
-  scale_x_continuous(breaks = function(x) seq(from = 0,to = max(x), length.out = 3),
-                     labels = function(x) {y = round(seq(from = 0,to = max(x), length.out = 3) / 10, 0) * 10
-                     z = prettyNum(y,big.mark = ",")
-                     z[z=="0"] <- ""
-                     return(z)}
+  #scale_x_continuous(labels = function(x)prettyNum(x, big.mark = ",")) +
+  scale_x_continuous(breaks = function(x) seq(from = 0,to = max(x), length.out = 2),
+                     labels = function(x) prettyNum(round(seq(from = 0,to = max(x), length.out = 2), 0),big.mark = ",")
+                     #z = prettyNum(y,big.mark = ",")
+                     #z[z=="0"] <- ""
+                     #return(z)}
                        #function(x) prettyNum(seq(from = 0,to = max(x), length.out = 3), big.mark = ",")
                      )+
  
@@ -59,7 +60,7 @@ ggplot(data = cert_pers,
        x = "",
        title = "Average number of Certified personnel per year under RCA") +
   theme_iaea() +
-  theme_strip()
+  theme_strip() 
   
   
 
