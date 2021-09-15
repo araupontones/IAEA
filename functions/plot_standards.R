@@ -25,10 +25,10 @@ plot_standards <- function(db,
   geom_tile(color = "white",
             aes(fill = {{fill}})
   ) +
-    xlim(c(vars_dimension, "RCA Performance", "")) +
+    xlim(c(vars_dimension, "Rating RCA contribution", "")) +
     coord_equal(ratio = .3) +
     geom_text(data = data_label,
-              aes(x = "RCA Performance",
+              aes(x = "Rating RCA contribution",
                   y = country,
                   label = label,
                   color = label

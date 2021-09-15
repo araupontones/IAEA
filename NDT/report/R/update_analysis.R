@@ -62,5 +62,3 @@ scripts_ip_NDT <- list.files(dir_ip_NDT, full.names = T)
 run_scripts(scripts_ip_NDT)
 
 
-
-

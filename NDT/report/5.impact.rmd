@@ -2,20 +2,23 @@
 
 This section aims to summarise the overall role of IAEA/RCA activities in achieving the general objectives and benefits of NDT on socio economic impact through industrial growth in each GP that is part of the programme.
 
-Table \@ref(tab:impact-table) shows the perception of the GP respondents on the role that RCA has had to:
+Figure \@ref(fig:impact-chart) shows the perception of the GP respondents on the role that RCA has had to:
 
 * Help speed up the adoption of NDT technologies since 2000.
 
 * Contribute to the adoption of NDT technologies by private businesses since 2000.
 
-* The proportion of total activity in the NDT sector in 2020 that can be attributed to the programme.
-
 * The productivity of NDT inspections (reduction of the average time to complete an inspection).
 
 
 
-According to experts who participated in the online survey, **for `r text_impact$speed_y_perc` of recipient the GPs, RCA NDT has helped to speed up the adoption of NDT technologies in their country since 2000**. For `r text_impact$cts_y1` the adoption occurred 1-3 years faster. Moreover, `r text_impact$cts_y2` reported that NDT RCA contributed for the adoption of NDT technologies to happen 4-5 years faster; and **`r text_impact$cts_y2` considered that the adoption occurred  6-10 years faster than with out the support of IAEA.**
+According to experts who participated in the online survey, **for `r text_impact$speed_y_perc` of the recipient GPs, RCA NDT has helped to speed up the adoption of NDT technologies in their country since 2000**. For `r text_impact$cts_y1` the adoption occurred 1-3 years faster. Moreover, `r text_impact$cts_y2` reported that NDT RCA contributed for the adoption of NDT technologies to happen 4-5 years faster; and **`r text_impact$cts_y3` considered that the adoption occurred  6-10 years faster than with out the support of IAEA.**
 
+```{r impact-chart, out.width="100%", fig.cap="Contribution of IAEA/RCA activities in achieving general objectives and benefits by GP"}
+
+knitr::include_graphics(file.path(dir_plots,"4.impact/plot_impact.png"))
+
+```
 
 Additionally, **`r text_impact$adopt_perc` of the GPs reported  that NDT RCA contributed to the adoption of NDT technologies by private business in their countries since 2000**. From these countries, **50% estimated that the proportion of the total activity in their NDT sector can be attributed to RCA at least 25% or more.** 
 
@@ -23,15 +26,18 @@ Additionally, **`r text_impact$adopt_perc` of the GPs reported  that NDT RCA con
 
 
 
-The table also displays the perception on the role of IAEA/RCA activities in achieving the general objectives and benefits.
+Finally, Figure \@ref(fig:assessment-chart) shows how every GP evaluated the role of IAEA/RCA activities in achieving the general objectives and benefits of NDT on socio economic impact through industrial growth in their country. Their assessment is the following:
+
+* **10 out of the 18 recipient GPs reported that the role of IAEA/RCA activities in achieving the general objectives and benefits of NDT on socio-economic impact through industrial growth in their countries is excellent.**
+
+* 4 of the recipient GPS and 1 of the non-recipient (Japan) consider that RCA NDT role in achieving the general objectives of NDT in their country is good.
+
+* From the GPs that consider the role of RCA has been poor, two are non-recipient countries (Australia, and New Zealand), and one (Cambodia) joint RCA NDT in 2018. 
 
 
-```{r impact-table}
+```{r assessment-chart, out.width="100%", fig.cap="Contribution of IAEA/RCA activities in achieving general objectives and benefits by GP"}
 
-
-table_impact <- rio::import(file.path("indicators/4.impact/table_impact.rds"))
-
-knitr::kable(table_impact, caption = "Contribution of IAEA/RCA activities in achieving general objectives and benefits by GP")
+knitr::include_graphics(file.path(dir_plots,"4.impact/plot_assesment.png"))
 
 ```
 
