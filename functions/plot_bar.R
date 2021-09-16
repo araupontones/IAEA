@@ -6,7 +6,8 @@ bar_plot <- function(db,
                      y_var,
                      label,
                      limits = c(0,12),
-                     fill = blue_navy){
+                     fill = blue_navy,
+                     caption = caption){
   
   db %>%
     ggplot(aes(x = {{x_var}},

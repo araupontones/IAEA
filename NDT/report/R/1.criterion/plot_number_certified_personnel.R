@@ -20,13 +20,15 @@ exfile <- file.path(dir_plots_NDT, "1.criterion/number_certified_personel.png")
 
 cert_pers <- import(infile) %>% 
   filter(cert_per > 0) %>%
-  select(country, accronym, cert_per, cert_women) %>%
+  select(country, accronym, cert_men, cert_women) %>%
   pivot_longer(-c(country, accronym),
                names_to = "sex") %>%
   mutate(sex = case_when(str_detect(sex, "women") ~ "Female",
                          T ~ "Male"))
 
-  #View(cert_pers)
+  
+#View(cert_pers)
+#View(cert_pers)
 
 #plot ==========================================================================
 ggplot(data = cert_pers,

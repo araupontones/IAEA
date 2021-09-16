@@ -1,0 +1,93 @@
+
+**Strengthened radiotherapy workforce **
+
+1. Achieve self-reliance in RT, including offering educational training programmes, and establishing Radio Oncology (RO) Departments and Societies.
+
+2. Establish GP's infrastructure to produce RT specialists in Radiation Oncology, Radiation Oncologists, Medical Physicists, Radiation Technology Therapists, and Radiation Oncology Nurses.
+
+
+
+
+## Criterion 1.1 Achieve self-reliance in RT
+
+
+### Contribution of the RT RCA in Achieve self-reliance in RT
+
+To have an approximation of the self-reliance in RT of each GP to strength its radiotherapy workforce, the number of  educational/training programmes on RT, Radiation Oncology (RO) Departments, and RO Societies that are available in country was estimated.  
+
+
+As can be seen in Figure \@ref(fig:train-plot), **there are a total of `r text_train$tot_train` educational programmes on RT available across all the GPs that are part of the RCA programme**. Vietnam and China are the countries where more programmes (20) are on RT are available, followed by South Korea and Japan where 15 and 10 educational programmes are available.
+
+According to the responses of the GPS, there are none training programmes available in `r text_train$train0`.
+
+
+
+
+```{r train-plot, out.width="100%", fig.cap="Number of educational or training programmes on RT available by GP."}
+knitr::include_graphics(file.path(dir_plots, "1.criterion/number_trained.png"))
+```
+
+Moreover, **there a total of `r text_train$tot_dep` Radiation Oncology (RO) Departments across all the GPs**. From all those departments `r text_train$dep_china_per` are located in China, `r text_train$dep_japan_per` in Japan, and `r text_train$dep_india_per` in India. Figure \@ref(fig:dep-plot) shows the number of RO Deparments available in each GP. 
+
+
+
+```{r dep-plot, out.width="100%", fig.cap="Number of educational or training programmes on RT available by GP."}
+knitr::include_graphics(file.path(dir_plots, "1.criterion/number_dep.png"))
+```
+
+Figure \@ref(fig:soc-plot) shows the number of national and regional RO societies estanlished accross the GPs. 
+
+
+```{r soc-plot, out.width="100%", fig.cap="Number of Radiation Oncology (RO) Societies available by type and by GP."}
+knitr::include_graphics(file.path(dir_plots, "1.criterion/societies.png"))
+```
+
+
+* Total number Radiation Oncology (RO) Societies by regional/national (stacked)
+*soc_num*
+
+
+
+* contribution of RCA in the establishment of the above
+
+
+*train_cont dep_cont soc_cont*
+
+
+
+### Performance standards of Educational programmes
+
+* **Adequate**: RCA contributed to the GPs has at least one of the EP, RO dep, NS
+
+* **Good**: the GPs has two of the EP, RO dep, NS
+
+* **Excellent** : the GPs all of the EP, RO dep, NS
+
+
+
+
+
+
+## 1.2 Establish GP's infrastructure to produce RT specialists
+
+## Contribution of the RCA in certified personnel
+
+* Number of RT specialist by year (dodged) and by field (facet)
+*roster spec2000 tot_2000 and roster spec2020 tot_2020**
+* % of certified : another chart with % certified by year (dodged) and by field (facet) (?) - 
+*cert_2000/tot_2000  and cert_2020/tot_2020*
+
+* extent did the RCA RT programme contribute to the increase of certified RT specialists between 2000 and 2020
+*spec_cont*
+
+
+
+* Adequate: Any increase in certfied
+* Good : Some increase in certified
+* Excellent: Significant increased in personnel
+
+
+
+train_cont (contribution of RCA on educational programmes)
+dep_cont (contribution to RO)
+soc_cont (contribution of societies)

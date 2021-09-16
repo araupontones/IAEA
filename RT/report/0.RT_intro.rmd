@@ -1,0 +1,27 @@
+
+
+This report presents the findings of the Social and Economic Impact Assessment of Radiotherapy (RT) of the RCA in Asia and the Pacific. The data that informs the analysis was collected through an online survey that was designed and piloted in May 2021 and deployed between June and August 2021. The respondents to the survey were national experts on the field of NDT. They provided relevant information about the equipment, training centres, certified personnel, and the health and safety impacts of the RCA programme in their country. 
+
+
+From the 22 countries that are part of the Cooperative Agreement for Research (RCA), `r text_intro$number` participated in the survey: `r text_intro$names`
+
+
+Figure: \@ref(fig:map-png) below shows the countries that participated in this study
+
+
+```{r map-png, out.width="100%", fig.cap="Map of the 20 countries that participated in the online survey."}
+knitr::include_graphics(file.path(dir_plots, "0.intro/map.png"))
+```
+
+
+
+**Strengthened radiotherapy workforce **
+
+1. Achieve self-reliance in RT, including offering educational training programmes, and establishing Radio Oncology (RO) Departments and Societies.
+
+2. Establish GP's infrastructure to produce RT specialists in Radiation Oncology, Radiation Oncologists, Medical Physicists, Radiation Technology Therapists, and Radiation Oncology Nurses.
+
+
+
+
+It is worth mentioning that the IAEA Technical Co-operation Programme (TCP) has been established by the IAEA to support IAEA Member States (MSs) (especially developing countries) to accelerate and enlarge the application of nuclear technologies in a safe, secure, effective, and efficient manner. In principle, every IAEA MS can receive and enjoy the benefit of the IAEA TCP. However, some MSs (especially developed/advanced MSs) volunteer not to receive the IAEA TCP, but they work as resource countries to provide support for the IAEA TCP. Under the RCA, there are 22 countries, of which 18 countries are TC recipients and 4 are TC non-recipients (Australia, Japan, New Zealand, and very recently Korea). **Based on this definition, the three countries that have historically acted as non-recipients (Australia, Japan and New Zealand) are excluded from the assessment of the criteria and level of performance conducted in this analysis. Given their historically non-recipient character, any assessment of the performance of RCA to accelerate and enlarge the application of NDT technologies in those countries would result in a misinterpretation of the results.**

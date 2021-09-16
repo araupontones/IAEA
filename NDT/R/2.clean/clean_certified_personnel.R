@@ -42,6 +42,7 @@ certi_raw <- import(file.path(param$dir_raw_s, "cert_advanced.dta")) %>%
   mutate(across(c(cert_per, cert_fem), NA_to_cero),
          cert_fem = cert_fem/100,
          cert_women = cert_per * cert_fem,
+         cert_men = cert_per - cert_women,
          cert_total_20 = cert_per * 20,
          cert_total_20_women = cert_women * 20
          ) %>% 

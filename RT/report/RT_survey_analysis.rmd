@@ -1,0 +1,169 @@
+---
+title: "Survey Analysis"
+subtitle: "Radiotherapy"
+output: 
+  bookdown::word_document2:
+  #bookdown::word_document2: default # for cross-reference
+    reference_docx: "template.docx"
+    toc: true
+    reference_num: true
+    number_sections: false
+    fig_caption: yes
+    
+ 
+---
+
+
+```{r include = FALSE}
+
+knitr::opts_chunk$set(echo = F, warning = F, message = F, fig.pos= "h")
+
+
+```
+
+
+```{r set_up}
+  
+  
+  source("RT_parameters.R", local = knitr::knit_global())
+
+  
+```
+
+
+
+
+```{r load_tx_int}
+
+text_intro <- import(file.path(dir_text, "0.intro/txt_intro.rds" ))
+
+```
+
+
+
+
+
+```{r load_tx_c1}
+
+
+  text_train <- import(file.path(dir_text, "1.criterion/txt_train.rds" ))
+  
+
+```
+
+<!----
+
+
+```{r load_tx_c2}
+
+
+
+
+```
+
+
+
+```{r load_tx_c3}
+
+
+
+```
+
+
+```{r load_impact}
+
+
+
+  
+
+```
+
+
+---->
+\newpage
+
+
+
+###### Report Information
+
++:-------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Prepared for | International Atomic Energy Agency                                                                                                                                                                                        |
++--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Prepared by  | Julian King, Kate McKegg, Andres Arau, Aaron Schiff, Martina Garcia Aisa                                                                                                                                                  |
++--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Cover image  |                                                                                                                                                                                                                           |
++--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Citation     | King,J., McKegg, K., Arau, A., Schiff, A., Garcia Aisa, M. (2021). *Social and Economic Impact Assessment of the RCA Programme: Radiotherapy Case Study.* Vienna, Austria: International Atomic Energy Agency. |
++--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+## Disclaimer
+
+The information in this document is presented in good faith using the information available to us at the time of preparation. It is provided on the basis that the authors of the document are not liable to any person or organisation for any damage or loss which may occur in relation to taking or not taking action in respect of any information or advice within this document
+
+## Acknowledgements
+
+The authors are grateful for the close and effective assistance of the Technical Cooperation division for Asia-Pacific (TCAP) and Technical Cooperation Division of Programme Support and Coordination (TCPC) of the International Atomic Energy Agency (IAEA), and the experts from the 22 participating countries in the the Radiotherapy Regional Cooperative Agreement (RCA): Australia, Bangladesh, Cambodia, China, Fiji, India, Indonesia, Japan, Laos, Malaysia, Mongolia, Myanmar, Nepal, New Zealand, Pakistan, Palau, Philippines, Singapore, South Korea, Sri Lanka, Thailand, and Viet Nam
+
+\newpage
+
+
+# Acronyms
+
+`r knitr::kable(tbl_acronym)`
+
+
+
+
+\newpage
+
+# Main findings 
+
+
+
+\newpage
+
+
+# Introduction
+```{r, child=c('0.RT_intro.Rmd')}
+```
+
+\newpage
+
+# Criterion 1: Strengthened radiotherapy workforce
+
+```{r, child=c('1.criterion.Rmd')}
+```
+
+
+\newpage
+
+# Criterion 2: Increased access to quality radiotherapy
+
+
+\newpage
+
+
+# Criterion 3: Increased life span and quality of life
+
+
+
+
+\newpage
+
+
+# Overall impact of the RT RCA programme
+
+
+
+
+
+
+
+
+# Annex A: Criteria and standards
+
+
+```{r, child=c('X.Annex_criterion1.rmd', 'X.Annex_criterion2.rmd', 'X.Annex_criterion3.rmd')}
+```
+
+

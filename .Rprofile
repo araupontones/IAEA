@@ -72,11 +72,19 @@ dir_clean <- file.path(dir_survey, "3.clean")
   dir_clean_ndt <- file.path(dir_clean, "iaea_ndt")
 dir_docs <- file.path(dir_survey, "docs")
 
-
+#report NDT ====================================================================
 dir_report_NDT <- "NDT/report"
 dir_plots_NDT <- file.path(dir_report_NDT, "plots")
 dir_text_NDT <- file.path(dir_report_NDT, "text")
 dir_indicators_NDT <- file.path(dir_report_NDT, "indicators")
+
+
+#report RT ====================================================================
+dir_report_RT <- "RT/report"
+dir_plots_RT <- file.path(dir_report_RT, "plots")
+dir_text_RT <- file.path(dir_report_RT, "text")
+dir_indicators_RT <- file.path(dir_report_RT, "indicators")
+
 
 
 ################################################################################
@@ -101,4 +109,6 @@ suppressWarnings({
 #load costumed functions
 gmdacr::load_functions("functions")
 caption = "Data: IAEA's NDT online survey, 2021"
+caption_RT = "Data: IAEA's RT online survey, 2021"
+
 

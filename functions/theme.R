@@ -1,9 +1,10 @@
+library(grDevices)
 library(extrafont)
 library(ggplot2)
-extrafont::loadfonts(dev = 'win')
+extrafont::loadfonts(dev = 'win', quiet = T)
 extrafont::fonts()
 
-caption = "Data: IAEA's NDT online survey, 2021"
+#caption = "Data: IAEA's NDT online survey, 2021"
 font_main <- "Calibri"
 font_light <- "Calibri Light"
 
@@ -14,6 +15,10 @@ widt_map <- 0
 
 height_plot <- 10
 width_plot <- 13
+
+
+width_bar_rt = 12.5
+height_bar_rt = 9.7
 
 #higer to fit countries
 height_standards <- height_plot + 4

@@ -1,15 +1,17 @@
 #'plot stacked
 
-plot_stacked <- function(data,
+plot_stacked <- function(data = data_plot,
                          x,
                          y,
                          fill,
                          fill_palete= c(blue_sky, blue_navy),
                          limits = c(0,900),
-                         xlab = "Number of inspection centres"){
+                         xlab = "Number of inspection centres",
+                         caption = caption,
+                         breaks){
   
   #plot -------------------------------------------------------------------------
-  ggplot(data = data_plot,
+  ggplot(data = data,
          aes(x = {{x}},
              y = {{y}},
              fill = {{fill}})
@@ -26,7 +28,8 @@ plot_stacked <- function(data,
                      limits = limits
   ) +
     scale_fill_manual(values = fill_palete,
-                      name = "") +
+                      name = "",
+                      breaks = breaks) +
     #theme -----------------------------------------------------------------------
   theme_iaea() +
     theme_stacked_bar()
