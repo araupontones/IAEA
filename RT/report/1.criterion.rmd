@@ -11,7 +11,7 @@
 ## Criterion 1.1 Achieve self-reliance in RT
 
 
-### Contribution of the RT RCA in Achieve self-reliance in RT
+
 
 To have an approximation of the self-reliance in RT of each GP to strength its radiotherapy workforce, the number of  educational/training programmes on RT, Radiation Oncology (RO) Departments, and RO Societies that are available in country was estimated.  
 
@@ -35,6 +35,9 @@ Moreover, **there a total of `r text_train$tot_dep` Radiation Oncology (RO) Depa
 knitr::include_graphics(file.path(dir_plots, "1.criterion/number_dep.png"))
 ```
 
+**Accros all the GPs there are a total of `r txt_soc$tot_soc` societies from which `r txt_soc$reg_perc` are regional societies**. The countries with the largest number of societies are China (39), India (14) and Japan (5). `r txt_soc$c_national` have societies at the national level but not at the regional one.
+
+
 Figure \@ref(fig:soc-plot) shows the number of national and regional RO societies estanlished accross the GPs. 
 
 
@@ -43,12 +46,32 @@ knitr::include_graphics(file.path(dir_plots, "1.criterion/societies.png"))
 ```
 
 
-* Total number Radiation Oncology (RO) Societies by regional/national (stacked)
-*soc_num*
+### Contribution of the RT RCA in Achieve self-reliance in RT
+
+
+To assess the contribution of RCA in the establishment of training programmes, RO departments, and RO societies, the participants of the online survey were asked the extent to which they perceive that the RCA has contributed to the establishment of these centres in their countries. The main findings in this respect are the following:
+
+
+* **From the 17 GPs for which a training programme is available in their countries, 8 (47%) reported that RCA contributed to a great extent in their establishment, and 6 that RCA's support contributed to some extent**. 2 countries reported the training programmes could have been available even without the support from RCA, one of this countries is New Zealand which is a non-recipient country.
+
+
+* 73% of the GPs where an RO Department has been established reported that RCA somehow contributed to its establishment. **Cambodia, China, Philippines, Sri Lanka, and Vietnam reported that RCA contributed to a great extent in the establishment of their RO departments.** Only Mongolia, New Zealand, and Singapore perceived that RCA has not contributed to the establishment of their RO departments.
+
+
+* China, Japan, Mongolia,Philippines, and Sri Lanka, Vietnam reported that RCA contribution was key to the establishment of the RO societies. 
+
+* Although Laos and Palau have not established any of this infrastructure, this is expected because they joined RCA in 2018 and 2019 respectively.
+
+The detailed contribution of RCA to the GP's self-reliance can be seen in Figure \@ref(fig:c1-cont). *The empty squares in the chart indicate that those GPs did not provide information to the online survey for either the number of available infrastructure or on their perception of RCA's contribution in this topic.*
 
 
 
-* contribution of RCA in the establishment of the above
+```{r c1-cont, out.width="100%", fig.cap="RCA contribution to self-rliance in RT"}
+knitr::include_graphics(file.path(dir_plots, "1.criterion/contribuion_trained.png"))
+```
+
+
+
 
 
 *train_cont dep_cont soc_cont*

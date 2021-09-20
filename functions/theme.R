@@ -75,8 +75,9 @@ theme_stacked_bar <- function(){
   
   theme(
     
-    panel.grid.major = element_line(color = grid_color, linetype = "dotted", size = .5),
-    legend.position = 'bottom'
+    panel.grid.major.x = element_line(color = grid_color, linetype = "dotted", size = .5),
+    legend.position = 'bottom',
+    legend.key.size = unit(.3,"cm")
   )
 }
 

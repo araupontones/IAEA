@@ -47,6 +47,8 @@ text_intro <- import(file.path(dir_text, "0.intro/txt_intro.rds" ))
 
 
   text_train <- import(file.path(dir_text, "1.criterion/txt_train.rds" ))
+  txt_soc <- import(file.path(dir_text, "1.criterion/societies.rds" ))
+
   
 
 ```
@@ -117,7 +119,8 @@ The authors are grateful for the close and effective assistance of the Technical
 \newpage
 
 # Main findings 
-
+```{r, child=c('5.findings.Rmd')}
+```
 
 
 \newpage

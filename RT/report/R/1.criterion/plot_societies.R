@@ -24,9 +24,12 @@ soc <- import(infile)
 soc_plot <- soc %>%
   filter(!is.na(value),
          value >0) %>%
-  mutate(country = fct_reorder(country, value))
+  group_by(country) %>%
+  mutate(total = sum(value)) %>%
+  ungroup() %>%
+  mutate(country = fct_reorder(country, total))
 
-
+View(soc_plot)
 
 plot_stacked (data = soc_plot ,
               x = value,
