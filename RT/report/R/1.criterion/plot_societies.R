@@ -29,7 +29,7 @@ soc_plot <- soc %>%
   ungroup() %>%
   mutate(country = fct_reorder(country, total))
 
-View(soc_plot)
+#View(soc_plot)
 
 plot_stacked (data = soc_plot ,
               x = value,

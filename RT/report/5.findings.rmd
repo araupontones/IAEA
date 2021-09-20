@@ -2,4 +2,4 @@
 * Out of the 22 countries that are part of the Regional Cooperative Agreement (RCA) for Research (Development and Training in Non-Destructive Testing (NDT) in Asia and the Pacific), `r text_intro$number` participated in the online survey: `r text_intro$names` **The support and cooperation of country representatives and IAEA staff during these unusual circumstances is gratefully acknowledged**.
 
 
-* There are a total of `r text_train$tot_train` educational programmes on RT available across all the GPs that are part of the RCA programme. from the 17 GPs for which an educational programme is available, 8 (47%) reported that RCA contributed to a great extent in their establishment, and 6 reported that RCA's support contributed to some extent.
+* Across all the GPs that are part of the RCA programme, there are a total of `r text_train$tot_train` educational programmes on RT available. From the 17 GPs for which an educational programme is available, 8 (47%) reported that RCA contributed to a great extent in their establishment, and 6 reported that RCA's support contributed to some extent.

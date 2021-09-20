@@ -74,7 +74,7 @@ theme_iaea <- function(){
 theme_stacked_bar <- function(){
   
   theme(
-    
+    axis.title.x.top =  element_text(size = 9, hjust = .5),
     panel.grid.major.x = element_line(color = grid_color, linetype = "dotted", size = .5),
     legend.position = 'bottom',
     legend.key.size = unit(.3,"cm")
@@ -110,6 +110,7 @@ theme_strip <- function(){
     legend.position = 'bottom',
     legend.text = element_text(size = 16),
     legend.title = element_blank(),
+    legend.key.size = unit(.3,"cm"),
     #strip
     strip.text = element_text(hjust = 0, size = 16, face = "bold"),
     strip.background = element_rect(fill = gray_light),
@@ -119,7 +120,7 @@ theme_strip <- function(){
     plot.caption = element_text(size = 13),
     
     axis.text = element_text(size = 14),
-    axis.text.x = element_text(hjust = 1),
+    axis.text.x = element_text(hjust = .5),
     
   )
 }

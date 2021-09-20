@@ -44,6 +44,8 @@ dep_japan_per <- paste0(round(dep_japan/tot_dep *100,1),"%")
 dep_india <- train$dep_num[train$country == "India"]
 dep_india_per <- paste0(round(dep_india/tot_dep *100,1),"%")
 
+
+
 tot_dep <- prettyNum(tot_dep, big.mark = ",")
 
 dep_india_per

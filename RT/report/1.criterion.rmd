@@ -16,9 +16,9 @@
 To have an approximation of the self-reliance in RT of each GP to strength its radiotherapy workforce, the number of  educational/training programmes on RT, Radiation Oncology (RO) Departments, and RO Societies that are available in country was estimated.  
 
 
-As can be seen in Figure \@ref(fig:train-plot), **there are a total of `r text_train$tot_train` educational programmes on RT available across all the GPs that are part of the RCA programme**. Vietnam and China are the countries where more programmes (20) are on RT are available, followed by South Korea and Japan where 15 and 10 educational programmes are available.
+As can be seen in Figure \@ref(fig:train-plot), **there are a total of `r text_train$tot_train` educational/training programmes (ET) on RT available across all the Radiotherapy RCA's GPs**. Vietnam and China are the countries where more training programmes on RT are available (20), followed by South Korea and Japan where 15 and 10 ETs are available.
 
-According to the responses of the GPS, there are none training programmes available in `r text_train$train0`.
+According to the responses of the GPS, there are none training programmes on RT available in `r text_train$train0`.
 
 
 
@@ -27,7 +27,7 @@ According to the responses of the GPS, there are none training programmes availa
 knitr::include_graphics(file.path(dir_plots, "1.criterion/number_trained.png"))
 ```
 
-Moreover, **there a total of `r text_train$tot_dep` Radiation Oncology (RO) Departments across all the GPs**. From all those departments `r text_train$dep_china_per` are located in China, `r text_train$dep_japan_per` in Japan, and `r text_train$dep_india_per` in India. Figure \@ref(fig:dep-plot) shows the number of RO Deparments available in each GP. 
+Moreover, **there a total of `r text_train$tot_dep` Radiation Oncology (RO) Departments across all the GPs**. From all those departments `r text_train$dep_china_per` are located in China, `r text_train$dep_japan_per` in Japan, and 15.6% in India. Figure \@ref(fig:dep-plot) shows the number of RO Deparments available in each GP. 
 
 
 
@@ -35,7 +35,7 @@ Moreover, **there a total of `r text_train$tot_dep` Radiation Oncology (RO) Depa
 knitr::include_graphics(file.path(dir_plots, "1.criterion/number_dep.png"))
 ```
 
-**Accros all the GPs there are a total of `r txt_soc$tot_soc` societies from which `r txt_soc$reg_perc` are regional societies**. The countries with the largest number of societies are China (39), India (14) and Japan (5). `r txt_soc$c_national` have societies at the national level but not at the regional one.
+**Accros all the GPs there are a total of `r txt_soc$tot_soc` Societies from which `r txt_soc$reg_perc` are regional societies**. The countries with the largest number of societies are China (39), India (14) and Japan (5). `r txt_soc$c_national` have societies at the national level but not at the regional one.
 
 
 Figure \@ref(fig:soc-plot) shows the number of national and regional RO societies estanlished accross the GPs. 
@@ -49,16 +49,16 @@ knitr::include_graphics(file.path(dir_plots, "1.criterion/societies.png"))
 ### Contribution of the RT RCA in Achieve self-reliance in RT
 
 
-To assess the contribution of RCA in the establishment of training programmes, RO departments, and RO societies, the participants of the online survey were asked the extent to which they perceive that the RCA has contributed to the establishment of these centres in their countries. The main findings in this respect are the following:
+To assess the contribution of RCA in the establishment of training programmes, RO departments, and RO societies, the participants of the online survey were asked the extent to which they perceive that the RCA has contributed to the establishment of this infrastructure in their countries. The main findings in this respect are the following:
 
 
-* **From the 17 GPs for which a training programme is available in their countries, 8 (47%) reported that RCA contributed to a great extent in their establishment, and 6 that RCA's support contributed to some extent**. 2 countries reported the training programmes could have been available even without the support from RCA, one of this countries is New Zealand which is a non-recipient country.
+* **From the 17 GPs for which a training programme is available in their countries, 8 (47%) reported that RCA contributed to a great extent in their establishment, and 6 that RCA's support contributed to some extent**. 2 countries reported that the training programmes could had been available even without the support from RCA, one of this countries is New Zealand which is a non-recipient country.
 
 
 * 73% of the GPs where an RO Department has been established reported that RCA somehow contributed to its establishment. **Cambodia, China, Philippines, Sri Lanka, and Vietnam reported that RCA contributed to a great extent in the establishment of their RO departments.** Only Mongolia, New Zealand, and Singapore perceived that RCA has not contributed to the establishment of their RO departments.
 
 
-* China, Japan, Mongolia,Philippines, and Sri Lanka, Vietnam reported that RCA contribution was key to the establishment of the RO societies. 
+* China, Japan, Mongolia,Philippines, and Sri Lanka, Vietnam reported that RCA contribution was key to the establishment of their RO societies. 
 
 * Although Laos and Palau have not established any of this infrastructure, this is expected because they joined RCA in 2018 and 2019 respectively.
 
@@ -71,10 +71,6 @@ knitr::include_graphics(file.path(dir_plots, "1.criterion/contribuion_trained.pn
 ```
 
 
-
-
-
-*train_cont dep_cont soc_cont*
 
 
 
@@ -93,7 +89,26 @@ knitr::include_graphics(file.path(dir_plots, "1.criterion/contribuion_trained.pn
 
 ## 1.2 Establish GP's infrastructure to produce RT specialists
 
+**In 2020 there were, approximately, a total of `r txt_spec$total_20` RT specialists across all the GPs that are part of RT RCA, from which `r txt_spec$perc_cert_20` were certified specialists**. The country with more RT specialists is `r txt_spec$count1` with  `r txt_spec$count1_num` specialists followed by `r txt_spec$count2` and `r txt_spec$count3` who have trained `r txt_spec$count2_num` and `r txt_spec$count3_num` specialists respectively. **The method for which more specialists have been trained is `r txt_spec$meth1` with anout `r txt_spec$meth1_num` specialists trained on RT**. Figure \@ref(fig:spec-china) shows the total number of RT specialist by GP and the proportion of specialists that are certified in 2020. 
+
+
+```{r spec-china, out.width="100%", fig.cap="Number of RT specialists by GP."}
+knitr::include_graphics(file.path(dir_plots, "1.criterion/number_specialists_china.png"))
+```
+
+
+Figure \@ref(fig:g-spec) below shows the growth in number of RT specialist in each GP since 2000. 
+
+```{r g-spec, out.width="100%", fig.cap="Number of RT specialists by GP."}
+knitr::include_graphics(file.path(dir_plots, "1.criterion/growth_specialists.png"))
+```
+
+
+
+As can be seen in Figure X, that shows the distribution of specialists by method and by country, across all the GPs,in 2020 there are *X* more RT specialists in comparison with the same figure in 2000. Which represents a growth of *% growth*. In absoulte terms, the country with a higher growth of RT specialists is *count1*. However, in terms of proportional growth, *grow1* is the GP with a faster grwoth in the number of RT specialist.  
+
 ## Contribution of the RCA in certified personnel
+
 
 * Number of RT specialist by year (dodged) and by field (facet)
 *roster spec2000 tot_2000 and roster spec2020 tot_2020**
