@@ -24,7 +24,10 @@ names(raw_main)
 labelvars <- c("country", "interview__status", "currency",
                
                #contribution programmes
-               "train_cont", "dep_cont", "soc_cont"
+               "train_cont", "dep_cont", "soc_cont",
+               
+               #contributiob specialists
+               "spec_cont"
                )
 
 

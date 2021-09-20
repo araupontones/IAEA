@@ -3,3 +3,5 @@
 
 
 * Across all the GPs that are part of the RCA programme, there are a total of `r text_train$tot_train` educational programmes on RT available. From the 17 GPs for which an educational programme is available, 8 (47%) reported that RCA contributed to a great extent in their establishment, and 6 reported that RCA's support contributed to some extent.
+
+* Compared to 2000, in 2020 there are `r txt_g$g_spec` more RT specialists. This figure represents a growth of `r txt_g$g_grow` in the period 2000 to 2020.

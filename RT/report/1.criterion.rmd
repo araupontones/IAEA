@@ -6,6 +6,8 @@
 2. Establish GP's infrastructure to produce RT specialists in Radiation Oncology, Radiation Oncologists, Medical Physicists, Radiation Technology Therapists, and Radiation Oncology Nurses.
 
 
+```{r table-c1, child=c('1.1.key_indicators_c1.rmd')}
+```
 
 
 ## Criterion 1.1 Achieve self-reliance in RT
@@ -89,13 +91,20 @@ knitr::include_graphics(file.path(dir_plots, "1.criterion/contribuion_trained.pn
 
 ## 1.2 Establish GP's infrastructure to produce RT specialists
 
-**In 2020 there were, approximately, a total of `r txt_spec$total_20` RT specialists across all the GPs that are part of RT RCA, from which `r txt_spec$perc_cert_20` were certified specialists**. The country with more RT specialists is `r txt_spec$count1` with  `r txt_spec$count1_num` specialists followed by `r txt_spec$count2` and `r txt_spec$count3` who have trained `r txt_spec$count2_num` and `r txt_spec$count3_num` specialists respectively. **The method for which more specialists have been trained is `r txt_spec$meth1` with anout `r txt_spec$meth1_num` specialists trained on RT**. Figure \@ref(fig:spec-china) shows the total number of RT specialist by GP and the proportion of specialists that are certified in 2020. 
+**In 2020 there were, approximately, a total of `r txt_spec$total_20` RT specialists across all the GPs that are part of RT RCA, from which `r txt_spec$perc_cert_20` were certified specialists**. The country with more RT specialists is `r txt_spec$count1` with  `r txt_spec$count1_num` specialists followed by `r txt_spec$count2` and `r txt_spec$count3` who have trained `r txt_spec$count2_num` and `r txt_spec$count3_num` specialists respectively. 
+
+**The method for which more specialists have been trained is `r txt_spec$meth1` with anout `r txt_spec$meth1_num` specialists trained on RT**. Figure \@ref(fig:spec-china) shows the total number of RT specialist by GP and the proportion of specialists that are certified in 2020. 
+
+*Australia, India, Laos, Myanmar, and New Zealand did not report, during the online survey, whether their RT specialist are certified or not. Thus, their figures are coded as "Unknown" in the Figure below*.
 
 
 ```{r spec-china, out.width="100%", fig.cap="Number of RT specialists by GP."}
 knitr::include_graphics(file.path(dir_plots, "1.criterion/number_specialists_china.png"))
 ```
 
+As can be seen in Figure \@ref(fig:g-spec), that shows the distribution of specialists by method and by country, **across all the GPs, there are `r txt_g$g_spec` more RT specialists in 2020 than they were in 2000. This figure represents a growth of `r txt_g$g_grow` for this period**. In absolute terms, the country with a higher growth of total RT specialists is `r txt_g$count1` (`r txt_g$count1_num` new specialists) . However, in terms of proportional growth, `r txt_g$grow1`  is the GP with a fastest growing number of RT specialist (`r txt_g$g_perc1` more in 2020 compared to 2000). 
+
+India, Laos, and New Zealand reported that they did not have RT specialist in 2000 but that they have managed to produce specialists ever since.   
 
 Figure \@ref(fig:g-spec) below shows the growth in number of RT specialist in each GP since 2000. 
 
@@ -104,16 +113,24 @@ knitr::include_graphics(file.path(dir_plots, "1.criterion/growth_specialists.png
 ```
 
 
+Figure \@ref(fig:g-spec) shows the distribution of certified specialists by method and by GP in 2020 (*to make the distribution of specialists easier to read, the Figure excludes China because it has a much larger number of specialists than the rest of the GPs)*. As can be seen in the figure, **after China, the country with the highest number of Radiation Therapists (RT) specialists is Japan (about 2,000 specialists in this field)**, followed by South Korea (750). Japan is also the GP with the highest number of certified Oncologists (899). 
 
-As can be seen in Figure X, that shows the distribution of specialists by method and by country, across all the GPs,in 2020 there are *X* more RT specialists in comparison with the same figure in 2000. Which represents a growth of *% growth*. In absoulte terms, the country with a higher growth of RT specialists is *count1*. However, in terms of proportional growth, *grow1* is the GP with a faster grwoth in the number of RT specialist.  
+*The countries for which the box is coded in gray is because they did not report whether their specialists are certified or not. 
 
-## Contribution of the RCA in certified personnel
+```{r m-spec, out.width="100%", fig.cap="Number of RT specialists by GP."}
+knitr::include_graphics(file.path(dir_plots, "1.criterion/method_specialists.png"))
+```
 
 
-* Number of RT specialist by year (dodged) and by field (facet)
-*roster spec2000 tot_2000 and roster spec2020 tot_2020**
-* % of certified : another chart with % certified by year (dodged) and by field (facet) (?) - 
-*cert_2000/tot_2000  and cert_2020/tot_2020*
+### Contribution of the RCA in certified personnel
+
+
+```{r spec-cont, out.width="100%", fig.cap="RCA RT programme contribution to the increase of certified RT specialists between 2000 and 2020."}
+knitr::include_graphics(file.path(dir_plots, "1.criterion/contribuion_specialists.png"))
+```
+
+
+
 
 * extent did the RCA RT programme contribute to the increase of certified RT specialists between 2000 and 2020
 *spec_cont*

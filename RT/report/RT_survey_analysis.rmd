@@ -49,6 +49,7 @@ text_intro <- import(file.path(dir_text, "0.intro/txt_intro.rds" ))
   text_train <- import(file.path(dir_text, "1.criterion/txt_train.rds" ))
   txt_soc <- import(file.path(dir_text, "1.criterion/societies.rds" ))
   txt_spec <- import(file.path(dir_text, "1.criterion/number_specialists.rds" ))
+  txt_g <- import(file.path(dir_text, "1.criterion/growth_specialists.rds" ))
 
   
 

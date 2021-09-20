@@ -43,7 +43,11 @@ spec <- raw_spec %>%
          perc_2000 = cert_2000/tot_2000,
          perc_2020 = cert_2020/tot_2020,
          un_2000 = tot_2000 - cert_2000,
-         un_2020 = tot_2020 - cert_2020 ) %>%
+         un_2020 = tot_2020 - cert_2020 ,
+         not_2020 = case_when(!is.na(tot_2020) & is.na(cert_2020) ~ tot_2020,
+                         T ~ NA_real_
+                         ) 
+         ) %>%
   left_join(raw_main, by = "interview__key") %>%
   select(-interview__key) %>%
   pivot_longer(-c(country, method),
@@ -53,6 +57,7 @@ spec <- raw_spec %>%
                                str_detect(indicator, "cert") ~ "Certified",
                                str_detect(indicator, "un") ~ "Uncertified",
                                str_detect(indicator, "perc") ~ "% Certified",
+                               str_detect(indicator, "not") ~ "Unknown",
                                T ~ NA_character_))
 
 

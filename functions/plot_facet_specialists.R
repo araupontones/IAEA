@@ -5,8 +5,8 @@ plot_facet_specialists <- function(.data){
                y = country,
                fill = indicator)) +
     geom_col() +
-    scale_fill_manual(breaks = c("Certified", "Uncertified"),
-                      values = c(blue_navy, blue_light)) +
+    scale_fill_manual(breaks = c("Certified", "Uncertified", "Unknown"),
+                      values = c(blue_navy, blue_light, "gray")) +
     scale_x_continuous(limits = c(0,25e3),
                        breaks = function(x)seq(from = 0, to = 20e3, length.out = 5),
                        labels = function(x)str_replace(x, "000$", "K"),

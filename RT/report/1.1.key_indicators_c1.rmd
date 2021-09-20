@@ -1,0 +1,11 @@
+| Sub-criterion                                           | Evidence                                                             | Finding                  |
+|---------------------------------------------------------|----------------------------------------------------------------------|--------------------------|
+| Achieve self-reliance in RT                             | Total educational/training programmes on RT are available across GPs | `r text_train$tot_train` |
+| Achieve self-reliance in RT                             | Total Radiation Oncology (RO) Departments                            | `r text_train$tot_dep`   |
+| Achieve self-reliance in RT                             | Total Radiation Oncology (RO) Societies                              | `r txt_soc$tot_soc`      |
+| Establish GP's infrastructure to produce RT specialists | Approximate number of RT specialists in 2020                         | `r txt_spec$total_20`    |
+| Establish GP's infrastructure to produce RT specialists | Increase of RT specialists between 2000 and 2020                     | `r txt_g$g_grow`         |
+
+: Key evidence for criterion 1: Strengthened radiotherapy workforce
+
+

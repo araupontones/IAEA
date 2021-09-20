@@ -21,7 +21,7 @@ spec <- import(infile)
 
 #prepare data for plot 
 spec_plot <- spec %>%
-  filter(indicator %in% c("Certified", "Uncertified")) %>%
+  filter(indicator %in% c("Certified", "Uncertified", "Unknown")) %>%
   filter(!is.na(value)) %>%
   filter(year == "2020") %>%
   group_by(country) %>%
@@ -30,7 +30,7 @@ spec_plot <- spec %>%
   #filter(country != "China") %>%
   mutate(country = fct_reorder(country, total),
          indicator = factor(indicator,
-                            levels = rev(c("Certified", "Uncertified")),
+                            levels = rev(c("Certified", "Uncertified", "Unknown")),
                             ordered = F)
   )
 
@@ -45,7 +45,7 @@ spec_plot <- spec %>%
 
 max(spec_plot$value, na.rm = T)
 
-
+View(spec_plot)
 
 
 
@@ -59,7 +59,7 @@ exfile
 ggsave(exfile,
        last_plot(),
        width = width_bar_rt ,
-       height = height_bar_rt +1.5,
+       height = height_bar_rt +3,
        units = "cm",
        dpi = dpi_report
 )
