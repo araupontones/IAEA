@@ -15,10 +15,10 @@ count_likert <- function(likert){
 count_likert_not_established <- function(likert,
                                          text_not = "Not established"){
   
-  x = case_when(likert == "To a great extent" ~ 5,
-                likert == "Little" ~ 4,
-                likert == "Not at all" ~ 3,
-                likert == text_not ~ 2,
+  x = case_when(likert == "To a great extent" ~ 6,
+                likert == "Little" ~ 3,
+                likert == "Not at all" ~ 1.1,
+                likert == text_not ~ 1,
                 
                 T ~ 0)
   
@@ -46,7 +46,7 @@ likert_to_NA <- function(has,
 }
 
 
-
+#--------------------------------------------------------------------------------
 clean_likert_num <- function(.data,
                              lkrt_var,
                              var_num,
@@ -56,11 +56,11 @@ clean_likert_num <- function(.data,
   
   .data %>%
     select(country,
-           {{var_num}}, 
+           value = {{var_num}}, 
            likert = {{lkrt_var}}) %>%
     mutate(indicator = indicator_name,
-           likert = case_when({{var_num}} == 0 ~ text_not,
-                              is.na({{var_num}}) ~ "N/A",
+           likert = case_when(value == 0 ~ text_not,
+                              is.na(value) ~ "N/A",
                               is.na(likert) ~ "N/A",
                               T ~ likert),
            #to factor 
@@ -70,6 +70,6 @@ clean_likert_num <- function(.data,
                                           "Not at all",
                                           text_not,
                                           "N/A")))
-    ) %>%
-    select(-{{var_num}})
+    ) #%>%
+    #select(-{{var_num}})
 }

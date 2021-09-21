@@ -30,7 +30,7 @@ cont <- import(infile) %>%
   select(country, spec_cont) %>%
   left_join(spec, by = "country") %>%
 mutate(country = fct_reorder(country, spec_num)) 
-filter(spec_num >0 & !is.na(spec_num))
+#filter(spec_num >0 & !is.na(spec_num))
 
 
 
@@ -57,15 +57,16 @@ cont_plot <- spec2 %>%
 
 
 #plot ==========================================================================
-
+#View(cont_plot)
 cont_plot %>%
   plot_contribution(x = country,
                     y = indicator,
                     fill = likert,
+                    caption = caption_RT,
                     pallete = c("white","#e7e9ea", color_inadequate, color_good, blue_navy),
                     legend = "Contribution of RCA to increase of certified RT specialists between 2000 and 2020")
-geom_text(aes(label = label),
-          family = font_main)
+# geom_text(aes(label = label),
+#           family = font_main)
 
 
 

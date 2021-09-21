@@ -46,6 +46,8 @@ plot_stacked(data = data_plot,
              x = value,
              y = country,
              fill = indicator,
+             breaks = c("Owned by local firms", "Owned by foreign firms"),
+             caption = caption_NDT,
              fill_palete = c(blue_sky, blue_navy))
 
 

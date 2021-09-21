@@ -147,6 +147,9 @@ theme_standards_sum <- function(){
 #================================================================================
 theme_bar <- function(){
   theme(panel.grid.major.x = element_line(linetype = "dotted", color = grid_color),
-        axis.title.x.bottom =  element_text(size = 9, hjust = 0)
+        panel.grid.minor.x = element_line(linetype = "dotted", color = grid_color),
+        axis.title.x.bottom =  element_text(size = 9, hjust = 0),
+        axis.title.x.top =  element_text(size = 9, hjust = .5),
+        legend.key.size = unit(.3,"cm")
   )
 }

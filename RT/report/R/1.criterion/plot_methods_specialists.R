@@ -38,7 +38,7 @@ spec <- import(infile) %>%
   )
   
 
-View(spec)
+
 
 
 

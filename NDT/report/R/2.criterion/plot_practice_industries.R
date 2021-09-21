@@ -31,6 +31,7 @@ bar_plot(
   db = prct_plot,
   x_var = industries,
   y_var = country,
+  caption = caption_NDT,
   x_title = "Number of industrial sectors in which NDT has been applied",
   limits = c(0,12),
   label = industries

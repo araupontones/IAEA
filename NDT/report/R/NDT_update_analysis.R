@@ -58,7 +58,8 @@ dir_ip_NDT <- file.path(dir_report_NDT, "R/4.impact")
 message("Impact")
 
 scripts_ip_NDT <- list.files(dir_ip_NDT, full.names = T)
-
+#list.files("functions/imapact_vars.R")
+source("functions/imapact_vars.R", encoding = "UTF-8")
 run_scripts(scripts_ip_NDT)
 
 

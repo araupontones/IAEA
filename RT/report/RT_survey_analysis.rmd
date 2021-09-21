@@ -55,17 +55,18 @@ text_intro <- import(file.path(dir_text, "0.intro/txt_intro.rds" ))
 
 ```
 
-<!----
+
 
 
 ```{r load_tx_c2}
 
-
+txt_mach <- import(file.path(dir_text, "2.criterion/growth_machines.rds" ))
+txt_pat <- import(file.path(dir_text, "2.criterion/growth_patients.rds" ))
 
 
 ```
 
-
+<!---------
 
 ```{r load_tx_c3}
 
@@ -143,7 +144,8 @@ The authors are grateful for the close and effective assistance of the Technical
 \newpage
 
 # Criterion 2: Increased access to quality radiotherapy
-
+```{r, child=c('2.criterion.Rmd')}
+```
 
 \newpage
 

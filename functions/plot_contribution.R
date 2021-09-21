@@ -3,7 +3,8 @@ plot_contribution <- function(.data,
                               y = indicator,
                               fill = likert,
                               legend = "Contribution of RCA to establish NCS or NCB",
-                              pallete = c("#e7e9ea", color_inadequate, color_good, blue_navy)){
+                              pallete = c("#e7e9ea", color_inadequate, color_good, blue_navy),
+                              caption = caption){
   
   .data %>%
     ggplot(aes(x = {{x}},
@@ -27,3 +28,4 @@ plot_contribution <- function(.data,
   
   
 }
+

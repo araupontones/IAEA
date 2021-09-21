@@ -28,8 +28,8 @@ soc <- import(file.path(param$dir_clean_s, "societies.rds")) %>%
 cont <- import(infile) %>%
   select(country, train_num,train_cont, dep_num, dep_cont, soc_cont) %>%
   left_join(soc, by = "country")
-  mutate(country = fct_reorder(country, train_num)) 
-  filter(train_num >0 & !is.na(train_num))
+  #mutate(country = fct_reorder(country, train_num)) 
+  #filter(train_num >0 & !is.na(train_num))
 
 
   
@@ -75,6 +75,7 @@ cont_plot %>%
   plot_contribution(x = country,
                     y = indicator,
                     fill = likert,
+                    caption = caption_RT,
                     pallete = c("white","#e7e9ea", color_inadequate, color_good, blue_navy),
                     legend = "Contribution of RCA to achieve self-reliance in RT")
   geom_text(aes(label = label),

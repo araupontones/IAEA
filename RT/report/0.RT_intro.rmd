@@ -21,6 +21,11 @@ knitr::include_graphics(file.path(dir_plots, "0.intro/map.png"))
 
 2. Establish GP's infrastructure to produce RT specialists in Radiation Oncology, Radiation Oncologists, Medical Physicists, Radiation Technology Therapists, and Radiation Oncology Nurses.
 
+**Increased access to quality radiotherapy**
+
+3. Increase operational RT equipment and technology
+
+4. Increase the number and quality of treatment of cancer patients using domestic RT facilities 
 
 
 

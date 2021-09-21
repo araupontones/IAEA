@@ -33,6 +33,7 @@ ipct %>%
   plot_contribution(x = country,
                     y = indicator,
                     fill = lkert,
+                    caption = caption_NDT,
                     pallete = c("white", color_inadequate,color_good ,blue_navy),
                     legend = "GP's assesment of the role of RCA in achieving objectives and benefits of NDT through industrial growth") 
 

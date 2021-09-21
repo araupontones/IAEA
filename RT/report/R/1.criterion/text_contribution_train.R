@@ -1,4 +1,4 @@
-cli::cli_alert_success("Plot # contribution personnel")
+cli::cli_alert_success("Text # contribution personnel")
 cli::cli_alert_info('Saved:in {file.path(dir_text_RT, "1.criterion/contribuion_trained.rds")}')
 
 
@@ -18,7 +18,7 @@ t <- import(infile) %>%
   select(country, init_year)
 
 
-View(t)
+
 
 #read data ====================================================================
 
@@ -30,15 +30,15 @@ soc <- import(file.path(param$dir_clean_s, "societies.rds")) %>%
 cont <- import(infile) %>%
   select(country, train_num,train_cont, dep_num, dep_cont, soc_cont) %>%
   left_join(soc, by = "country")
-mutate(country = fct_reorder(country, train_num)) 
-filter(train_num >0 & !is.na(train_num))
+#mutate(country = fct_reorder(country, train_num)) 
+#filter(train_num >0 & !is.na(train_num))
 
 
 
 cont %>%
   filter(train_num >0 & !is.na(train_num)) %>%
   tabyl(train_cont)
-  View()
+  
   
   
   cont %>%
@@ -48,7 +48,7 @@ cont %>%
     sort() %>%
     knitr::combine_words()
     #tabyl(dep_cont)
-    View()
+    
     
     
   

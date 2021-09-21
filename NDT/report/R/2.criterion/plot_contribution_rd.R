@@ -45,6 +45,7 @@ rd_cont %>%
   plot_contribution(x = country,
                     y = indicator,
                     fill = likert,
+                    caption = caption_NDT,
                     pallete = c("white","#e7e9ea", color_inadequate, color_good, blue_navy),
                     legend = "Contribution of RCA to enable or promote the initiation of R&D ") +
   geom_text(aes(label = label),

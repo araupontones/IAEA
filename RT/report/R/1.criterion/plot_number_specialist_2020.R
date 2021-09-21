@@ -45,11 +45,11 @@ spec_plot <- spec %>%
 
 max(spec_plot$value, na.rm = T)
 
-View(spec_plot)
 
 
 
 spec_plot %>% plot_facet_specialists()
+
 
 #export ==================================================================
 

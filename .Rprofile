@@ -110,5 +110,6 @@ suppressWarnings({
 gmdacr::load_functions("functions")
 caption = "Data: IAEA's NDT online survey, 2021"
 caption_RT = "Data: IAEA's RT online survey, 2021"
+caption_NDT = "Data: IAEA's NDT online survey, 2021"
 
 

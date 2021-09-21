@@ -33,16 +33,18 @@ message("Criterion 1")
 scripts_c1_RT <- list.files(dir_c1_RT, full.names = T)
 
 run_scripts(scripts_c1_RT)
-# 
-# 
-# #4. Indicators  & plotscriterion 2 =====================================================
-# 
-# dir_c2_NDT <- file.path(dir_report_NDT, "R/2.criterion")
-# message("Criterion 2")
-# 
-# scripts_c2_NDT <- list.files(dir_c2_NDT, full.names = T)
-# 
-# run_scripts(scripts_c2_NDT)
+
+ 
+# 5. Indicators  & plotscriterion 2 =====================================================
+
+ dir_c2_RT <- file.path(dir_report_RT, "R/2.criterion")
+ message("Criterion 2")
+ 
+ 
+ scripts_c2_RT <- list.files(dir_c2_RT, full.names = T)
+ 
+ 
+ run_scripts(scripts_c2_RT)
 # 
 # 
 # #4. Indicators  & plotscriterion 3 =====================================================

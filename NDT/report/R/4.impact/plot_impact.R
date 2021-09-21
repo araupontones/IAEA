@@ -85,6 +85,7 @@ im %>%
   plot_contribution(x = Country,
                     y = indicator,
                     fill = has,
+                    caption = caption_NDT,
                     pallete = c("white", color_inadequate, blue_navy),
                     legend = "Contribution of RCA in achieving general objectives") +
   geom_text(aes(label = lkert),

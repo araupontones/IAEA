@@ -33,6 +33,7 @@ bar_plot(
   db = rd_plot,
   x_var = value,
   y_var = country,
+  caption = caption_NDT,
   x_title = "Publications related to NDT have been published since 2000",
   limits = c(0,270),
   label = value,

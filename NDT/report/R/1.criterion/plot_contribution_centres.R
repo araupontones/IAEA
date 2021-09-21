@@ -107,6 +107,7 @@ both %>%
   plot_contribution(x = country,
                     y = indicator,
                     fill = likert,
+                    caption = caption_NDT,
                     legend = "Contribution of RCA to establish local training and inspection centres") +
   geom_text(aes(label = invest),
             color = "white",

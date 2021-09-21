@@ -32,6 +32,7 @@ bar_plot(
   db = rd_plot,
   x_var = value,
   y_var = country,
+  caption = caption_NDT,
   x_title = "Personnel trained on NDT under the RCA NDT programme",
   limits = c(0,1150),
   label = value,

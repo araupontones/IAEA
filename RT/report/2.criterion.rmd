@@ -1,0 +1,63 @@
+This section presents the findings on the contribution of the RT RCA programme to the Increased access to quality radiotherapy in the GPs that are part of the programme and that participated in the online survey. In particular, the objective of the analysis is to understand the number of operational RT equipment and technology available, the quality of radiotherapy treatment, and the extent to which the support of the RT programme has contributed to:
+
+1. Increase operational RT equipment and technology
+
+2. Increase the number and quality of treatment of cancer patients using domestic RT facilities 
+
+
+Key indicators and results of this assessment are summarized in the below table
+
+```{r table-c1, child=c('1.2.key_indicators_c2.rmd')}
+```
+
+
+
+## Criterion 2.1 Increase operational RT equipment and technology
+
+
+**In 2000, there were approximately `r txt_mach$tot_0` operational RT equipment (linear accelerators and Cobalt 60 machines) across all the GPs that are part of the RT RCA programme**. By 2020, this figure has increased to `r txt_mach$tot_20` **which represents a percentage growth of `r txt_mach$g_grow` between 2000 and 2020**. `r txt_mach$count1` is the country where more operational RT equipment is available (`r txt_mach$count1_num` machines), followed by `r txt_mach$count2` that has `r txt_mach$count2_num` RT machines, and `r txt_mach$count3` (`r txt_mach$count3_num` linear accelerators and Cobalt 60 machines). Palau is the only country that reported not to have any operational RT equipment available in their country.
+
+The largest total increase in treatment machines in the period 2000 to 2010 was reported by `r txt_mach$grow1` that reported a total increase of `r txt_mach$grow1_num` in this period. However, in terms of relative terms, the largest increase was observed for `r txt_mach$perc1` which reported to have `r txt_mach$perc1_num` more RT equipment in 2020 in relation to 2020. 
+
+Figure \@ref(fig:mach-plot) shows the total number of operational RT equipment (linear accelerators and Cobalt 60 machines) available by GP in 2000, 2010, and 2020. 
+
+
+```{r mach-plot, out.width="100%", fig.cap="Total number of operational RT equipment by GP (linear accelerators and Cobalt 60 machines) by GP between 2000 and 2020."}
+knitr::include_graphics(file.path(dir_plots, "2.criterion/number_machines.png"))
+```
+
+
+
+## Criterion 2.2 Increase the number and quality of treatment of cancer patients using domestic RT facilities
+
+
+Approximately, across all the GPs that are part of RT RCA,  **there were `r txt_pat$g_pat` more total number of cancer patients treated using domestic RT facilities in 2020 than they were in 2020  (an increment of `r txt_pat$g_grow`)**. In 2000 there were `r txt_pat$tot_0` patients reported and `r txt_pat$tot_20` in 2020. 
+
+In 2020, across all the GPs, `r txt_pat$count1` was the country where more cancer patients were treated using domestic RT facilities (`r txt_pat$count1_num` patients), followed by `r txt_pat$count2` (`r txt_pat$count2_num` patients), and `r txt_pat$count3` (`r txt_pat$count3_num`). 
+
+Figure \@ref(fig:pat-plot) shoes the total number of cancer patients treated using domestic RT facilities by GPs between 2000 and 2020. 
+
+```{r pat-plot, out.width="100%", fig.cap="Total number of cancer patients treated using domestic RT facilities by GPs between 2000 and 2020."}
+knitr::include_graphics(file.path(dir_plots, "2.criterion/number_patients.png"))
+```
+
+waiting times *roster wait_2000prop and 2020prop*
+
+
+
+
+## Contribution RCA on Supplied RT technology and quality of treatment 
+
+#### On technology
+
+new technologies *tech* (multiple select)
+
+
+Did the RCA RT cause to invest in additional RT equipment between 2000 and 2020? By RT equipment we mean linear accelerators and Cobalt 60 machines.(*mach_rca*). From those, the additional RT equipment can be attributed to country’s participation in the RCA RT (*mach_rcanum*)
+
+#### on patients
+In your opinion, to what extent did the RCA RT programme contribute to this increase of patients treated between 2000 and 2020 *pat_cont* (extent to increase small - large) --- (show graph of increase of patients and label the cont.)
+
+In your opinion, has the quality of RT services offered in %country% improved as a result of participating in the RCA RT programme? *qual_yn* (yes/no) by how much  *qual_cont* (frequency)
+
+waiting_time : *wait_cont* (likert)

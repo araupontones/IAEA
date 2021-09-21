@@ -67,6 +67,7 @@ both %>%
 plot_contribution(x = country,
                   y = indicator,
                   fill = likert,
+                  caption = caption_NDT,
                   pallete = c("white", "#e7e9ea", color_inadequate, color_good, blue_navy),
                   legend = "Contribution of RCA to establish NCS or NCB")
 

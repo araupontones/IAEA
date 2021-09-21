@@ -1,4 +1,4 @@
-cli::cli_alert_success("Plot, trained people RD")
+cli::cli_alert_success("Plot, #seminars RD")
 cli::cli_alert_info(glue('Saved: {file.path(dir_plots_NDT, "2.criterion/RD_seminar.png")}'))
 
 #clean main quesitonnaire
@@ -33,6 +33,7 @@ bar_plot(
   db = rd_plot,
   x_var = value,
   y_var = country,
+  caption = caption_NDT,
   x_title = "NDT Seminars/conferences organized since 2000",
   limits = c(0,1900),
   label = value,
