@@ -30,7 +30,9 @@ knitr::include_graphics(file.path(dir_plots, "2.criterion/number_machines.png"))
 
 ## Criterion 2.2 Increase the number and quality of treatment of cancer patients using domestic RT facilities
 
+This section presents the findings on the analysis made about the total number of cancer patients treated and the approximate average waiting times for the patients to be treated. 
 
+#### Cancer patients treated using domestic RT
 Approximately, across all the GPs that are part of RT RCA,  **there were `r txt_pat$g_pat` more total number of cancer patients treated using domestic RT facilities in 2020 than they were in 2020  (an increment of `r txt_pat$g_grow`)**. In 2000 there were `r txt_pat$tot_0` patients reported and `r txt_pat$tot_20` in 2020. 
 
 In 2020, across all the GPs, `r txt_pat$count1` was the country where more cancer patients were treated using domestic RT facilities (`r txt_pat$count1_num` patients), followed by `r txt_pat$count2` (`r txt_pat$count2_num` patients), and `r txt_pat$count3` (`r txt_pat$count3_num`). 
@@ -41,8 +43,17 @@ Figure \@ref(fig:pat-plot) shoes the total number of cancer patients treated usi
 knitr::include_graphics(file.path(dir_plots, "2.criterion/number_patients.png"))
 ```
 
-waiting times *roster wait_2000prop and 2020prop*
+#### Waiting times 
 
+**The proporiton of patients that experienced less than 10 days of waiting time increased from `r txt_wait$w_0` in 2000 to `r txt_wait$w_20` in 2020**. In countries like Cambodia, Philippines, South Korea, and Vietnam more than 80% of the patients are treated in less than 10 days. The proportion of patients that are treated below this threshold increased for all countries except for Mongolia, Bangladesh, and Pakistan. The proportion is the same between 2000 and 2020 for New Zealand, Singapore, and Sri Lanka. 
+
+Figure \@ref(fig:wait-plot) shows the proportion of patients that experienced less than 10 days of waiting time in 2000 and in 2020 for each of the GPs that provided this information.
+
+*Australia, India, Laos, Myanmar, and Palau are not shown in the Figure because information about waiting times was not provided by this countries during the online survey.*
+
+```{r wait-plot, out.width="100%", fig.cap="Percentage of patients that experienced less that 10 days of waiting time by GP and by year."}
+knitr::include_graphics(file.path(dir_plots, "2.criterion/waiting_improve.png"))
+```
 
 
 

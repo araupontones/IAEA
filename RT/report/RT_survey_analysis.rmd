@@ -62,6 +62,7 @@ text_intro <- import(file.path(dir_text, "0.intro/txt_intro.rds" ))
 
 txt_mach <- import(file.path(dir_text, "2.criterion/growth_machines.rds" ))
 txt_pat <- import(file.path(dir_text, "2.criterion/growth_patients.rds" ))
+txt_wait <- import(file.path(dir_text, "2.criterion/waiting.rds" ))
 
 
 ```

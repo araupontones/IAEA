@@ -4,8 +4,6 @@
 | Increase operational RT equipment and technology                                             | \% increase in the number of operational RT equipment (linear accelerators and Cobalt 60 machines) between 2000 and 2020 | `r txt_mach$g_grow` |
 | Increase the number and quality of treatment of cancer patients using domestic RT facilities | Total number of cancer patients treated using domestic RT facilities in 2020                                             | `r txt_pat$tot_20`  |
 | Increase the number and quality of treatment of cancer patients using domestic RT facilities | \% increase in the number of cancer patients treated using domestic RT facilities between 2000 and 2020                  | `r txt_pat$g_grow`  |
-|                                                                                              |                                                                                                                          |                     |
+| Increase the number and quality of treatment of cancer patients using domestic RT facilities | Proporiton of patients that experienced less than 10 days of waiting time in 2020                                        | `r txt_wait$w_20`   |
 
 : Key evidence for criterion 2: Increased access to quality radiotherapy
-
-

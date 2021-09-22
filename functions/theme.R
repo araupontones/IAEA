@@ -24,7 +24,7 @@ height_bar_rt = 9.7
 height_standards <- height_plot + 4
 width_standards <- width_plot + 2
 
-
+gmdacr::un_colors()
 
 #colors
 blue <- "#01558B" 
@@ -35,6 +35,9 @@ gray_dark <- "#4D4D4D"
 gray_light <- "#F2F2F2"
 purple_bright <- "#E11484"
 yellow <- "#FDB713"
+green <- "#279B48"
+green_light <- "#5DBB46"  
+red <- "#EB1C2D" 
 
 
 color_good <- blue_light
@@ -60,7 +63,8 @@ theme_iaea <- function(){
         panel.background =  element_rect(fill = 'white'),
         
         #legend
-        legend.text = element_text(size = 9)
+        legend.text = element_text(size = 9),
+        legend.key = element_rect(fill = NA)
         
         
         
@@ -150,6 +154,8 @@ theme_bar <- function(){
         panel.grid.minor.x = element_line(linetype = "dotted", color = grid_color),
         axis.title.x.bottom =  element_text(size = 9, hjust = 0),
         axis.title.x.top =  element_text(size = 9, hjust = .5),
+        axis.text.y = element_text(size = 8),
+        axis.text.x.top = element_text(size = 8),
         legend.key.size = unit(.3,"cm")
   )
 }

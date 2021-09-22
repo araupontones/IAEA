@@ -25,7 +25,7 @@ plot_by_year <- function(.data,
     geom_text(hjust = -.35,
               family = font_main,
               color = blue_navy,
-              size = 2.5)+
+              size = 3)+
     scale_color_manual(values = pallete,
                        name = "Year",
                        breaks = breaks
