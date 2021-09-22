@@ -27,7 +27,10 @@ labelvars <- c("country", "interview__status", "currency",
                "train_cont", "dep_cont", "soc_cont",
                
                #contributiob specialists
-               "spec_cont"
+               "spec_cont",
+               
+               #waiting
+               "wait_cont"
                )
 
 

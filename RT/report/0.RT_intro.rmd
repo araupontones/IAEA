@@ -13,6 +13,9 @@ Figure: \@ref(fig:map-png) below shows the countries that participated in this s
 knitr::include_graphics(file.path(dir_plots, "0.intro/map.png"))
 ```
 
+The assessment of the social and economic impacts of the RT RCA programme involved pre-defining agreed performance criteria (aspects of social and economic impacts that were the focus of the evaluation) and standards (narratives describing four levels of performance – excellent, good, adequate, and inadequate). These criteria and standards (detailed in Annex G) provided a transparent and robust framework for rating the impact of the RT RCA.
+
+To understand the contribution of the RT RCA programme on social and economic indicators, the study analyses the extent to which being part of the programme has enabled the GPs to:
 
 
 **Strengthened radiotherapy workforce **
@@ -27,6 +30,8 @@ knitr::include_graphics(file.path(dir_plots, "0.intro/map.png"))
 
 4. Increase the number and quality of treatment of cancer patients using domestic RT facilities 
 
+**Increased life span and quality of life **
 
+5. Increase in local control and life in years of patients
 
 It is worth mentioning that the IAEA Technical Co-operation Programme (TCP) has been established by the IAEA to support IAEA Member States (MSs) (especially developing countries) to accelerate and enlarge the application of nuclear technologies in a safe, secure, effective, and efficient manner. In principle, every IAEA MS can receive and enjoy the benefit of the IAEA TCP. However, some MSs (especially developed/advanced MSs) volunteer not to receive the IAEA TCP, but they work as resource countries to provide support for the IAEA TCP. Under the RCA, there are 22 countries, of which 18 countries are TC recipients and 4 are TC non-recipients (Australia, Japan, New Zealand, and very recently Korea). **Based on this definition, the three countries that have historically acted as non-recipients (Australia, Japan and New Zealand) are excluded from the assessment of the criteria and level of performance conducted in this analysis. Given their historically non-recipient character, any assessment of the performance of RCA to accelerate and enlarge the application of NDT technologies in those countries would result in a misinterpretation of the results.**

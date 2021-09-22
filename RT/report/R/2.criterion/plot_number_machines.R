@@ -20,7 +20,7 @@ exfile <- file.path(dir_plots_RT, "2.criterion/number_patients.png")
 pat <- import(infile) %>%
   filter(!is.na(pat_num))
 
-names(pat)
+
 #prepare for plot --------------------------------------------------------------
 
 m20 <- pat %>%
@@ -29,13 +29,13 @@ m20 <- pat %>%
   mutate(label = nums_to_label(pat_num))
 
 
-65e4
+
 
 m10 <- pat %>%
   filter(year != "2020") %>%
   mutate(label  = "")
 
-View(pat)
+
 
 max(m20$pat_num, na.rm = T)
 

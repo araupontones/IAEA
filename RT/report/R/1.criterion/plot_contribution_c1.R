@@ -111,7 +111,7 @@ cont_plot %>%
   plot_contribution(x = country,
                     y = indicator,
                     fill = likert,
-                    caption = caption_RT,
+                    caption = glue('The figures within the boxes show the total number reported for each dimension in 2020.\n\n{caption_RT}'),
                     pallete = c("white","#e7e9ea", color_inadequate, color_good, blue_navy),
                     legend = "Contribution of RCA to strength radiotherapy workforce") +
   geom_text(aes(label = label,

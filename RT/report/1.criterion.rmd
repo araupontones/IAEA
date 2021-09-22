@@ -1,7 +1,6 @@
 
 To understand the contribution of the RT RCA programme to developing the capacity and capability of the Government Parties (GPs) to strength their radiotherapy workforce, this section presents the results of the assessment of the extent to which the support of the RT RCA has enabled GPs to:
 
-**Strengthened radiotherapy workforce **
 
 1. Achieve self-reliance in RT, including offering educational training programmes, and establishing Radio Oncology (RO) Departments and Societies.
 
@@ -17,7 +16,7 @@ Key indicators and results of this assessment are summarized in the below table
 ## Criterion 1.1 Achieve self-reliance in RT
 
 
-To have an approximation of the level of self-reliance in RT of each GP to strength its radiotherapy workforce, the number of  educational/training programmes on RT, Radiation Oncology (RO) Departments, and RO Societies that are available in country was estimated.  
+To have an approximation of the level of self-reliance in RT of each GP to strength its radiotherapy workforce, the number of  educational/training programmes on RT, Radiation Oncology (RO) Departments, and RO Societies that are available in each country was estimated.  
 
 
 #### Educational training programmes
@@ -60,32 +59,36 @@ knitr::include_graphics(file.path(dir_plots, "1.criterion/societies.png"))
 
 ## Criterion 1.2 Establish GP's infrastructure to produce RT specialists
 
-**In 2020 there were, approximately, a total of `r txt_spec$total_20` RT specialists across all the GPs that are part of RT RCA, from which `r txt_spec$perc_cert_20` were certified specialists**. The country with more RT specialists is `r txt_spec$count1` with  `r txt_spec$count1_num` specialists followed by `r txt_spec$count2` and `r txt_spec$count3` who have trained `r txt_spec$count2_num` and `r txt_spec$count3_num` specialists respectively. 
+* **In 2020 there were, approximately, a total of `r txt_spec$total_20` RT specialists across all the GPs that are part of RT RCA, from which `r txt_spec$perc_cert_20` were certified specialists**. The country with more RT specialists is `r txt_spec$count1` with  `r txt_spec$count1_num` specialists followed by `r txt_spec$count2` and `r txt_spec$count3` who have trained `r txt_spec$count2_num` and `r txt_spec$count3_num` specialists respectively. 
 
-**The method for which more specialists have been trained is `r txt_spec$meth1` with about `r txt_spec$meth1_num` specialists trained on RT**. Figure \@ref(fig:spec-china) shows the total number of RT specialist by GP and the proportion of specialists that are certified in 2020. 
+* **The method for which more specialists have been trained is `r txt_spec$meth1` with about `r txt_spec$meth1_num` specialists trained on RT**. Figure \@ref(fig:spec-china) shows the total number of RT specialist by GP and the proportion of specialists that are certified in 2020. 
 
 *Australia, India, Laos, Myanmar, and New Zealand did not report, during the online survey, whether their RT specialist are certified or not. Thus, their figures are coded as "Unknown" in the Figure below*.
 
 
-```{r spec-china, out.width="100%", fig.cap="Number of RT specialists by GP."}
+```{r spec-china, out.width="100%", fig.cap="Number of RT specialists by GP in 2000 and 2020."}
 knitr::include_graphics(file.path(dir_plots, "1.criterion/number_specialists_china.png"))
 ```
 
 #### RT specialists in 2000 and 2020
 
-As can be seen in Figure \@ref(fig:g-spec), that shows the distribution of specialists by method and by country, **across all the GPs, there are `r txt_g$g_spec` more RT specialists in 2020 than they were in 2000. This figure represents a growth of `r txt_g$g_grow` for this period**. In absolute terms, the country with a higher growth of total RT specialists is `r txt_g$count1` (`r txt_g$count1_num` new specialists) . However, in terms of proportional growth, `r txt_g$grow1`  is the GP with a fastest growing number of RT specialist (`r txt_g$g_perc1` more in 2020 compared to 2000). 
-
-India, Laos, and New Zealand reported that they did not have RT specialist in 2000 but that they have managed to produce specialists ever since.   
-
-Figure \@ref(fig:g-spec) below shows the growth in number of RT specialist in each GP since 2000. 
 
 ```{r g-spec, out.width="100%", fig.cap="Number of RT specialists by GP."}
 knitr::include_graphics(file.path(dir_plots, "1.criterion/growth_specialists.png"))
 ```
 
+
+As can be seen in Figure \@ref(fig:g-spec) above, that shows the distribution of specialists by method and by country, **across all the GPs, there are `r txt_g$g_spec` more RT specialists in 2020 than they were in 2000. This figure represents a growth of `r txt_g$g_grow` for this period**. In absolute terms, the country with a higher growth of RT specialists since 2000 is `r txt_g$count1` (`r txt_g$count1_num` new specialists) . However, in proportional terms, `r txt_g$grow1`  is the GP with the fastest growing number of RT specialist (`r txt_g$g_perc1` more in 2020 compared to 2000). 
+
+India, Laos, and New Zealand reported that they did not have RT specialist in 2000 but that they have managed to produce specialists ever since.   
+
+
+
 #### RT specialists by method
 
-Figure \@ref(fig:g-spec) shows the distribution of **certified** specialists by method and by GP in 2020 (*to make the distribution of specialists easier to read, the Figure excludes China because it has a much larger number of specialists than the rest of the GPs)*. As can be seen in the figure, **after China, the country with the highest number of Radiation Therapists (RT) specialists is Japan (about 2,000 specialists in this field)**, followed by South Korea (750). Japan is also the GP with the highest number of certified Oncologists (899). 
+Figure \@ref(fig:m-spec) shows the distribution of **certified** specialists by method and by GP in 2020 (*to make the distribution of specialists easier to read, the Figure excludes China because it has a much larger number of specialists than the rest of the GPs)*. 
+
+As can be seen in the figure, **after China, the country with the highest number of Radiation Therapists (RT) specialists is Japan (about 2,000 specialists in this field)**, followed by South Korea (750). Japan is also the GP with the highest number of certified Oncologists (899). 
 
 *The countries for which the box is coded in gray is because they did not report whether their specialists are certified or not*. 
 
@@ -95,29 +98,19 @@ knitr::include_graphics(file.path(dir_plots, "1.criterion/method_specialists.png
 
 
 
-```{r spec-cont, out.width="100%", fig.cap="RCA RT programme contribution to the increase of certified RT specialists between 2000 and 2020."}
-#knitr::include_graphics(file.path(dir_plots, "1.criterion/contribuion_specialists.png"))
-```
-
-
-```{r c1-contX, out.width="100%", fig.cap="RCA contribution to self-rliance in RT"}
-#knitr::include_graphics(file.path(dir_plots, "1.criterion/contribuion_trained.png"))
-```
-
-
 ## Contribution of RT RCA in strengthening ratiotherapy workforce
 
 
-To assess the contribution of RCA in the establishment of training programmes, RO departments, RO societies, and the production of RT specialists the participants of the online survey were asked the extent to which they perceive that the RCA has contributed to the establishment of this infrastructure in their countries. The main findings in this respect are the following:
+To assess the contribution of RCA in the establishment of training programmes, RO departments, RO societies, and the production of RT specialists the participants of the online survey were asked the extent to which they perceived that the RCA has contributed to the establishment of this infrastructure in their countries. The main findings in this respect are the following:
 
 
-* **From the 17 GPs for which a training programme is available in their countries, 8 (47%) reported that RCA contributed to a great extent in their establishment, and 6 that RCA's support contributed to some extent**. 2 countries reported that the training programmes could had been available even without the support from RCA, one of this countries is New Zealand which is a non-recipient country.
+* **From the 17 GPs for which a training programme is available in their countries, 8 (47%) reported that RCA contributed to a great extent in their establishment, and 6 that RCA's support contributed to some extent**. 2 countries reported that the training programmes could had been available even without the support from RCA, one of these countries is New Zealand which is a non-recipient country.
 
 
-* 73% of the GPs where an RO Department has been established reported that RCA somehow contributed to its establishment. **Cambodia, China, Philippines, Sri Lanka, and Vietnam reported that RCA contributed to a great extent in the establishment of their RO departments.** Only Mongolia, New Zealand, and Singapore perceived that RCA has not contributed to the establishment of their RO departments.
+* 73% of the GPs where an RO Department has been established reported that RCA contributed to its establishment. **Cambodia, China, Philippines, Sri Lanka, and Vietnam reported that RCA contributed to a great extent in the establishment of their RO departments.** Only Mongolia, New Zealand, and Singapore perceived that RCA has not contributed to the establishment of their RO departments.
 
 
-* China, Japan, Mongolia,Philippines, and Sri Lanka, Vietnam reported that RCA contribution was key to the establishment of their RO societies. 
+* **China, Japan, Mongolia,Philippines, and Sri Lanka, Vietnam reported that RCA contribution was key to the establishment of their RO societies**. 
 
 
 * 9 out of the 19 historically recipient countries that participated in the survey (Laos, Cambodia, Myanmar, Indonesia, Japan, Malaysia, Sri Lanka, Mongolia, and Philippines) reported that RCA contributed to a great extent in the production of RT specialists. And 6 of these 19 countries perceived that RCA contributed somehow to produce their specialists. Thus **17 out of the 19 historically recipient countries (89%) consider that RCA contributed to the increase of certified RT specialists between 2000 and 2020**. 
@@ -126,7 +119,7 @@ To assess the contribution of RCA in the establishment of training programmes, R
 
 The detailed contribution of RCA to the GP's self-reliance can be seen in Figure \@ref(fig:c1-cont). 
 
-*The labels within the boxes represent the total number of training programmes, RO departments, RO societies, and RT specialists that each GP reported for the 2020 period. The empty squares in the chart indicate that those GPs did not provide information to the online survey for either about their perception of RCA's contribution in that dimension*
+*The labels within the boxes represent the total number of training programmes, RO departments, RO societies, and RT specialists that each GP reported for the 2020 period. The white boxes indicate that those GPs did not provide information to the online survey about their perception of RCA's contribution in that dimension*
 
 
 ```{r c1-cont, out.width="100%", fig.cap="RCA contribution to strength radiotherapy workforce"}
