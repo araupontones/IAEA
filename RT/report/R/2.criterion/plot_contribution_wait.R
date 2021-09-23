@@ -87,7 +87,9 @@ geom_text(aes(label = label,
            family = font_main,
           show.legend = F,
           size = 5) +
-  scale_color_manual(values = rev(c("white", "black")))
+  scale_color_manual(values = rev(c("white", "black"))) +
+  theme_standards_rt()
+
 
 
 

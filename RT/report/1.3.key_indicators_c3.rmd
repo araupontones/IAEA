@@ -1,0 +1,8 @@
+| Sub-criterion                              | Evidence                                                                                   | Finding               |
+|--------------------------------------------|--------------------------------------------------------------------------------------------|-----------------------|
+| Increase in local control or survival data | Approximate average 5-year local control rate in 2020 (average across all types of cancer) | `r txt_control$c_20`  |
+| Increase in local control or survival data | Increase in the approximate 5-year local control rate in the period 2000-2020              | `r txt_control$imp_c` |
+| Increase life-years                        | Approximate average 5-year survival rate in 2020 (average across all types of cancer)      | `r txt_control$l_20`  |
+| Increase life-years                        | Increase in the approximate 5-year survival rate in the period 2000-2020                   | `r txt_control$imp_l` |
+
+: Key evidence for criterion 3: Increased life span and quality of life

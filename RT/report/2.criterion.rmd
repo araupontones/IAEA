@@ -37,7 +37,7 @@ Approximately, across all the GPs that are part of RT RCA,  **there were `r txt_
 
 In 2020, across all the GPs, `r txt_pat$count1` was the country where more cancer patients were treated using domestic RT facilities (`r txt_pat$count1_num` patients), followed by `r txt_pat$count2` (`r txt_pat$count2_num` patients), and `r txt_pat$count3` (`r txt_pat$count3_num`). 
 
-Figure \@ref(fig:pat-plot) shoes the total number of cancer patients treated using domestic RT facilities by GPs between 2000 and 2020. 
+Figure \@ref(fig:pat-plot) shows the total number of cancer patients treated using domestic RT facilities by GPs between 2000 and 2020. 
 
 ```{r pat-plot, out.width="100%", fig.cap="Total number of cancer patients treated using domestic RT facilities by GPs between 2000 and 2020."}
 knitr::include_graphics(file.path(dir_plots, "2.criterion/number_patients.png"))

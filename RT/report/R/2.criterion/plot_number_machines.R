@@ -48,7 +48,9 @@ m20 %>% plot_by_year(data_prev = m10,
                      breaks = c("2000"),
                      pallete = c(blue_light),
                      limits = c(0,63e4),
-                     x_title = "Total number of cancer patients treated using domestic RT facilities")
+                     x_title = "Total number of cancer patients treated using domestic RT facilities") +
+
+
 
 exfile
 

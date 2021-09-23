@@ -30,7 +30,10 @@ labelvars <- c("country", "interview__status", "currency",
                "spec_cont",
                
                #waiting
-               "wait_cont"
+               "wait_cont",
+               
+               #control
+               "surv_cont", "cont_cont"
                )
 
 

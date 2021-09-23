@@ -142,12 +142,20 @@ theme_standards_sum <- function(){
         legend.margin = margin(t = -2, b = 10),
         legend.text = element_text(size = 18),
         legend.title = element_text(size = 16)
+        #caption 
+        #plot.caption = element_text(size = 14)
         
   )
   
   
 }
 
+
+theme_standards_rt <- function(){
+  
+  
+  theme(plot.caption = element_text(size = 14))
+}
 #================================================================================
 theme_bar <- function(){
   theme(panel.grid.major.x = element_line(linetype = "dotted", color = grid_color),

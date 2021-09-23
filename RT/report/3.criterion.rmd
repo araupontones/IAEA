@@ -1,0 +1,67 @@
+The aim of this section is to understand the extent to which participating in the RT RCA programme has enabled GPs to: 
+
+1. Increase in local control or survival data 
+
+2. Increase life-years 
+
+
+
+```{r table-c1, child=c('1.3.key_indicators_c3.rmd')}
+```
+
+
+
+## Criterion 3.1 Increase in local control or survival data
+
+```{r control-plot, out.width="100%", fig.cap="Approximate average 5-year control rate in 2000 and 2020 by GP."}
+knitr::include_graphics(file.path(dir_plots, "3.criterion/control.png"))
+```
+
+Figure \@ref(fig:control-plot) above, shows the average 5-year local control rate in 2000 and 2020.
+
+Local control is defined as a complete tumor clearance at the primary site that has received treatment such as radiotherapy. And 5-year local control rate is the proportion of patients that still retain the status of clear tumor clearance in the primary site after five years, over all patients included in that patient's population.
+
+There was an increase in the average 5-year local control rate for all the GPs that reported information on this indicator, except for Myanmar that reported a 60% average rate for both periods, 2000 and 2020. 
+
+As can be seen in Figure \@ref(fig:control-plot), **the approximate average 5-year local control rate across all GPs in 2000 and 2020 was `r txt_control$c_0` and `r txt_control$c_20` respectively. Which implies an increase of `r txt_control$imp_c` (percentage points) in 2020 with respect to 2000**. 
+
+The GPs that reported the highest 5-year local control in 2020 are Sri Lanka (80%), Singapore (80%), and Philippines (75%).
+
+*Australia, Laos, Mongolia, New Zealand, and Palau did not report information about the average 5-year control rates during the online survey*
+
+## Criterion 3.2 Increase life-years
+
+
+As can be seen in Figure \@ref(fig:survival-plot), **the approximate average 5-year survival rate across all types of cancer increased `r txt_control$imp_l` in 2020 with respect to 2020 across all GPs**. The average survival rate was `r txt_control$l_0` in 2000 and `r txt_control$c_20` in 2020. 
+
+The survival rate increased for all countries that reported this information during the online survey and the GPs that reported a highest 5-year survival rate are Philippines, Singapore, and South Korea (70%)
+
+*Australia, and Laos did not information about survival rates during the online survey*.
+
+```{r survival-plot, out.width="100%", fig.cap="Approximate average 5-year control rate in 2000 and 2020 by GP."}
+knitr::include_graphics(file.path(dir_plots, "3.criterion/control.png"))
+```
+
+
+
+
+## Contribution of RCA on increasing life span and quality of life  
+
+* **93% of the GPs that reported about the extent to which RCA contributed to the increase of the 5-year control rate between 2000 and 2020, considered that RT RCA had some positive impact to achieve this result.**  Pakistan was the only GP that reported that the RCA programme did not have an impact on the increase of control rates during this period.
+
+* **Malaysia considered that RT RCA had a large impact to increase the 5-year control rates**. And China, Sri Lanka, and Vietnam reported that the impact of RCA was significant to achieve this increase.
+
+* **86.6% of the GPs that reported about the extent to which RT RCA contributed to increase the 5-year survival rate between 2000 and 2020 in their countries, considered that the RT RCA support contributed to it**. Only Pakistan and New Zealand reported that RT RCA had no impact on this.
+
+* 11 GPs reported that RT RCA had from a moderate to a large impact in increasing he 5-year survival rate between 2000 and 2020 in their countries (Bangladesh, Cambodia, China, Indonesia, Nepal, Malaysia, Philippines, Japan, South Korea, Sri Lanka, and Vietnam.)
+
+
+Figure \@ref(fig:contc3-plot) below shows the extent to which the RCA RT programme contributed to the increase in the 5-year survival and control rates between 2000 and 2020.
+
+*The percentages within the boxes show the average 5-year control and survival rates reported by the GPs in 2020 and the colours show the perception of GPs to the extent to which RCA contributed to increase these rates. Australia, Laos, Mongolia, Myanmar and Palau did not provide this information during the online survey*
+
+```{r contc3-plot, out.width="100%", fig.cap="RCA impact to increase 5-year survival and control rates by GP."}
+knitr::include_graphics(file.path(dir_plots, "3.criterion/contribution_control.png"))
+```
+
+

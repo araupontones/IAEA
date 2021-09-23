@@ -6,8 +6,22 @@ plot_by_year <- function(.data,
                          breaks = c("2000", "2010"),
                          pallete = c(blue_light,yellow ),
                          limits = c(0,2200),
-                         x_title = "Total number of operational RT equipment"
+                         x_title = "Total number of operational RT equipment",
+                         scale = "int"
 ) {
+  
+  
+  
+  if(scale == "int"){
+    
+    fn_labels <- nums_to_label
+    
+  } else {
+    
+    
+    fn_labels <- function(x){paste0(x,"%")}
+    
+  }
   
   
   .data %>%
@@ -33,7 +47,7 @@ plot_by_year <- function(.data,
     scale_fill_manual(values = blue_navy,
                       name = "") +
     scale_x_continuous(position = "top",
-                       labels = function(x)nums_to_label(x),
+                       labels = function(x)fn_labels(x),
                        limits = limits) +
     guides(color = guide_legend(override.aes = list(size = 3) )) +
     labs(y = "",

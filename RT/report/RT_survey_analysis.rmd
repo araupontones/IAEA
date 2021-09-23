@@ -67,15 +67,17 @@ txt_ctech <- import(file.path(dir_text, "2.criterion/contribution_tech.rds" ))
 
 ```
 
-<!---------
+
 
 ```{r load_tx_c3}
 
+txt_control <- import(file.path(dir_text, "3.criterion/control.rds" ))
 
 
 ```
 
 
+<!---------
 ```{r load_impact}
 
 
@@ -153,13 +155,14 @@ The authors are grateful for the close and effective assistance of the Technical
 
 # Criterion 3: Increased life span and quality of life
 
-
+```{r, child=c('3.criterion.Rmd')}
+```
 
 
 \newpage
 
 
-# Overall impact of the RT RCA programme
+
 
 
 

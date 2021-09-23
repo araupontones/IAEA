@@ -64,7 +64,9 @@ cont_plot %>%
                     fill = likert,
                     caption = caption_RT,
                     pallete = c("white","#e7e9ea", color_inadequate, color_good, blue_navy),
-                    legend = "Contribution of RCA to increase of certified RT specialists between 2000 and 2020")
+                    legend = "Contribution of RCA to increase of certified RT specialists between 2000 and 2020") +
+  theme_standards_rt()
+
 # geom_text(aes(label = label),
 #           family = font_main)
 

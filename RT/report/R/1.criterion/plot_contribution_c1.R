@@ -119,7 +119,8 @@ cont_plot %>%
             family = font_main,
             show.legend = F,
             size = 5) +
-  scale_color_manual(values = c("black", "white"))
+  scale_color_manual(values = c("black", "white")) +
+  theme_standards_rt()
 
 
 
@@ -128,7 +129,7 @@ cont_plot %>%
 exfile
 ggsave(exfile,
        last_plot(),
-       height = height_plot + 1,
+       height = height_plot + 2,
        width = width_plot+20,
        units = "cm",
        dpi = dpi_report

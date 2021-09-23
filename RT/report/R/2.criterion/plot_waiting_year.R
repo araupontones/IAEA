@@ -34,7 +34,7 @@ my_arrow <- function(data,
                    y = country,
                    yend = country,
                ),
-               arrow = arrow(length = unit(.2,"cm"), type = "closed"),
+               arrow = arrow(length = unit(.1,"cm"), type = "closed"),
                color = color,
                arrow.fill = color)
 }

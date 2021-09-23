@@ -79,7 +79,9 @@ cont_plot %>%
                     pallete = c("white","#e7e9ea", color_inadequate, color_good, blue_navy),
                     legend = "Contribution of RCA to achieve self-reliance in RT")
   geom_text(aes(label = label),
-            family = font_main)
+            family = font_main) +
+    theme_standards_rt()
+  
 
 
 

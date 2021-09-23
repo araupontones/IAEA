@@ -72,7 +72,9 @@ t_p %>%
   #coord_equal() +
   theme_iaea() +
   theme_standards_sum() +
-  theme(legend.title = element_text(color = "black"))
+  theme(legend.title = element_text(color = "black")) +
+  theme_standards_rt()
+
 
 
 exfile
