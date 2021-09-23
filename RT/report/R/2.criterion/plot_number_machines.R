@@ -1,5 +1,5 @@
-cli::cli_alert_success("Plot: # patients")
-cli::cli_alert_info('Saved:in {file.path(dir_plots_RT, "2.criterion/number_patients.png")}')
+cli::cli_alert_success("Plot: # machines")
+cli::cli_alert_info('Saved:in {file.path(dir_plots_RT, "2.criterion/number_machines.png")}')
 
 #clean main quesitonnaire
 survey <- "iaea_rt"
@@ -10,50 +10,50 @@ param <- parameters(mode = survey,
                     module = module)
 
 
-infile <- file.path(param$dir_clean_s, "patients.rds")
-exfile <- file.path(dir_plots_RT, "2.criterion/number_patients.png")
+infile <- file.path(param$dir_clean_s, "machines.rds")
+exfile <- file.path(dir_plots_RT, "2.criterion/number_machines.png")
 
 
 
 #import data -------------------------------------------------------------------
 
-pat <- import(infile) %>%
-  filter(!is.na(pat_num))
+mach <- import(infile) %>%
+  filter(!is.na(mach_num))
 
 
 #prepare for plot --------------------------------------------------------------
 
-m20 <- pat %>%
+m20 <- mach %>%
   filter(year == "2020") %>%
-  mutate(country = fct_reorder(country, pat_num))%>%
-  mutate(label = nums_to_label(pat_num))
+  mutate(country = fct_reorder(country, mach_num))%>%
+  mutate(label = nums_to_label(mach_num))
 
 
 
 
-m10 <- pat %>%
+m10 <- mach %>%
   filter(year != "2020") %>%
   mutate(label  = "")
 
 
 
-max(m20$pat_num, na.rm = T)
+max(m20$mach_num, na.rm = T)
 
 
 
 m20 %>% plot_by_year(data_prev = m10,
-                     var_x = pat_num,
+                     var_x = mach_num,
                      var_y = country,
                      var_label = label,
-                     breaks = c("2000"),
-                     pallete = c(blue_light),
-                     limits = c(0,63e4),
-                     x_title = "Total number of cancer patients treated using domestic RT facilities") +
+                     breaks = c("2000", "2010", "2020"),
+                     pallete = c(blue_light,yellow),
+                     limits = c(0,2300),
+                     x_title = "Total number of operational RT equipment (linear accelerators and Cobalt 60 machines)") 
+
 
 
 
 exfile
-
 ggsave(exfile,
        last_plot(),
        width = width_bar_rt ,

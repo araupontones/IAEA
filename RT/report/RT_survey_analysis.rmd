@@ -163,18 +163,3 @@ The authors are grateful for the close and effective assistance of the Technical
 
 
 
-
-
-
-
-
-
-
-
-# Annex A: Criteria and standards
-
-
-```{r, child=c('X.Annex_criterion1.rmd', 'X.Annex_criterion2.rmd', 'X.Annex_criterion3.rmd')}
-```
-
-

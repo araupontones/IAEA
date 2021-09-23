@@ -1,8 +1,8 @@
 The aim of this section is to understand the extent to which participating in the RT RCA programme has enabled GPs to: 
 
-1. Increase in local control or survival data 
+1. Increase in local control rates.
 
-2. Increase life-years 
+2. Increase in survival rates.
 
 
 
@@ -11,35 +11,35 @@ The aim of this section is to understand the extent to which participating in th
 
 
 
-## Criterion 3.1 Increase in local control or survival data
+## Criterion 3.1 Increase in local control
 
 ```{r control-plot, out.width="100%", fig.cap="Approximate average 5-year control rate in 2000 and 2020 by GP."}
 knitr::include_graphics(file.path(dir_plots, "3.criterion/control.png"))
 ```
 
-Figure \@ref(fig:control-plot) above, shows the average 5-year local control rate in 2000 and 2020.
 
 Local control is defined as a complete tumor clearance at the primary site that has received treatment such as radiotherapy. And 5-year local control rate is the proportion of patients that still retain the status of clear tumor clearance in the primary site after five years, over all patients included in that patient's population.
 
-There was an increase in the average 5-year local control rate for all the GPs that reported information on this indicator, except for Myanmar that reported a 60% average rate for both periods, 2000 and 2020. 
+Between 2000 and 2020, there was an increase in the average 5-year local control rate for all the GPs that reported information on this indicator, except for Myanmar that reported a 60% average rate for both periods. 
 
-As can be seen in Figure \@ref(fig:control-plot), **the approximate average 5-year local control rate across all GPs in 2000 and 2020 was `r txt_control$c_0` and `r txt_control$c_20` respectively. Which implies an increase of `r txt_control$imp_c` (percentage points) in 2020 with respect to 2000**. 
+As can be seen in Figure \@ref(fig:control-plot), **the approximate average 5-year local control rate across all GPs in 2000 and 2020 was `r txt_control$c_0` and `r txt_control$c_20` respectively. Which implies an increase of `r txt_control$imp_c` (percentage points) during this period**. 
 
 The GPs that reported the highest 5-year local control in 2020 are Sri Lanka (80%), Singapore (80%), and Philippines (75%).
+
+Figure \@ref(fig:control-plot) above, shows the average 5-year local control rate in 2000 and 2020.
 
 *Australia, Laos, Mongolia, New Zealand, and Palau did not report information about the average 5-year control rates during the online survey*
 
 ## Criterion 3.2 Increase life-years
 
+**From 2000 to 2020 the approximate average 5-year survival rate across all types of cancer increased `r txt_control$imp_l` (percentage points) across all GPs**. The average survival rate was `r txt_control$l_0` in 2000 and `r txt_control$c_20` in 2020. 
 
-As can be seen in Figure \@ref(fig:survival-plot), **the approximate average 5-year survival rate across all types of cancer increased `r txt_control$imp_l` in 2020 with respect to 2020 across all GPs**. The average survival rate was `r txt_control$l_0` in 2000 and `r txt_control$c_20` in 2020. 
+As can be seen in Figure \@ref(fig:survival-plot), the average survival rate increased for all GPs that reported this information during the online survey. The GPs that reported the highest 5-year survival rate are South Korea, Singapore and Philippines (80%), followed by Thailand (65%) and New Zealand (63%).
 
-The survival rate increased for all countries that reported this information during the online survey and the GPs that reported a highest 5-year survival rate are Philippines, Singapore, and South Korea (70%)
+*Australia, and Laos did not information about average 5 year survival rates during the online survey*.
 
-*Australia, and Laos did not information about survival rates during the online survey*.
-
-```{r survival-plot, out.width="100%", fig.cap="Approximate average 5-year control rate in 2000 and 2020 by GP."}
-knitr::include_graphics(file.path(dir_plots, "3.criterion/control.png"))
+```{r survival-plot, out.width="100%", fig.cap="Approximate average 5-year survival rate in 2000 and 2020 by GP."}
+knitr::include_graphics(file.path(dir_plots, "3.criterion/life.png"))
 ```
 
 
@@ -47,18 +47,20 @@ knitr::include_graphics(file.path(dir_plots, "3.criterion/control.png"))
 
 ## Contribution of RCA on increasing life span and quality of life  
 
-* **93% of the GPs that reported about the extent to which RCA contributed to the increase of the 5-year control rate between 2000 and 2020, considered that RT RCA had some positive impact to achieve this result.**  Pakistan was the only GP that reported that the RCA programme did not have an impact on the increase of control rates during this period.
+This section summarises the perception that the GPs have on the extent to which RT RCA has contributed to increase life span and quality of life of patients treated using RT facilities. 
 
-* **Malaysia considered that RT RCA had a large impact to increase the 5-year control rates**. And China, Sri Lanka, and Vietnam reported that the impact of RCA was significant to achieve this increase.
+* From the `r text_intro$number` that participated in the survey, 15 reported the extent to which RCA has contributed to the increase of life span and quality of life in their countries. This question was not administered to the countries that either did not report about the average rates or for which there was not an increase in the average rates between 2000 and 2020 (*"the "n/a" in Figure \@ref(fig:contc3-plot) shows the countries that did not provide this information*).
 
-* **86.6% of the GPs that reported about the extent to which RT RCA contributed to increase the 5-year survival rate between 2000 and 2020 in their countries, considered that the RT RCA support contributed to it**. Only Pakistan and New Zealand reported that RT RCA had no impact on this.
+* **93% of the GPs that reported an increase of the 5-year control rate between 2000 and 2020, considered that RT RCA had some positive impact to achieve this result.**  Pakistan was the only GP that reported that the RCA programme did not have an impact on the increase of control rates during this period.
 
-* 11 GPs reported that RT RCA had from a moderate to a large impact in increasing he 5-year survival rate between 2000 and 2020 in their countries (Bangladesh, Cambodia, China, Indonesia, Nepal, Malaysia, Philippines, Japan, South Korea, Sri Lanka, and Vietnam.)
+* **Malaysia considered that RT RCA had a large impact to increase the 5-year control rates**. And China, Sri Lanka, and Vietnam reported that the impact of RCA was significant to achieve this increment.
+
+* **86.6% of the GPs that reported a positive increase in the 5-year survival rate between 2000 and 2020, considered that the RT RCA support contributed to it**. Only Pakistan and New Zealand reported that RT RCA had no impact on this. Bangladesh, Cambodia, China, Indonesia, Nepal, Malaysia, Philippines, Japan, Singapore, South Korea, Sri Lanka, Thailand, Vietnam reported that RT RCA had from a moderate to a large impact in increasing he 5-year survival rate between 2000 and 2020 in their countries.
 
 
 Figure \@ref(fig:contc3-plot) below shows the extent to which the RCA RT programme contributed to the increase in the 5-year survival and control rates between 2000 and 2020.
 
-*The percentages within the boxes show the average 5-year control and survival rates reported by the GPs in 2020 and the colours show the perception of GPs to the extent to which RCA contributed to increase these rates. Australia, Laos, Mongolia, Myanmar and Palau did not provide this information during the online survey*
+*The percentages within the boxes show the average 5-year control and survival rates reported by the GPs in 2020 and the colours show the perception of GPs to the extent to which RCA contributed to increase these rates. Australia, Laos, Mongolia, Myanmar and Palau did not provide this information during the online survey*.
 
 ```{r contc3-plot, out.width="100%", fig.cap="RCA impact to increase 5-year survival and control rates by GP."}
 knitr::include_graphics(file.path(dir_plots, "3.criterion/contribution_control.png"))

@@ -37,7 +37,7 @@ wait <- import(file.path(param$dir_clean_s, "waiting.rds"))  %>%
 cont <- import(infile) %>%
   select(country, wait_cont) %>%
   left_join(wait, by = "country") 
-mutate(country = fct_reorder(country, spec_num)) 
+#mutate(country = fct_reorder(country, spec_num)) 
 #filter(spec_num >0 & !is.na(spec_num))
 
 

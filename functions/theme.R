@@ -41,8 +41,10 @@ red <- "#EB1C2D"
 
 
 color_good <- blue_light
-color_inadequate <- '#BDC2C6'
-color_adequate <- '#7F99A5'
+color_inadequate <- '#BDC2C6' 
+
+color_adequate <- "#99deef"
+#  '#7F99A5'
 
 grid_color <- "#B7B7B7"
 
@@ -164,6 +166,7 @@ theme_bar <- function(){
         axis.title.x.top =  element_text(size = 9, hjust = .5),
         axis.text.y = element_text(size = 8),
         axis.text.x.top = element_text(size = 8),
-        legend.key.size = unit(.3,"cm")
+        legend.key.size = unit(.3,"cm"),
+        plot.caption = element_text(size = 7)
   )
 }

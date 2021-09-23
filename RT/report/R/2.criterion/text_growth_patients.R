@@ -78,8 +78,7 @@ grow <- pat %>%
 
 
 grow1 <- grow[1,1] %>% as.character()
-grow1_num <- grow[1,6] %>% as.numeric() %>% prettyNum(",")
-
+grow1_num <- grow[1,4] %>% as.numeric() %>% prettyNum(",")
 
 #by trelative ----------------------------------------------------------------
 

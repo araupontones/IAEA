@@ -53,9 +53,10 @@ l_p <- cont %>%
 
 d_p <- rbind(c_p, l_p) %>%
   #clean vars 
-  mutate(likert = str_remove_all(likert, " \\(.*\\)| impact"),
+  mutate(value = case_when(value == 0 ~ NA_real_, T ~ value),
+        likert = str_remove_all(likert, " \\(.*\\)| impact"),
          label = nums_to_label(value, "perc"),
-         likert = case_when(is.na(likert) ~ " ", 
+         likert = case_when(is.na(likert) ~ "n/a", 
                             likert == "No" ~ "No impact",
                             T ~ likert),
          likert = factor(likert,
@@ -84,7 +85,7 @@ d_p <- rbind(c_p, l_p) %>%
 
 
 
-View(d_p)
+
 
 
 d_p %>%
@@ -102,7 +103,7 @@ d_p %>%
   #scales
   scale_x_discrete(position = "top") +
   scale_color_manual(values = c("black", "white"))+
-  scale_fill_manual(values = c("white", "#e7e9ea", color_adequate, blue_light, blue_sky, blue_navy),
+  scale_fill_manual(values = c("white", "#e7e9ea", "#99deef", blue_light, blue_sky, blue_navy),
                     name = 'RCA impact to increase 5-year survival and control rates between 2000 and 2020'
                     ) +
   guides(fill = guide_legend(title.position = "top",
@@ -117,7 +118,6 @@ d_p %>%
   theme(legend.title = element_text(color = "black")) +
   theme_standards_rt()
 
-
 exfile
 ggsave(exfile,
        last_plot(),
@@ -126,6 +126,7 @@ ggsave(exfile,
        units = "cm",
        dpi = dpi_report
 )
+
 
 
 

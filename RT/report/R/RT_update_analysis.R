@@ -45,16 +45,15 @@ run_scripts(scripts_c1_RT)
  
  
  run_scripts(scripts_c2_RT)
-# 
-# 
+
 # #4. Indicators  & plotscriterion 3 =====================================================
 # 
-# dir_c3_NDT <- file.path(dir_report_NDT, "R/3.criterion")
-# message("Criterion 3")
-# 
-# scripts_c3_NDT <- list.files(dir_c3_NDT, full.names = T)
-# 
-# run_scripts(scripts_c3_NDT)
+dir_c3_RT <- file.path(dir_report_RT, "R/3.criterion")
+message("Criterion 3")
+
+scripts_c3_RT <- list.files(dir_c3_RT, full.names = T)
+
+run_scripts(scripts_c3_RT)
 # 
 # 
 # #5. Impact =====================================================
