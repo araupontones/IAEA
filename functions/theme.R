@@ -83,7 +83,8 @@ theme_stacked_bar <- function(){
     axis.title.x.top =  element_text(size = 9, hjust = .5),
     panel.grid.major.x = element_line(color = grid_color, linetype = "dotted", size = .5),
     legend.position = 'bottom',
-    legend.key.size = unit(.3,"cm")
+    legend.key.size = unit(.3,"cm"),
+    plot.caption = element_text(size = 7)
   )
 }
 

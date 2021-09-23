@@ -55,6 +55,7 @@ spec %>%
   geom_text(size = 2.5,
             show.legend = F)+
   scale_fill_gradient(low = "#a6ffff", high = '#132b53',
+                      na.value = "#e7e9ea",
                       limits = c(0, 2e3),
                       name = "Number of RT CERTIFIED specialist by method in 2020.",
                       labels = function(x){y = str_replace(x, "000$", "K")
