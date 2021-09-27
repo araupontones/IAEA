@@ -23,7 +23,9 @@ infile
 dep <- import(infile) %>%
   select(country, dep_num) %>%
   filter(dep_num >0 & !is.na(dep_num)) %>%
-  mutate(country = fct_reorder(country, dep_num))
+  mutate(country = fct_reorder(country, dep_num),
+         label = nums_to_label(dep_num))
+
 
 
 #to define the limit
@@ -33,7 +35,7 @@ max(dep$dep_num, na.rm = T)
 bar_plot(db = dep,
          x_var = dep_num,
          y_var = country,
-         label = dep_num,
+         label = label,
          limits = c(0,1590),
          x_title = "Number Radiation Oncology (RO) Departments available",
          caption = caption_RT

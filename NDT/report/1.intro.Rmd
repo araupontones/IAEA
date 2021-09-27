@@ -14,7 +14,7 @@ This report presents the findings of the Social and Economic Impact Assessment o
 From the 22 countries that are part of the Cooperative Agreement for Research (RCA), `r text_intro$number` participated in the survey: `r text_intro$names`
 
 
-Figure: \@ref(fig:map-png) below shows the countries that participated in this study
+Figure \@ref(fig:map-png) below shows the countries that participated in this study.
 
 
 ```{r map-png, out.width="100%", fig.cap="Map of the 20 countries that participated in the online survey."}

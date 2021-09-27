@@ -33,7 +33,8 @@ m20 <- pat %>%
 
 m10 <- pat %>%
   filter(year != "2020") %>%
-  mutate(label  = "")
+  mutate(label  = "") %>%
+  filter(pat_num > 0)
 
 
 

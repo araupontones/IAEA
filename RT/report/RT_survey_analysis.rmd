@@ -9,10 +9,7 @@ output:
     reference_num: true
     number_sections: false
     fig_caption: yes
-    
- 
 ---
-
 
 ```{r include = FALSE}
 
@@ -20,7 +17,6 @@ knitr::opts_chunk$set(echo = F, warning = F, message = F, fig.pos= "h")
 
 
 ```
-
 
 ```{r set_up}
   
@@ -30,18 +26,11 @@ knitr::opts_chunk$set(echo = F, warning = F, message = F, fig.pos= "h")
   
 ```
 
-
-
-
 ```{r load_tx_int}
 
 text_intro <- import(file.path(dir_text, "0.intro/txt_intro.rds" ))
 
 ```
-
-
-
-
 
 ```{r load_tx_c1}
 
@@ -55,9 +44,6 @@ text_intro <- import(file.path(dir_text, "0.intro/txt_intro.rds" ))
 
 ```
 
-
-
-
 ```{r load_tx_c2}
 
 txt_mach <- import(file.path(dir_text, "2.criterion/growth_machines.rds" ))
@@ -67,8 +53,6 @@ txt_ctech <- import(file.path(dir_text, "2.criterion/contribution_tech.rds" ))
 
 ```
 
-
-
 ```{r load_tx_c3}
 
 txt_control <- import(file.path(dir_text, "3.criterion/control.rds" ))
@@ -76,7 +60,7 @@ txt_control <- import(file.path(dir_text, "3.criterion/control.rds" ))
 
 ```
 
-
+```{=html}
 <!---------
 ```{r load_impact}
 
@@ -88,21 +72,18 @@ txt_control <- import(file.path(dir_text, "3.criterion/control.rds" ))
 
 
 ---->
+```
 \newpage
-
-
 
 ###### Report Information
 
-+:-------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Prepared for | International Atomic Energy Agency                                                                                                                                                                                        |
-+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Prepared by  | Julian King, Kate McKegg, Andres Arau, Aaron Schiff, Martina Garcia Aisa                                                                                                                                                  |
-+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Cover image  |                                                                                                                                                                                                                           |
-+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++:-------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Prepared for | International Atomic Energy Agency                                                                                                                                                                             |
++--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Prepared by  | Julian King, Kate McKegg, Andres Arau, Aaron Schiff, Martina Garcia Aisa                                                                                                                                       |
++--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Citation     | King,J., McKegg, K., Arau, A., Schiff, A., Garcia Aisa, M. (2021). *Social and Economic Impact Assessment of the RCA Programme: Radiotherapy Case Study.* Vienna, Austria: International Atomic Energy Agency. |
-+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 ## Disclaimer
 
@@ -114,25 +95,21 @@ The authors are grateful for the close and effective assistance of the Technical
 
 \newpage
 
-
 # Acronyms
 
 `r knitr::kable(tbl_acronym)`
 
-
-
-
 \newpage
 
-# Main findings 
+# Main findings
+
 ```{r, child=c('5.findings.Rmd')}
 ```
 
-
 \newpage
 
-
 # Introduction
+
 ```{r, child=c('0.RT_intro.Rmd')}
 ```
 
@@ -143,23 +120,23 @@ The authors are grateful for the close and effective assistance of the Technical
 ```{r, child=c('1.criterion.Rmd')}
 ```
 
-
 \newpage
 
 # Criterion 2: Increased access to quality radiotherapy
+
 ```{r, child=c('2.criterion.Rmd')}
 ```
 
 \newpage
-
 
 # Criterion 3: Increased life span and quality of life
 
 ```{r, child=c('3.criterion.Rmd')}
 ```
 
-
 \newpage
 
+# Annex: Criteria and standards
 
-
+```{r, child=c('X.annex_criterion1.Rmd', 'X.annex_criterion2.Rmd', 'X.annex_criterion3.Rmd')}
+```

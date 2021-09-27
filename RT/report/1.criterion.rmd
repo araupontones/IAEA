@@ -2,9 +2,9 @@
 To understand the contribution of the RT RCA programme to developing the capacity and capability of the Government Parties (GPs) to strength their radiotherapy workforce, this section presents the results of the assessment of the extent to which the support of the RT RCA has enabled GPs to:
 
 
-1. Achieve self-reliance in RT, including offering educational training programmes, and establishing Radio Oncology (RO) Departments and Societies.
+1. Offer educational training programmes, and establish Radio Oncology (RO) Departments and Societies.
 
-2. Establish GP's infrastructure to produce RT specialists in Radiation Oncology, Radiation Oncologists, Medical Physicists, Radiation Technology Therapists, and Radiation Oncology Nurses.
+2. Produce RT specialists in Radiation Oncology, Radiation Oncologists, Medical Physicists, Radiation Technology Therapists, and Radiation Oncology Nurses.
 
 Key indicators and results of this assessment are summarized in the below table
 
@@ -13,10 +13,10 @@ Key indicators and results of this assessment are summarized in the below table
 
 
 
-## Criterion 1.1 Achieve self-reliance in RT
+## Criterion 1.1 Offer educational training programmes, and establish Radio Oncology (RO) Departments and Societies
 
 
-To have an approximation of the level of self-reliance in RT of each GP to strength its radiotherapy workforce, the number of  educational/training programmes on RT, Radiation Oncology (RO) Departments, and RO Societies that are available in each country was estimated.  
+To have an approximation of the capacity of each GP to strength its radiotherapy workforce, the number of  educational/training programmes on RT, Radiation Oncology (RO) Departments, and RO Societies that are available in each country was estimated.  
 
 
 #### Educational training programmes
@@ -57,7 +57,7 @@ knitr::include_graphics(file.path(dir_plots, "1.criterion/societies.png"))
 
 
 
-## Criterion 1.2 Establish GP's infrastructure to produce RT specialists
+## Criterion 1.2 Produce RT specialists
 
 * Across all the GPs that are part of RT RCA, **in 2020 there were, approximately, a total of `r txt_spec$total_20` RT specialists , from which `r txt_spec$perc_cert_20` were certified specialists**. The country with more RT specialists is `r txt_spec$count1` with  `r txt_spec$count1_num` specialists followed by `r txt_spec$count2` and `r txt_spec$count3` that have produced `r txt_spec$count2_num` and `r txt_spec$count3_num` specialists respectively. 
 

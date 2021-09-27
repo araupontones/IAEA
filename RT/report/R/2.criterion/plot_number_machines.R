@@ -33,7 +33,8 @@ m20 <- mach %>%
 
 m10 <- mach %>%
   filter(year != "2020") %>%
-  mutate(label  = "")
+  mutate(label  = "") %>%
+  filter(mach_num >0)
 
 
 

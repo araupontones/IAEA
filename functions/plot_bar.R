@@ -23,7 +23,8 @@ bar_plot <- function(db,
     #xlim(c(0,12))+
     scale_x_continuous(
       limits = limits,
-      labels = function(x)prettyNum(round(x), big.mark = ","),
+      #labels = function(x)prettyNum(round(x), big.mark = ","),
+      labels = function(x)nums_to_label(x),
       position = "top"
       ) +
     labs(y = "",

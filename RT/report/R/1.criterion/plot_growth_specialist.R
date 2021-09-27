@@ -54,7 +54,8 @@ m20 <- spec2 %>%
 
 m10 <- spec2 %>%
   filter(year != "2020") %>%
-  mutate(label  = "")
+  mutate(label  = "") %>%
+  filter(Total > 0)
 
 
 
