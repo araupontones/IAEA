@@ -21,9 +21,9 @@ To have an approximation of the capacity of each GP to strength its radiotherapy
 
 #### Educational training programmes
 
-As can be seen in Figure \@ref(fig:train-plot), **there are a total of `r text_train$tot_train` educational/training programmes (ET) on RT available across all the Radiotherapy RCA's GPs**. Vietnam and China are the countries where more training programmes on RT are available (20), followed by South Korea and Japan where 15 and 10 ETs are available.
+As can be seen in Figure \@ref(fig:train-plot), **there are a total of `r text_train$tot_train` educational/training programmes (ET) on RT available across all the RT RCA's GPs**. Vietnam and China are the countries where more training programmes on RT are available (20), followed by South Korea and Japan where 15 and 10 ETs are available.
 
-According to the responses of the GPS, there are none training programmes on RT available in `r text_train$train0`.
+According to the responses of the GPs, there are none training programmes on RT available in `r text_train$train0`.
 
 
 
@@ -63,9 +63,9 @@ knitr::include_graphics(file.path(dir_plots, "1.criterion/societies.png"))
 
 * **The method for which more specialists have been trained is `r txt_spec$meth1` with about `r txt_spec$meth1_num` specialists trained on RT**. 
 
-Figure \@ref(fig:spec-china) shows the total number of RT specialist by GP and the proportion of specialists that are certified in 2020. 
+Figure \@ref(fig:spec-china) shows the total number of RT specialist by GP and the proportion of specialists that are certified in 2020 by RT method. 
 
-*Australia, India, Laos, Myanmar, and New Zealand did not report, during the online survey, whether their RT specialist are certified or not. Thus, their figures are coded as "Unknown" in the Figure below*.
+*Australia, India, Laos, Myanmar, and New Zealand did not report, during the online survey, whether their RT specialist are certified or not. Thus, their bars are coded as "Unknown" in the Figure below*.
 
 
 ```{r spec-china, out.width="100%", fig.cap="Number of RT specialists by GP in 2000 and 2020."}
@@ -80,7 +80,7 @@ knitr::include_graphics(file.path(dir_plots, "1.criterion/growth_specialists.png
 ```
 
 
-As can be seen in Figure \@ref(fig:g-spec) above, that shows the distribution of specialists by method and by country, **across all the GPs, there are `r txt_g$g_spec` more RT specialists in 2020 than they were in 2000. This figure represents a growth of `r txt_g$g_grow` for this period**. In absolute terms, the country with a higher growth of RT specialists since 2000 is `r txt_g$count1` (`r txt_g$count1_num` new specialists) . However, in proportional terms, `r txt_g$grow1`  is the GP with the fastest growing number of RT specialist (`r txt_g$g_perc1` more in 2020 compared to 2000). 
+As can be seen in Figure \@ref(fig:g-spec) above, that shows the distribution of RT specialists by country, **across all the GPs, there are `r txt_g$g_spec` more RT specialists in 2020 than they were in 2000. This increase represents a growth of `r txt_g$g_grow` for this period**. In absolute terms, the country with a higher growth of RT specialists since 2000 is `r txt_g$count1` (`r txt_g$count1_num` new specialists) . However, in proportional terms, `r txt_g$grow1`  is the GP with the fastest growing number of RT specialist (`r txt_g$g_perc1` more in 2020 compared to 2000). 
 
 India, Laos, and New Zealand reported that they did not have RT specialist in 2000 but that they have managed to produce specialists ever since.   
 
@@ -89,7 +89,6 @@ India, Laos, and New Zealand reported that they did not have RT specialist in 20
 #### RT specialists by method
 
 Figure \@ref(fig:m-spec) below shows the distribution of **certified specialists** by method and by GP in 2020 (*to make the distribution of specialists easier to read, the Figure excludes China because it has a much larger number of specialists than the rest of the GPs, and the countries for which the box is coded in gray is because they did not report whether their specialists are certified or not)*.
-. 
 
 ```{r m-spec, out.width="100%", fig.cap="Number of RT specialists by GP."}
 knitr::include_graphics(file.path(dir_plots, "1.criterion/method_specialists.png"))
@@ -115,13 +114,13 @@ This section presents the results of the extent to which, the GPs perceived that
 * **China, Japan, Mongolia,Philippines, Sri Lanka, and Vietnam reported that RCA contribution was key to the establishment of their RO societies**. 
 
 
-* 9 out of the 19 historically recipient countries(Laos, Cambodia, Myanmar, Indonesia, Japan, Malaysia, Sri Lanka, Mongolia, and Philippines) reported that RCA contributed to a great extent in the production of RT specialists. And 6 of these 19 countries perceived that RCA contributed somehow to produce their specialists. Thus **17 out of the 19 historically recipient countries consider that RCA contributed to the increase of certified RT specialists between 2000 and 2020**. 
+* 9 out of the 19 historically recipient countries (Laos, Cambodia, Myanmar, Indonesia, Japan, Malaysia, Sri Lanka, Mongolia, and Philippines) reported that RCA contributed to a great extent in the production of RT specialists. And 6 of these 19 countries perceived that RCA contributed somehow to produce their specialists. Thus **17 out of the 19 historically recipient countries consider that RCA contributed to the increase of certified RT specialists between 2000 and 2020**. 
 
 * From the countries that provided information about RCA's contribution, only Palau, and New Zealand reported that RCA has not contributed to the strengthening of their RT workforce. New Zealand have acted historically as non-recipients, and Palau joined RT RCA in 2019.
 
 Figure \@ref(fig:c1-cont) shows the detailed contribution of RCA to the GP's self-reliance. 
 
-*The numbers within the boxes represent the total number of training programmes, RO departments, RO societies, and RT specialists that each GP reported for the 2020 period. The white boxes indicate that those GPs did not provide information about their perception of RCA's contribution in that dimension*
+*The numbers within the boxes represent the total number of training programmes, RO departments, RO societies, and RT specialists that each GP reported for the 2020 period. The white boxes indicate that those GPs did not provide information about their perception of RCA's contribution in that dimension*.
 
 
 ```{r c1-cont, out.width="100%", fig.cap="RCA contribution to strength radiotherapy workforce"}

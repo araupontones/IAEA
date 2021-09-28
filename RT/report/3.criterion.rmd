@@ -20,7 +20,7 @@ knitr::include_graphics(file.path(dir_plots, "3.criterion/control.png"))
 
 Local control is defined as a complete tumor clearance at the primary site that has received treatment such as radiotherapy. And 5-year local control rate is the proportion of patients that still retain the status of clear tumor clearance in the primary site after five years, over all patients included in that patient's population.
 
-Between 2000 and 2020, there was an increase in the average 5-year local control rate for all the GPs that reported information on this indicator, except for Myanmar that reported a 60% average rate for both periods. 
+**Between 2000 and 2020, there was an increase in the average 5-year local control rate for all the GPs that reported information** on this indicator, except for Myanmar that reported a 60% average rate for both periods. 
 
 As can be seen in Figure \@ref(fig:control-plot), **the approximate average 5-year local control rate across all GPs in 2000 and 2020 was `r txt_control$c_0` and `r txt_control$c_20` respectively. Which implies an increase of `r txt_control$imp_c` (percentage points) during this period**. 
 
@@ -28,13 +28,13 @@ The GPs that reported the highest 5-year local control in 2020 are Sri Lanka (80
 
 Figure \@ref(fig:control-plot) above, shows the average 5-year local control rate in 2000 and 2020.
 
-*Australia, Laos, Mongolia, New Zealand, and Palau did not report information about the average 5-year control rates during the online survey*
+*Australia, Laos, Mongolia, New Zealand, and Palau did not report information about the average 5-year control rates during the online survey*.
 
 ## Criterion 3.2 Increase life-years
 
 **From 2000 to 2020 the approximate average 5-year survival rate across all types of cancer increased `r txt_control$imp_l` (percentage points) across all GPs**. The average survival rate was `r txt_control$l_0` in 2000 and `r txt_control$c_20` in 2020. 
 
-As can be seen in Figure \@ref(fig:survival-plot), the average survival rate increased for all GPs that reported this information during the online survey. The GPs that reported the highest 5-year survival rate are South Korea, Singapore and Philippines (80%), followed by Thailand (65%) and New Zealand (63%).
+As can be seen in Figure \@ref(fig:survival-plot), the average survival rate increased for all GPs that reported this information during the online survey. The GPs that reported the highest 5-year survival rate are South Korea, Singapore and Philippines (70%), followed by Thailand (65%) and New Zealand (63%).
 
 *Australia, and Laos did not information about average 5 year survival rates during the online survey*.
 

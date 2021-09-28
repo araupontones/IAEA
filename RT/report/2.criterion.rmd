@@ -20,7 +20,7 @@ knitr::include_graphics(file.path(dir_plots, "2.criterion/number_machines.png"))
 
 Figure \@ref(fig:mach-plot) above shows the total number of operational RT equipment (linear accelerators and Cobalt 60 machines) available by GP in 2000, 2010, and 2020. As can be seen in the figure `r txt_mach$count1` is the country where more operational RT equipment is available (`r txt_mach$count1_num` machines) in 2020, followed by `r txt_mach$count2` that has `r txt_mach$count2_num` RT machines, and `r txt_mach$count3` (`r txt_mach$count3_num`). Palau is the only country that reported not to have any operational RT equipment available in their country.
 
-The largest total increase in treatment machines in the period 2000 to 2010 was reported by `r txt_mach$grow1` that reported a total increase of `r txt_mach$grow1_num`. However, in relative terms, the largest increase was observed for `r txt_mach$perc1` which reported to have `r txt_mach$perc1_num` more RT equipment in 2020 in relation to 2000.
+The largest total increase in treatment machines in the period 2000 to 2020 was reported by `r txt_mach$grow1` that reported a total increase of `r txt_mach$grow1_num`. However, in relative terms, the largest increase was observed for `r txt_mach$perc1` which reported to have `r txt_mach$perc1_num` more RT equipment in 2020 in relation to 2000.
 
 **Overall, in 2000, there were approximately `r txt_mach$tot_0` operational RT equipment (linear accelerators and Cobalt 60 machines) across all the GPs that are part of the RT RCA programme**. By 2020, this figure has increased to `r txt_mach$tot_20` **which represents a percentage growth of `r txt_mach$g_grow` between 2000 and 2020**.  
 
@@ -33,7 +33,7 @@ The largest total increase in treatment machines in the period 2000 to 2010 was 
 This section presents the findings on the analysis conducted on the total number of cancer patients treated and the approximate average waiting times for the patients to be treated in 2000 and 2020. 
 
 #### Cancer patients treated using domestic RT
-Approximately, **across all the GPs that are part of RT RCA,there were `r txt_pat$g_pat` more total number of cancer patients treated using domestic RT facilities in 2020 than they were in 2020  (an increment of `r txt_pat$g_grow`)**. In 2000 there were `r txt_pat$tot_0` patients reported and `r txt_pat$tot_20` in 2020. 
+Approximately, **across all the GPs that are part of RT RCA,there were `r txt_pat$g_pat` more total number of cancer patients treated using domestic RT facilities in 2020 than they were in 2000  (an increment of `r txt_pat$g_grow`)**. In 2000 there were `r txt_pat$tot_0` patients reported and `r txt_pat$tot_20` in 2020. 
 
 In 2020, among all the GPs, `r txt_pat$count1` was the country where more cancer patients were treated using domestic RT facilities (`r txt_pat$count1_num` patients), followed by `r txt_pat$count2` (`r txt_pat$count2_num` patients), and `r txt_pat$count3` (`r txt_pat$count3_num`). 
 
@@ -83,7 +83,7 @@ knitr::include_graphics(file.path(dir_plots, "2.criterion/contribution_tech.png"
 * **84.2% of the GPs consider that the quality of RT services offered in their improved as a result of participating in the RCA RT programme**.
 
 
-*  As cab be seen in Figure \@ref(fig:waitC-plot) that shows the perception of each GP on the contribution of RCA to the decrease of waiting times, **75% of the GPs reported that RCA contributed somehow to the decrease in the average waiting time for treatment**. Philippines, and Vietnam perceived that RCA contributed to a great extent to reduce the average waiting time of treatment. 
+*  As can be seen in Figure \@ref(fig:waitC-plot) that shows the perception of each GP on the contribution of RCA to the decrease of waiting times, **75% of the GPs reported that RCA contributed somehow to the decrease in the average waiting time for treatment**. Philippines, and Vietnam perceived that RCA contributed to a great extent to reduce the average waiting time of treatment. 
 
 *Australia, India, Laos, Myanmar, and Palau did not reported information about waiting times during the online survey*.
 
