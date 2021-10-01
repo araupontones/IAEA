@@ -80,7 +80,15 @@ knitr::include_graphics(file.path(dir_plots, "1.criterion/growth_specialists.png
 ```
 
 
-As can be seen in Figure \@ref(fig:g-spec) above, that shows the distribution of RT specialists by country, **across all the GPs, there are `r txt_g$g_spec` more RT specialists in 2020 than they were in 2000. This increase represents a growth of `r txt_g$g_grow` for this period**. In absolute terms, the country with a higher growth of RT specialists since 2000 is `r txt_g$count1` (`r txt_g$count1_num` new specialists) . However, in proportional terms, `r txt_g$grow1`  is the GP with the fastest growing number of RT specialist (`r txt_g$g_perc1` more in 2020 compared to 2000). 
+As can be seen in Figure \@ref(fig:g-spec) above, that shows the distribution of RT specialists by country, **across all the GPs, there are `r txt_g$g_spec` more RT specialists in 2020 than they were in 2000. This increase represents a growth of `r txt_g$g_grow` for this period**. In absolute terms, the country with a higher growth of RT specialists since 2000 is `r txt_g$count1` (`r txt_g$count1_num` new specialists) . However, in proportional terms, `r txt_g$grow1`  is the GP with the fastest growing number of RT specialist (`r txt_g$g_perc1` more in 2020 compared to 2000). Figure \@ref(fig:gp-spec) shows the percentage change of RT specialists between 2000 and 2020.
+
+*Myanmar is the only GP that reported a negative percentage change of RT specialists. Although they reported to have Medical Physicists, Radiation Oncologists, Radiation Therapists, and RO Nurses in 2000, they did not report the number of Medical Physicists, Radiation Therapists, and RO Nurses.*
+
+```{r gp-spec, out.width="100%", fig.cap="Percentage change of RT specialists between 2000 and 2020 by GP."}
+knitr::include_graphics(file.path(dir_plots, "1.criterion/growth_specialists_perc.png"))
+```
+
+
 
 India, Laos, and New Zealand reported that they did not have RT specialist in 2000 but that they have managed to produce specialists ever since.   
 

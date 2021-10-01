@@ -22,8 +22,7 @@ soc <- import(infile)
 #prepare for plot 
 
 soc_plot <- soc %>%
-  filter(!is.na(value),
-         value >0) %>%
+  filter(!is.na(value)) %>%
   group_by(country) %>%
   mutate(total = sum(value)) %>%
   ungroup() %>%

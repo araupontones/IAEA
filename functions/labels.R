@@ -5,7 +5,7 @@ nums_to_label <- function(x, scale = "int"){
               x < 1e3 ~ as.character(round(x,0)),
               T ~ "n/a")
   } else{
-    case_when(!is.na(x) ~ paste0(x,"%"),
+    case_when(!is.na(x) ~ paste0(round(x,1),"%"),
               T ~ "n/a")
     
   }

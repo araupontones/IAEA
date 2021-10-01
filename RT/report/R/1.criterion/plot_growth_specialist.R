@@ -11,6 +11,7 @@ param <- parameters(mode = survey,
 
 
 exfile <- file.path(dir_plots_RT, "1.criterion/growth_specialists.png")
+exfile_woChina <- file.path(dir_plots_RT, "1.criterion/growth_specialists_withoutChina.png")
 infile <- file.path(param$dir_clean_s, "specialists.rds")
 
 
@@ -71,41 +72,28 @@ m20 %>% plot_by_year(data_prev = m10,
                       x_title = "Total number of RT specialists")
 
 
+ggsave(exfile,
+       last_plot(),
+       width = width_bar_rt ,
+       height = height_bar_rt,
+       units = "cm",
+       dpi = dpi_report
+)
 
-# 
-# View(spec2)
-# 
-# max(spec$Total)
-# 
-# spec %>%
-# ggplot(aes(x = Total,
-#            y = country,
-#            fill = year)) +
-#   geom_col(position = "dodge") +
-#   geom_text(aes(label = label,
-#                 color = year),
-#             position = position_dodge(width =1),
-#             size = 2.5,
-#             hjust = 0,
-#             vjust = 0.2,
-#             show.legend = F) +
-#   labs(y = "",
-#        x = "Number of RT specialists in 2000 and 2020",
-#        caption = caption_RT)+
-#   scale_fill_manual(breaks = c("2000", "2020"),
-#                     values = c( blue_light, blue_navy),
-#                     name = "") +
-#   scale_color_manual(values = c(blue_navy, blue_light)) +
-#   scale_x_continuous(position = "top",
-#                      label = function(x)str_replace(x, "000$", "K"),
-#                      limits = c(0, 50e3)) +
-#   theme_iaea() +
-#   theme_stacked_bar() +
-#   theme(panel.grid.minor.x = element_line(color = grid_color, linetype = "dotted"))
+
 
 #=================================================================================
-exfile
-ggsave(exfile,
+m20 %>% filter(country != "China") %>%
+  plot_by_year(data_prev = filter(m10,country!="China"),
+               var_x = Total,
+               var_y = country,
+               var_label = label,
+               breaks = c("2000"),
+               pallete = c(blue_light ),
+               limits = c(0,10e3),
+               x_title = "Total number of RT specialists (without China)")
+
+ggsave(exfile_woChina,
        last_plot(),
        width = width_bar_rt ,
        height = height_bar_rt,

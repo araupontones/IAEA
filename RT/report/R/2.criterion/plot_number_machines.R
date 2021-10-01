@@ -49,7 +49,7 @@ m20 %>% plot_by_year(data_prev = m10,
                      breaks = c("2000", "2010", "2020"),
                      pallete = c(blue_light,yellow),
                      limits = c(0,2300),
-                     x_title = "Total number of operational RT equipment (linear accelerators and Cobalt 60 machines)") 
+                     x_title = "Total number of operational RT equipment") 
 
 
 

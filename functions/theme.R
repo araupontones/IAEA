@@ -17,8 +17,8 @@ height_plot <- 10
 width_plot <- 13
 
 
-width_bar_rt = 12.5
-height_bar_rt = 9.7
+width_bar_rt = 11.4
+height_bar_rt = 8.8
 
 #higer to fit countries
 height_standards <- height_plot + 4

@@ -20,7 +20,15 @@ exfile
 c <- import(infile) %>%
   arrange(country, year)
 
-
+# 
+# p <- c %>%
+#   group_by(country) %>%
+#   mutate(change = surv_num - lag(surv_num, 1)) %>%
+#   ungroup() %>%
+#   filter(year == 2020) %>%
+#   filter(change >0)
+# 
+# View(p)
 
 
 #calculate percentage control rates ===========================================

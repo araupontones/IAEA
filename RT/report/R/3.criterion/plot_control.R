@@ -22,6 +22,7 @@ c <- import(infile) %>%
   filter(!is.na(cont_num) & cont_num >0)
 
 
+
 #prepare for plot --------------------------------------------------------------
 
 m20 <- c %>%

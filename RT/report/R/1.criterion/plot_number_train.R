@@ -23,8 +23,9 @@ infile
 train <- import(infile) %>%
   select(country, train_num) %>%
   mutate(country = fct_reorder(country, train_num)) %>%
-  filter(train_num >0 & !is.na(train_num))
+  filter(!is.na(train_num))
 
+  View(train)
 
 #to define the limit
 #max(train$train_num, na.rm = T)

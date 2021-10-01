@@ -16,13 +16,12 @@ exfile <- file.path(dir_plots_RT, "1.criterion/number_dep.png")
 
 
 
-infile
 
 #read data ====================================================================
 
 dep <- import(infile) %>%
   select(country, dep_num) %>%
-  filter(dep_num >0 & !is.na(dep_num)) %>%
+  filter(!is.na(dep_num)) %>%
   mutate(country = fct_reorder(country, dep_num),
          label = nums_to_label(dep_num))
 

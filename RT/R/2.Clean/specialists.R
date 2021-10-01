@@ -27,6 +27,9 @@ raw_spec <- import(param$file_raw) %>% select(-c(interview__id)) %>%
 raw_spec20 <- import(file.path(param$dir_raw_s, "spec2020.dta")) %>% select(-c(interview__id)) %>%
   rename(method = spec2020__id)
 
+
+
+
 #View(spec)
 
 #label variables ---------------------------------------------------------------
@@ -64,7 +67,8 @@ spec <- raw_spec %>%
 
 #View(clean_main)  
 
-#View(spec)
+
+View(spec)
 
 
 #export ---------------------------------------------------------------------

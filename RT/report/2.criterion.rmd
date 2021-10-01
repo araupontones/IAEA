@@ -24,7 +24,11 @@ The largest total increase in treatment machines in the period 2000 to 2020 was 
 
 **Overall, in 2000, there were approximately `r txt_mach$tot_0` operational RT equipment (linear accelerators and Cobalt 60 machines) across all the GPs that are part of the RT RCA programme**. By 2020, this figure has increased to `r txt_mach$tot_20` **which represents a percentage growth of `r txt_mach$g_grow` between 2000 and 2020**.  
 
+Figure \@ref(fig:mach-g) shows the percentage change of operational RT equipment between 2010 and 2020 by GP. 
 
+```{r mach-g, out.width="100%", fig.cap="Percentage change of operational RT equipment between 2000 and 2020 by GP (linear accelerators and Cobalt 60 machines)."}
+knitr::include_graphics(file.path(dir_plots, "2.criterion/growth_machines.png"))
+```
 
 
 
@@ -41,6 +45,12 @@ Figure \@ref(fig:pat-plot) shows the total number of cancer patients treated usi
 
 ```{r pat-plot, out.width="100%", fig.cap="Total number of cancer patients treated using domestic RT facilities by GPs between 2000 and 2020."}
 knitr::include_graphics(file.path(dir_plots, "2.criterion/number_patients.png"))
+```
+
+Figure \@ref(fig:pat-g) shows the percentage change of cancer patients treated using domestic RT facilities by GPs between 2000 and 2020.
+
+```{r pat-g, out.width="100%", fig.cap="Percentage change of cancer patients treated using domestic RT facilities by GPs between 2000 and 2020."}
+knitr::include_graphics(file.path(dir_plots, "2.criterion/growth_patients.png"))
 ```
 
 #### Waiting times 
