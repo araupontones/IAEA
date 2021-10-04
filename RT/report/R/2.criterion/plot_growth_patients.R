@@ -1,5 +1,5 @@
-cli::cli_alert_success("Plot RO specialists growth")
-cli::cli_alert_info('Saved:in {file.path(dir_plots_RT, "2.criterion/growth_patients.png")}')
+cli::cli_alert_success("Plot population coverage")
+cli::cli_alert_info('Saved:in {file.path(dir_plots_RT, "2.criterion/population.png")}')
 
 #clean main quesitonnaire
 survey <- "iaea_rt"
@@ -10,40 +10,35 @@ param <- parameters(mode = survey,
                     module = module)
 
 
-exfile <- file.path(dir_plots_RT, "2.criterion/growth_patients.png")
-infile <- file.path(param$dir_clean_s, "patients.rds")
+exfile <- file.path(dir_plots_RT, "2.criterion/population.png")
+infile <- file.path(param$dir_clean_s, "iaea_rt.rds")
 
 
 
 
-
+View(pop)
 
 #prepare data for plotting
-pat2 <- import(infile) %>%
-  group_by(country) %>%
-  mutate(p_g = per_grow(lag(pat_num,1), pat_num),
-         label = nums_to_label(p_g,"perc")) %>%
-  ungroup() %>%
-  filter(year == "2020") %>%
-  filter(p_g != Inf) %>%
-  mutate(country = fct_reorder(country, p_g),
-         label_null = "   ")
+pop <- import(infile) %>%
+  select(country, mach_rad) %>%
+  mutate(country= fct_reorder(country, mach_rad),
+         label = nums_to_label(mach_rad, "perc"))
+  
 
 
 min(pat2$p_g)
 max(pat2$p_g)
 
-bar_plot(db = pat2,
-         x_var = p_g,
+bar_plot(db = pop,
+         x_var = mach_rad,
          y_var = country,
          label = label,
          scale = "perc",
          just = -.2,
-         limits = c(0,460),
-         x_title = "(%) change of cancer patients treated using RT facilities between 2000 and 2020",
+         limits = c(0,111),
+         x_title = "Proportion of the population that lives within a radius of 100km from a RT equipment",
          caption = caption_RT
-)+
- geom_vline(xintercept = 0) 
+)
 exfile
 ggsave(exfile,
        last_plot(),

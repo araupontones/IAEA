@@ -49,17 +49,22 @@ t_p <- tech %>%
   group_by(tech) %>%
   mutate(tot = sum(count)) %>%
   ungroup() %>%
-  mutate(tech = fct_reorder(tech, tot))
+  mutate(tech = fct_reorder(tech, tot),
+         label = case_when(cont == "n/a" ~ cont,
+                           T ~ ""))
 
 
 
-
+View(t_p)
 
 t_p %>%
   ggplot(aes(x = country,
              y = tech, 
              fill = cont))+
   geom_tile(color = "white") +
+  geom_text(aes(label = label),
+            family = font_main,
+            hjust = .5) +
   scale_x_discrete(position = "top")+
   scale_fill_manual(values = c("white", "#e7e9ea", blue_navy),
                     name = 'RCA contributed to introduce this technology'

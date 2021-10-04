@@ -52,8 +52,8 @@ label_main <- raw_main %>%
 #head(label_main$benefits)
 
 #names(label_main)
-label_main %>%
-  tabyl(train_cont)
+# label_main %>%
+  #tabyl(mach_rad)
 
 
 #clean file -------------------------------------------------------------------

@@ -136,6 +136,16 @@ The authors are grateful for the close and effective assistance of the Technical
 
 \newpage
 
+# Annex: Waiting times in 2000 and 2020
+```{r wait-table}
+
+#print(list.files("idicators"))
+table_wait <- rio::import(file.path("indicators/2.criterion/waiting.rds"))
+
+knitr::kable(table_wait, caption = "Proportion of patients treated in given waiting times in the period 2000 to 2020 by GP.")
+```
+
+
 # Annex: Criteria and standards
 
 ```{r, child=c('X.annex_criterion1.Rmd', 'X.annex_criterion2.Rmd', 'X.annex_criterion3.Rmd')}
