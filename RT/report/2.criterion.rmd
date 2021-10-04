@@ -66,10 +66,16 @@ In countries like Cambodia, Philippines, South Korea, and Vietnam more than 80% 
 
 **Overall, the proportion of patients that experienced less than 10 days of waiting time increased from `r txt_wait$w_0` in 2000 to `r txt_wait$w_20` in 2020 across all the GPs that are part of the RT RCA programme**. 
 
+
+As can be seen in Figure \@ref(fig:waitfreq-plot) that shows the proportion of patients treated by waiting time and by GP in 2020. The 100% of the patients of South Korea experienced less than 5 days of waiting times. In Vietnam, the proportion of patients that are treated in less than 5 days is 60%. 
+
+```{r waitfreq-plot, out.width="100%", fig.cap="Proportion of patients treated by waiting time and GP."}
+knitr::include_graphics(file.path(dir_plots, "2.criterion/waiting_freq.png"))
+```
+
 The complete distribution of waiting times in the period 2000 to 2020 is presented in the Annex. 
 
-
-*Australia, India, Laos, Myanmar, and Palau are not shown in the Figure because information about waiting times was not provided by these countries during the online survey.*
+*Australia, India, Laos, Myanmar, and Palau are not shown in the Figures because information about waiting times was not provided by these countries during the online survey.*
 
 
 #### Population coverage

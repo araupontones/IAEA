@@ -16,7 +16,6 @@ infile <- file.path(param$dir_clean_s, "iaea_rt.rds")
 
 
 
-View(pop)
 
 #prepare data for plotting
 pop <- import(infile) %>%
@@ -36,7 +35,7 @@ bar_plot(db = pop,
          scale = "perc",
          just = -.2,
          limits = c(0,111),
-         x_title = "Proportion of the population that lives within a radius of 100km from a RT equipment",
+         x_title = "(%) of the population that lives within a radius of 100km from a RT equipment",
          caption = caption_RT
 )
 exfile
