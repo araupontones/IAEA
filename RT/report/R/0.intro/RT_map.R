@@ -13,27 +13,37 @@ importfile <- file.path(param$dir_clean_s,paste0(survey, ".rds"))
 
 importfile
 #import main ------------------------------------------------------------------
+#import main ------------------------------------------------------------------
 
 clean_main <- import(importfile) %>%
-  mutate(responded = T)
+  select(country) %>%
+  mutate(responded = "Yes")
 
-unique(clean_main$country)
-
-world_sf <- import(file.path(dir_reference, "world_sf.rds")) %>%
-  left_join(select(clean_main, c(country, responded)), by = "country") %>%
-  mutate(responded = case_when(responded ~ T,
-                               T ~ F))
+names(clean_main)
 
 
+countries_RCA <- import(file.path(dir_reference, "countries.xlsx")) %>%
+  select(country = Country)
+
+shape <- world_sf <- import(file.path(dir_reference, "world_sf.rds")) 
 
 
 #x_nudge <- c("Thailand")
 
 #left.countries <- c("Singapore", "Sri Lanka", "Malaysia")
 
-data_plot <- world_sf 
+data_plot <- clean_main %>% 
+  right_join(countries_RCA, by = "country") %>%
+  mutate(responded = case_when(responded == "Yes" ~ "Yes",
+                               T ~ "No")) %>%
+  right_join(shape, by = "country") %>%
+  mutate(responded = case_when(!is.na(responded) ~ responded,
+                               T ~ "Not RCA")) %>%
+  
+  sf::st_as_sf() 
 
 
+View(data_plot)
 
 
 
@@ -42,27 +52,32 @@ data_plot <- world_sf
 
 
 set.seed(42)
-map <- ggplot(data = data_plot,
-              aes(fill = responded)
+ggplot(data = data_plot,
+       aes(fill = responded)
 ) +
   geom_sf( colour = '#E5E6EB',
            size = .05) +
   
   #map only Asia and Oceania
-  coord_sf(crs = 4326, 
+  coord_sf(crs = 4326,
            xlim = c(42, 180), ylim = c(65, -58)
   ) +
   
-labs(x = "",
-     y = "")+
+  labs(x = "",
+       y = "")+
   #styles and labels ----------------------------------------------------------
-scale_fill_manual(values = c("#CCCCCC", blue_navy))+
-  labs(caption = caption_RT) +
+scale_fill_manual(breaks = c("Yes", "No", "Not RCA"),
+                  values = c( blue_navy, "#f1626e","#CCCCCC"),
+                  name = "Participated")+
+  labs(caption = "Data: online survey, 2021") +
   
   #theme -----------------------------------------------------------------------
 theme(axis.text.y = element_blank()) +
   #theme_iaea() 
-  theme_map() 
+  theme_map() +
+  theme(legend.key.height = unit(.3, 'cm'),
+        legend.key.width = unit(.3, 'cm'))
+
 
 map
 
@@ -76,7 +91,7 @@ exfile<-file.path(exdir, "map.png")
 
 
 ggsave(exfile,
-       map, 
+       last_plot(), 
        width = 13.1,
        height = 8.71,
        units = 'cm',

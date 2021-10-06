@@ -68,7 +68,16 @@ spec <- raw_spec %>%
 #View(clean_main)  
 
 
-View(spec)
+# View(spec_wide)
+# spec_wide <- spec %>%
+#   filter(indicator == "Total") %>%
+#   select(method, value, year) %>%
+#   group_by(method, year) %>%
+#   summarise(total = sum(value,na.rm = T)) %>%
+#   pivot_wider(id_cols = method,
+#               values_from = "total",
+#               names_from = "year") %>%
+#   mutate(change = `2020` - `2000`)
 
 
 #export ---------------------------------------------------------------------

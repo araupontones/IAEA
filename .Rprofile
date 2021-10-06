@@ -84,6 +84,7 @@ dir_report_RT <- "RT/report"
 dir_plots_RT <- file.path(dir_report_RT, "plots")
 dir_text_RT <- file.path(dir_report_RT, "text")
 dir_indicators_RT <- file.path(dir_report_RT, "indicators")
+dir_clean_rt <- file.path(dir_clean, "iaea_rt")
 
 
 

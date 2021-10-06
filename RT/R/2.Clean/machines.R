@@ -33,7 +33,16 @@ mach <- raw_mach %>%
   select(country, year, mach_num)
 
 
-
+View(mach)
+spec_wide <- spec %>%
+  filter(indicator == "Total") %>%
+  select(method, value, year) %>%
+  group_by(method, year) %>%
+  summarise(total = sum(value,na.rm = T)) %>%
+  pivot_wider(id_cols = method,
+              values_from = "total",
+              names_from = "year") %>%
+  mutate(change = `2020` - `2000`)
 
 
 #View(spec)

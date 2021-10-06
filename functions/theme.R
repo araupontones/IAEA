@@ -94,11 +94,11 @@ theme_stacked_bar <- function(){
 #===============================================================================
 theme_map <- function(){
   
-  theme(text = element_text(family = font_main),
+  theme(text = element_text(family = font_main, colour = gray_dark),
         axis.text = element_blank(),
         axis.ticks = element_blank(),
         axis.title = element_blank(),
-        legend.position = 'none',
+        legend.position = 'top',
         plot.background = element_rect(fill = 'white'),
         panel.background = element_rect(fill = '#f7fafe'),
         panel.grid = element_blank()

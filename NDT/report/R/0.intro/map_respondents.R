@@ -11,34 +11,34 @@ filemain <- file.path(param$dir_clean_s,paste0(survey, ".dta"))
 importfile <- file.path(param$dir_clean_s,paste0(survey, ".dta"))
 
 
+list.files(dir_reference)
+
 
 #import main ------------------------------------------------------------------
 
 clean_main <- import(importfile) %>%
-  mutate(responded = T)
+  select(country) %>%
+  mutate(responded = "Yes")
 
-unique(clean_main$country)
-
-world_sf <- import(file.path(dir_reference, "world_sf.rds")) %>%
-  left_join(select(clean_main, c(country, responded)), by = "country") %>%
-  mutate(responded = case_when(responded ~ T,
-                               T ~ F))
+names(clean_main)
 
 
+countries_RCA <- import(file.path(dir_reference, "countries.xlsx")) %>%
+  select(country = Country)
 
-#prepare data for chart
-big.countries <- c("China", "Mongolia", "India", "Australia", "Pakistan"
-)
+shape <- world_sf <- import(file.path(dir_reference, "world_sf.rds")) 
 
-#x_nudge <- c("Thailand")
 
-#left.countries <- c("Singapore", "Sri Lanka", "Malaysia")
 
-data_plot <- world_sf %>%
-  mutate(name1 = country %in% big.countries ,
-         name2 = !country %in% c(big.countries) & responded)
-#name_X = country %in% x_nudge)
-
+data_plot <- clean_main %>% 
+  right_join(countries_RCA, by = "country") %>%
+  mutate(responded = case_when(responded == "Yes" ~ "Yes",
+                               T ~ "No")) %>%
+  right_join(shape, by = "country") %>%
+  mutate(responded = case_when(!is.na(responded) ~ responded,
+                               T ~ "Not RCA")) %>%
+  
+  sf::st_as_sf() 
 
 
 
@@ -47,58 +47,36 @@ data_plot <- world_sf %>%
 
 
 
-set.seed(42)
-map <- ggplot(data = data_plot,
+
+ggplot(data = data_plot,
               aes(fill = responded)
 ) +
   geom_sf( colour = '#E5E6EB',
            size = .05) +
   
   #map only Asia and Oceania
-  coord_sf(crs = 4326, 
+  coord_sf(crs = 4326,
            xlim = c(42, 180), ylim = c(65, -58)
   ) +
-#   #names of big countries *to avoid overlapping -------------------------------
-# stat_sf_coordinates(data = filter(data_plot, name1 ==T),
-#                     geom = "text",
-#                     color = "black",
-#                     aes(label = country),
-#                     family = "Open Sans Light",
-#                     size = 2
-#  )+ 
-#   #points of other countries ---------------------------------------------------
-# stat_sf_coordinates(
-#   data = subset(data_plot, name2),
-#   geom = "point",
-#   size = .5
-# ) +
-#   #names of small countries -------------------------------------------------
-# stat_sf_coordinates(data = filter(data_plot, name2 ==T),
-#                     geom = "text_repel",
-#                     aes(label = country),
-#                     direction = c("both"),
-#                     min.segment.length = 0, 
-#                     box.padding = .5,
-#                     family = "Open Sans Light",
-#                     max.overlaps = Inf, 
-#                     size = 2,
-#                     segment.size = .2
-#                     
-# ) +
+
   labs(x = "",
        y = "")+
   #styles and labels ----------------------------------------------------------
-scale_fill_manual(values = c("#CCCCCC", blue_navy))+
+scale_fill_manual(breaks = c("Yes", "No", "Not RCA"),
+                  values = c( blue_navy, "#f1626e","#CCCCCC"),
+                  name = "Participated")+
   labs(caption = "Data: online survey, 2021") +
   
   #theme -----------------------------------------------------------------------
 theme(axis.text.y = element_blank()) +
 #theme_iaea() 
-theme_map() 
+theme_map() +
+  theme(legend.key.height = unit(.3, 'cm'),
+        legend.key.width = unit(.3, 'cm'))
 
 #map
 
-
+exfile
 
 #export -------------------------------------------------------------------------
 exdir <- file.path(dir_plots_NDT, "intro")
@@ -110,7 +88,7 @@ if(!dir.exists(exdir)){
 exfile<-file.path(exdir, "map.png")
 
 ggsave(exfile,
-       map, 
+       last_plot(), 
        width = 13.1,
        height = 8.71,
        units = 'cm',
