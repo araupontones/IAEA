@@ -4,7 +4,7 @@ caption = "Data: IAEA's NDT online survey, 2021"
 
 #00. download the data ==========================================================
 
-#source("R/download_interviews.R", encoding = "UTF-8")
+source("R/download_interviews.R", encoding = "UTF-8")
 
 
 #00. clean the data =============================================================

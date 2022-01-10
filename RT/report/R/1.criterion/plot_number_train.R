@@ -17,7 +17,7 @@ exfile <- file.path(dir_plots_RT, "1.criterion/number_trained.png")
 
 
 infile
-
+View(train)
 #read data ====================================================================
 
 train <- import(infile) %>%
@@ -25,7 +25,7 @@ train <- import(infile) %>%
   mutate(country = fct_reorder(country, train_num)) %>%
   filter(!is.na(train_num))
 
-  View(train)
+
 
 #to define the limit
 #max(train$train_num, na.rm = T)

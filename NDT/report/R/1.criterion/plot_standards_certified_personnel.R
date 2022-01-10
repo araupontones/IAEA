@@ -16,6 +16,8 @@ pers_vars <- names(indicators_cert_pers)[!names(indicators_cert_pers) %in% c("co
 
 #View(indicators_centre)
 
+
+
 data_plot <- indicators_cert_pers %>%
   filter(!country %in% support_countries) %>%
   long_data_standards(var_total = cert_pers_total,
@@ -42,7 +44,6 @@ plot_standards(db = data_plot,
                data_label = annotate_label,
                color_fill = blue_navy,
                color_text = c(color_adequate, blue_navy ,blue_light, color_inadequate))
-#exfile
 
 
 #export ========================================================================

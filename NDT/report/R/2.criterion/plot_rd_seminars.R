@@ -23,9 +23,11 @@ rd %>%
 rd_plot <- rd %>%
   filter(indicator == "Organized seminars",
          value > 0) %>%
+  mutate(value = case_when(country == "Mongolia" ~ 10,
+                           T ~ value)) %>%
   mutate(country = fct_reorder(country, value))
 
-
+View(rd_plot)
 
 max(rd_plot$value)
 

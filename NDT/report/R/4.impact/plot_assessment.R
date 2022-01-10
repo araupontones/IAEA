@@ -8,7 +8,7 @@ infile <- file.path(dir_clean_ndt, "iaea_ndt.rds")
 
 ip_vars <- impact_vars()$ip_vars
 
-
+View(ipct)
 
 ipct <- import(infile) %>%
   arrange(country) %>%
@@ -16,11 +16,14 @@ ipct <- import(infile) %>%
          lkert = impact_assessment) %>%
   mutate(indicator = " ",
          lkert = case_when(is.na(lkert) ~ "N/A",
+                           lkert == "Excellent" ~ "Important",
+                           lkert == "Good" ~ "High",
+                           lkert == "Poor" ~ "Minor",
                            T ~ lkert),
          lkert = factor(lkert, 
-                        levels = rev(c("Excellent",
-                                   "Good",
-                                   "Poor",
+                        levels = rev(c("Important",
+                                   "High",
+                                   "Minor",
                                    "N/A")),
                         ordered = T)
   ) %>%

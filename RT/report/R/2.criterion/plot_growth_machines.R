@@ -21,7 +21,7 @@ infile <- file.path(param$dir_clean_s, "machines.rds")
 
 #prepare data for plotting
 mach2 <- import(infile) %>%
-  filter(year %in% c("2010", "2020")) %>%
+  filter(year %in% c("2000", "2020")) %>%
   group_by(country) %>%
   mutate(p_g = per_grow(lag(mach_num,1), mach_num),
          label = nums_to_label(p_g,"perc")) %>%
@@ -30,7 +30,7 @@ mach2 <- import(infile) %>%
   filter(p_g != Inf) %>%
   mutate(country = fct_reorder(country, p_g),
          label_null = "   ")
-
+View(mach2)
 
 min(mach2$p_g)
 max(mach2$p_g)
@@ -41,7 +41,7 @@ bar_plot(db = mach2,
          label = label,
          scale = "perc",
          just = -.2,
-         limits = c(0,190),
+         limits = c(0,800),
          x_title = "Percentage change of operational RT equipment by GP between 2000 and 2020",
          caption = caption_RT
 )+

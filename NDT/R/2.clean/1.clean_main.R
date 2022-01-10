@@ -19,6 +19,7 @@ param <- parameters(mode = survey,
 raw_main <- import(param$file_raw)
 names(raw_main)
 
+
 #label variables ---------------------------------------------------------------
 
 labelvars <- c("country", "interview__status", "currency",

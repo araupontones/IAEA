@@ -32,22 +32,24 @@ cont <- import(infile) %>%
   left_join(soc, by = "country")
 #mutate(country = fct_reorder(country, train_num)) 
 #filter(train_num >0 & !is.na(train_num))
-
-
+View(cont)
 
 cont %>%
-  filter(train_num >0 & !is.na(train_num)) %>%
-  tabyl(train_cont)
+  tabyl(dep_num)
+
+cont %>%
+  filter(train_num >0 & !is.na(train_num)) 
   
+  19 countries
+  14/19
+  Ausralia and Myanmar
   
-  
-  cont %>%
-    filter(dep_num >0 & !is.na(dep_num)) %>%
-    filter(dep_cont %in% c("To a great extent")) %>%
-    .$country %>%
-    sort() %>%
-    knitr::combine_words()
-    #tabyl(dep_cont)
+    cont %>%
+    filter(dep_num >0 & !is.na(dep_num)) |>
+    select(country,starts_with("dep_")) |>
+      tabyl(dep_cont)
+    
+  View(t)
     
     
     

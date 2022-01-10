@@ -25,8 +25,11 @@ mach <- import(infile) %>%
 
 m20 <- mach %>%
   filter(year == "2020") %>%
+  mutate(mach_num = case_when(country == "Indonesia" ~ 82,
+                              T ~ mach_num)) %>%
   mutate(country = fct_reorder(country, mach_num))%>%
   mutate(label = nums_to_label(mach_num))
+
 
 
 

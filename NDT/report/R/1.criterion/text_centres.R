@@ -11,7 +11,7 @@ centres <- import(infile)
 
 
 countries_excellent <- centres$country[centres$centres_standard == "Excellent"]
-countries_inadequate <- centres$country[centres$centres_standard == "Inadequate"]
+countries_inadequate <- centres$country[centres$centres_standard == "Minor"]
 
 
 

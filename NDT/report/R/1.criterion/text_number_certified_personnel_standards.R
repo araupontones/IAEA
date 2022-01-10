@@ -11,7 +11,7 @@ cert_pers <-import(infile)
 
 countries_excellent <- cert_pers$country[cert_pers$cert_pers_standard == "Excellent"] %>% as.character()
 countries_gd <- cert_pers$country[cert_pers$cert_pers_standard == "Good"] %>% as.character()
-countries_iq <- cert_pers$country[cert_pers$cert_pers_standard == "Inadequate"] %>% as.character()
+countries_iq <- cert_pers$country[cert_pers$cert_pers_standard == "Minor"] %>% as.character()
 
 ctres_excel_num <- length(countries_excellent) %>% to_text()
 ctres_excel <- knitr::combine_words(sort(countries_excellent))

@@ -80,7 +80,6 @@ exportar <- function(pais){
 
 
 
-
 export(certi_raw, exfile)
 
 #from main: country cert_method

@@ -29,8 +29,8 @@ m20 <- c %>%
   mutate(country = fct_reorder(country, surv_num))%>%
   mutate(label = nums_to_label(surv_num, scale = "perc"))
 
-
-
+55 - 41
+55-39
 
 m10 <- c %>%
   filter(year != "2020") %>%
@@ -54,7 +54,6 @@ m20 %>% plot_by_year(data_prev = m10,
 
 
 
-exfile
 
 ggsave(exfile,
        last_plot(),

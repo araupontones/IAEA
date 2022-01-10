@@ -41,6 +41,7 @@ indicators_cert <- clean_data %>%
 
 #View(indicators_cert)
 
+View(indicators_cert)
 #export ========================================================================
 export(indicators_cert, exfile)
 

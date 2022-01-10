@@ -20,8 +20,9 @@ infile <- file.path(param$dir_clean_s, "specialists.rds")
 #read file --------------------------------------------------------------------
 spec <- import(infile) %>%
   filter(indicator == "Certified",
-         year == "2020",
-         country != "China") %>%
+         year == "2020"
+         #country != "China"
+         ) %>%
   group_by(country) %>%
   mutate(total = sum(value, na.rm = T)) %>%
   ungroup() %>%
@@ -35,7 +36,12 @@ spec <- import(infile) %>%
          ),
          color = case_when(value >=350 ~ "white",
                            T ~ "black")
-  )
+  ) %>%
+  #to fit china in the table
+  mutate(value = case_when(country == "China" ~ 2000,
+                           T ~ value))
+
+
   
 
 
@@ -52,7 +58,7 @@ spec %>%
              label = label,
              color = color)) +
   geom_tile(color = "white") +
-  geom_text(size = 2.5,
+  geom_text(size = 2,
             show.legend = F)+
   scale_fill_gradient(low = "#a6ffff", high = '#132b53',
                       na.value = "#e7e9ea",
@@ -60,6 +66,7 @@ spec %>%
                       name = "Number of RT CERTIFIED specialist by method in 2020.",
                       labels = function(x){y = str_replace(x, "000$", "K")
                       z = str_replace(y,"1500", "1.5K")
+                      w = str_replace(z,"2K", "+2K")
                       }
                       ) +
   scale_x_discrete(position = "top") +
@@ -89,7 +96,7 @@ exfile
 ggsave(exfile,
        last_plot(),
        height = height_plot - 2,
-       width = width_plot+4,
+       width = width_plot+5,
        units = "cm",
        dpi = dpi_report
 )

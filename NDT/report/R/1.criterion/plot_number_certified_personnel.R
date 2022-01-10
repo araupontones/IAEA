@@ -15,34 +15,36 @@ exfile <- file.path(dir_plots_NDT, "1.criterion/number_certified_personel.png")
 
 
 
-
 #prepare data for plot =========================================================
 
-cert_pers <- import(infile) %>% 
+cert_pers <- import(infile) |>
   filter(cert_per > 0) %>%
-  select(country, accronym, cert_men, cert_women) %>%
+  mutate(cert_total_20_men = cert_total_20 - cert_total_20_women,
+         across(contains("total_20"), function(x)round(x,0))) |>
+  select(country, accronym, cert_total_20_men, cert_total_20_women) |>
   pivot_longer(-c(country, accronym),
                names_to = "sex") %>%
   mutate(sex = case_when(str_detect(sex, "women") ~ "Female",
                          T ~ "Male"),
          log = log(value)) %>%
-  filter(log >0) %>%
+  filter(value >0) %>%
   group_by(country) %>%
   mutate(tot = sum(value)) %>%
   ungroup()%>%
   mutate(country= fct_reorder(country, -tot))
 
+max(cert_pers$tot)
 
-View(cert_pers)
   
 #View(cert_pers)
 #View(cert_pers)
-
+prettyNum(3e4, big.mark = ",")
+log(27000)
 #plot ==========================================================================
 ggplot(data = cert_pers,
        aes(
        y = accronym,
-       x = log,
+       x = log(value),
        fill = sex)
        ) +
   geom_col(width = .7) +
@@ -54,7 +56,9 @@ ggplot(data = cert_pers,
   scale_fill_manual(values = c(blue, purple_bright),
                     breaks = c("Male", "Female")
                     ) +
-  #scale_x_continuous(labels = function(x)prettyNum(x, big.mark = ",")) +
+  scale_x_continuous(breaks = c(0,15),
+                     labels = c("", "30K"))+
+                    #labels = function(x)floor(x)^10) +
   # scale_x_continuous(breaks = function(x) seq(from = 0,to = max(x), length.out = 2),
   #                    labels = function(x) prettyNum(round(seq(from = 0,to = max(x), length.out = 2), 0),big.mark = ",")
   #                    #z = prettyNum(y,big.mark = ",")
@@ -67,13 +71,12 @@ ggplot(data = cert_pers,
   #style ---------------------------------------------------------------------
   labs(caption = caption,
        y = "NDT certifications",
-       x = "Logarithmic scale",
-       title = "Approximate number of Certified personnel per year under RCA") +
+       x = "Logarithmic scale (labels in original scale)",
+       title = "Approximate number of Certified personnel under RCA since 2000") +
   theme_iaea() +
   theme_strip() 
   
-exfile
-  
+
 
 #save =========================================================================
 

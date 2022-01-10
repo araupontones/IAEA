@@ -67,9 +67,9 @@ standards_aws <- joint %>%
       excellent ~ "Excellent",
       good ~ "Good",
       adequate ~ "Adequate",
-      T ~ "Inadequate"
+      T ~ "Minor"
     ),
-    levels = rev(c("Inadequate", "Adequate", "Good", "Excellent")),
+    levels = rev(c("Minor", "Adequate", "Good", "Excellent")),
     ordered = T),
     
     
@@ -77,7 +77,7 @@ standards_aws <- joint %>%
     total = case_when(criterion ==  "Excellent" ~  total + 4,
                       criterion==  "Good" ~  total + 3,
                       criterion==  "Adequate" ~  total + 2,
-                      criterion==  "Inadequate" ~  total + 0,
+                      criterion==  "Minor" ~  total + 0,
                       T ~  0)
     
   ) %>%

@@ -59,7 +59,7 @@ ind_centres <- centres_1 %>%
          centres_standard = case_when(country == "Cambodia" ~ "Good",
                                       T ~ centres_standard),
          centres_standard = factor(centres_standard,
-                                   levels = rev(c("Inadequate", "Adequate", "Good", "Excellent")),
+                                   levels = rev(c("Minor", "Adequate", "Good", "Excellent")),
                                    ordered = T)
          )
 

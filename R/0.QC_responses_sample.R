@@ -82,9 +82,6 @@ interviews_rt.2 <- links_rt %>%
 interviews_rt.2 %>%
   tabyl(Status)
 
-View(interviews_rt.2) 
-
-
 
 export(interviews_rt.2, file.path(dir_docs, "survey_progress_RT.xlsx"), overwrite = T)
 
