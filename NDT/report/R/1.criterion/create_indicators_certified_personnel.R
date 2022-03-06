@@ -22,6 +22,7 @@ pers <- import(infile)
 
 
 
+
 #create reference vectors ======================================================
 methods <- pers %>% group_by(method) %>% slice(1) %>% select(method, accronym, type) %>% ungroup()%>% mutate_all(as.character)
 

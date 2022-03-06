@@ -29,7 +29,7 @@ rd_plot <- rd %>%
 
 View(rd_plot)
 
-max(rd_plot$value)
+sum(rd_plot$value)
 
 bar_plot(
   db = rd_plot,
@@ -37,7 +37,7 @@ bar_plot(
   y_var = country,
   caption = caption_NDT,
   x_title = "NDT Seminars/conferences organized since 2000",
-  limits = c(0,1900),
+  limits = c(0,1100),
   label = value,
   fill = blue_navy
 )
