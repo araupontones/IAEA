@@ -1,5 +1,5 @@
 cli::cli_alert_success("Plot RO specialists growth")
-cli::cli_alert_info('Saved:in {file.path(dir_plots_RT, "1.criterion/growth_specialists.png")}')
+cli::cli_alert_info('Saved:in {file.path(dir_plots_RT, "1.criterion/growth_specialists.pdf")}')
 
 #clean main quesitonnaire
 survey <- "iaea_rt"
@@ -10,8 +10,8 @@ param <- parameters(mode = survey,
                     module = module)
 
 
-exfile <- file.path(dir_plots_RT, "1.criterion/growth_specialists.png")
-exfile_woChina <- file.path(dir_plots_RT, "1.criterion/growth_specialists_withoutChina.png")
+exfile <- file.path(dir_plots_RT, "1.criterion/growth_specialists.pdf")
+exfile_woChina <- file.path(dir_plots_RT, "1.criterion/growth_specialists_withoutChina.pdf")
 infile <- file.path(param$dir_clean_s, "specialists.rds")
 
 
@@ -72,7 +72,7 @@ m20 %>% plot_by_year(data_prev = m10,
                       x_title = "Total number of RT specialists")
 
 
-ggsave(exfile,
+ggsave(exfile, device = cairo_pdf,
        last_plot(),
        width = width_bar_rt ,
        height = height_bar_rt,
@@ -92,6 +92,7 @@ m20 %>% filter(country != "China") %>%
                pallete = c(blue_light ),
                limits = c(0,10e3),
                x_title = "Total number of RT specialists (without China)")
+
 
 ggsave(exfile_woChina,
        last_plot(),

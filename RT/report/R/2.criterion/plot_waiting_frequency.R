@@ -1,5 +1,5 @@
 cli::cli_alert_success("Table: waiting improve")
-cli::cli_alert_info('Saved:in {file.path(dir_plots_RT, "2.criterion/waiting_freq.png")}')
+cli::cli_alert_info('Saved:in {file.path(dir_plots_RT, "2.criterion/waiting_freq.pdf")}')
 
 
 #clean main quesitonnaire
@@ -12,7 +12,7 @@ param <- parameters(mode = survey,
 
 
 infile <- file.path(param$dir_clean_s, "waiting.rds")
-exfile <- file.path(dir_plots_RT, "2.criterion/waiting_freq.png")
+exfile <- file.path(dir_plots_RT, "2.criterion/waiting_freq.pdf")
 
 
 
@@ -84,10 +84,10 @@ w_r <- import(infile) %>%
   exfile
 #  export(w_r, exfile)
 
-  ggsave(exfile,
+  ggsave(exfile, device = cairo_pdf,
          last_plot(),
          width = width_bar_rt +2 ,
-         height = height_bar_rt,
+         height = height_bar_rt + 2.5,
          units = "cm",
          dpi = dpi_report
   )

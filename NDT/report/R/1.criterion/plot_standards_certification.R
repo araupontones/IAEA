@@ -1,7 +1,7 @@
 #create chart for standards of criterion 1 certification
 
 infile <- file.path(dir_indicators_NDT, "1.criterion/indicators_cert.rds")
-exfile <- file.path(dir_plots_NDT,"1.criterion/cert_standards.png" )
+exfile <- file.path(dir_plots_NDT,"1.criterion/cert_standards.pdf" )
 
 indicators_cert <- import(infile)
 cert_vars<-criterion_1_vars()$cert_vars
@@ -49,7 +49,7 @@ plot_standards(db = long,
 
 
 
-ggsave(exfile,
+ggsave(exfile, device = cairo_pdf,
        last_plot(),
        height = height_standards,
        width = width_standards, 

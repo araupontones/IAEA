@@ -28,7 +28,7 @@ According to the responses of the GPs, there are none training programmes on RT 
 
 
 ```{r train-plot, out.width="100%", fig.cap="Number of educational or training programmes on RT available by GP."}
-knitr::include_graphics(file.path(dir_plots, "1.criterion/number_trained.png"))
+knitr::include_graphics(file.path(dir_plots, "1.criterion/number_trained.pdf"))
 ```
 
 
@@ -39,7 +39,7 @@ knitr::include_graphics(file.path(dir_plots, "1.criterion/number_trained.png"))
 
 
 ```{r dep-plot, out.width="100%", fig.cap="Number of educational or training programmes on RT available by GP."}
-knitr::include_graphics(file.path(dir_plots, "1.criterion/number_dep.png"))
+knitr::include_graphics(file.path(dir_plots, "1.criterion/number_dep.pdf"))
 ```
 
 #### Radiation Oncology Societies
@@ -51,7 +51,7 @@ Figure \@ref(fig:soc-plot) shows the number of national and regional RO societie
 
 
 ```{r soc-plot, out.width="100%", fig.cap="Number of Radiation Oncology (RO) Societies available by type and by GP."}
-knitr::include_graphics(file.path(dir_plots, "1.criterion/societies.png"))
+knitr::include_graphics(file.path(dir_plots, "1.criterion/societies.pdf"))
 ```
 
 
@@ -69,14 +69,14 @@ Figure \@ref(fig:spec-china) shows the total number of RT specialist by GP and t
 
 
 ```{r spec-china, out.width="100%", fig.cap="Number of RT specialists by GP in 2000 and 2020."}
-knitr::include_graphics(file.path(dir_plots, "1.criterion/number_specialists_china.png"))
+knitr::include_graphics(file.path(dir_plots, "1.criterion/number_specialists_china.pdf"))
 ```
 
 #### RT specialists in 2000 and 2020
 
 
 ```{r g-spec, out.width="100%", fig.cap="Number of RT specialists by GP."}
-knitr::include_graphics(file.path(dir_plots, "1.criterion/growth_specialists.png"))
+knitr::include_graphics(file.path(dir_plots, "1.criterion/growth_specialists.pdf"))
 ```
 
 
@@ -85,7 +85,7 @@ As can be seen in Figure \@ref(fig:g-spec) above, that shows the distribution of
 *Myanmar is the only GP that reported a negative percentage change of RT specialists. Although they reported to have Medical Physicists, Radiation Oncologists, Radiation Therapists, and RO Nurses in 2000, they did not report the number of Medical Physicists, Radiation Therapists, and RO Nurses.*
 
 ```{r gp-spec, out.width="100%", fig.cap="Percentage change of RT specialists between 2000 and 2020 by GP."}
-knitr::include_graphics(file.path(dir_plots, "1.criterion/growth_specialists_perc.png"))
+knitr::include_graphics(file.path(dir_plots, "1.criterion/growth_specialists_perc.pdf"))
 ```
 
 
@@ -99,7 +99,7 @@ India, Laos, and New Zealand reported that they did not have RT specialist in 20
 Figure \@ref(fig:m-spec) below shows the distribution of **certified specialists** by method and by GP in 2020 (*to make the distribution of specialists easier to read, the Figure excludes China because it has a much larger number of specialists than the rest of the GPs, and the countries for which the box is coded in gray is because they did not report whether their specialists are certified or not)*.
 
 ```{r m-spec, out.width="100%", fig.cap="Number of RT specialists by GP."}
-knitr::include_graphics(file.path(dir_plots, "1.criterion/method_specialists.png"))
+knitr::include_graphics(file.path(dir_plots, "1.criterion/method_specialists.pdf"))
 ```
 
 As can be seen in the Figure above, **after China, the country with the highest number of Radiation Therapists (RT) specialists is Japan (about 2,000 specialists in this field)**, followed by South Korea (750). Japan is also the GP with the highest number of certified Oncologists (899). 
@@ -132,7 +132,7 @@ Figure \@ref(fig:c1-cont) shows the detailed contribution of RCA to the GP's sel
 
 
 ```{r c1-cont, out.width="100%", fig.cap="RCA contribution to strength radiotherapy workforce"}
-knitr::include_graphics(file.path(dir_plots, "1.criterion/contribuion_c1.png"))
+knitr::include_graphics(file.path(dir_plots, "1.criterion/contribuion_c1.pdf"))
 ```
 
 

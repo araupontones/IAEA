@@ -17,7 +17,7 @@ Moreover, figure \@ref(fig:standards-c2-sum) below shows the performance standar
 
 ```{r standards-c3-sum, out.width="100%", fig.cap="Improved health and safety: Performance standard by criterion and country"}
 
-knitr::include_graphics(file.path(dir_plots,"3.criterion/standards_crit3.png"))
+knitr::include_graphics(file.path(dir_plots,"3.criterion/standards_crit3.pdf"))
 
 ```
 
@@ -47,7 +47,7 @@ Figure \@ref(fig:standards-c3) shows the standards met for this dimension. It is
 
 ```{r standards-c3, out.width="100%", fig.cap="Performance standards: Improved Health and Safety"}
 
-knitr::include_graphics(file.path(dir_plots,"3.criterion/standards_HS.png"))
+knitr::include_graphics(file.path(dir_plots,"3.criterion/standards_HS.pdf"))
 
 ```
 

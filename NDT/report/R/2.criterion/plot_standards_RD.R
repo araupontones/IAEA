@@ -1,9 +1,9 @@
 
 cli::cli_alert_success("Plot standard RD")
-cli::cli_alert_info(glue('Saved: {file.path(dir_plots_NDT, "2.criterion/standards_RD.png")}'))
+cli::cli_alert_info(glue('Saved: {file.path(dir_plots_NDT, "2.criterion/standards_RD.pdf")}'))
 
 infile <- file.path(dir_indicators_NDT, "2.criterion/RD.rds")
-exfile <- file.path(dir_plots_NDT,"2.criterion/standards_RD.png" )
+exfile <- file.path(dir_plots_NDT,"2.criterion/standards_RD.pdf" )
 
 indicators_rd <- import(infile)
 rd_vars <- criterion_2_vars()$vars_rd
@@ -49,7 +49,7 @@ plot_standards(db = data_plot,
 
 
 #export ========================================================================
-ggsave(exfile,
+ggsave(exfile, device = cairo_pdf,
        last_plot(),
        height = height_standards,
        width = width_standards,

@@ -1,10 +1,10 @@
 #create chart for standards of criterion 1 certification
 
 cli::cli_alert_success("Plot standard centres")
-cli::cli_alert_info(glue('Saved: {file.path(dir_plots_NDT, "1.criterion/centre_standards.png")}'))
+cli::cli_alert_info(glue('Saved: {file.path(dir_plots_NDT, "1.criterion/centre_standards.pdf")}'))
 
 infile <- file.path(dir_indicators_NDT, "1.criterion/indicators_centres.rds")
-exfile <- file.path(dir_plots_NDT,"1.criterion/centre_standards.png" )
+exfile <- file.path(dir_plots_NDT,"1.criterion/centre_standards.pdf" )
 
 indicators_centre <- import(infile)
 centre_vars <- criterion_1_vars()$centres_vars
@@ -39,7 +39,7 @@ plot_standards(db = data_plot,
                color_text = c(blue_navy, blue_light, color_inadequate))
 
 
-ggsave(exfile,
+ggsave(exfile, device = cairo_pdf,
        last_plot(),
        height = height_standards,
        width = width_standards,

@@ -1,5 +1,5 @@
 cli::cli_alert_success("Plot RCA contribution certification")
-cli::cli_alert_info(glue('Saved: {file.path(dir_plots_NDT, "1.criterion/contribution_centres.png")}'))
+cli::cli_alert_info(glue('Saved: {file.path(dir_plots_NDT, "1.criterion/contribution_centres.pdf")}'))
 
 
 
@@ -7,7 +7,7 @@ cli::cli_alert_info(glue('Saved: {file.path(dir_plots_NDT, "1.criterion/contribu
 survey <- "iaea_ndt"
 module <- "inspection_firms"
 infile <- file.path(dir_indicators_NDT, "1.criterion/indicators_centres.rds")
-exfile <- file.path(dir_plots_NDT, "1.criterion/contribution_centres.png")
+exfile <- file.path(dir_plots_NDT, "1.criterion/contribution_centres.pdf")
 
 #get parameters to import and export file
 
@@ -120,7 +120,7 @@ both %>%
 #export ========================================================================
 exfile
 
-ggsave(exfile,
+ggsave(exfile, device = cairo_pdf,
        last_plot(),
        height = height_plot - 6,
        width = width_plot,

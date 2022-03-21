@@ -1,5 +1,5 @@
 cli::cli_alert_success("Plot standard Criterion 2")
-cli::cli_alert_info(glue('Saved: {file.path(dir_plots_NDT, "intro/standard.png")}'))
+cli::cli_alert_info(glue('Saved: {file.path(dir_plots_NDT, "intro/standard.pdf")}'))
 
 
 
@@ -8,7 +8,7 @@ dims <- c("centres", "cert", "certified_personel")
 #infile <- file.path(dir_indicators_NDT, glue("1.criterion/indicators_{x}.rds"))
 
 
-exfile <- file.path(dir_plots_NDT,"intro/standard.png" )
+exfile <- file.path(dir_plots_NDT,"intro/standard.pdf" )
 
 #read all indicators  =====================================================
 
@@ -79,9 +79,10 @@ data_plot <- files_app %>%
 
 
 
-exfile
-ggsave(exfile,
+
+ggsave(exfile, device = cairo_pdf,
        last_plot(),
+      
        height = height_plot - 3.5,
        width = width_plot,
        dpi = dpi_report)

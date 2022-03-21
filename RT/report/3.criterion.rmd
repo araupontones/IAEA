@@ -14,7 +14,7 @@ The aim of this section is to understand the extent to which participating in th
 ## Criterion 3.1 Increase in local control
 
 ```{r control-plot, out.width="100%", fig.cap="Approximate average 5-year control rate in 2000 and 2020 by GP."}
-knitr::include_graphics(file.path(dir_plots, "3.criterion/control.png"))
+knitr::include_graphics(file.path(dir_plots, "3.criterion/control.pdf"))
 ```
 
 
@@ -39,7 +39,7 @@ As can be seen in Figure \@ref(fig:survival-plot), the average survival rate inc
 *Australia, and Laos did not information about average 5 year survival rates during the online survey*.
 
 ```{r survival-plot, out.width="100%", fig.cap="Approximate average 5-year survival rate in 2000 and 2020 by GP."}
-knitr::include_graphics(file.path(dir_plots, "3.criterion/life.png"))
+knitr::include_graphics(file.path(dir_plots, "3.criterion/life.pdf"))
 ```
 
 
@@ -63,7 +63,7 @@ Figure \@ref(fig:contc3-plot) below shows the extent to which the RCA RT program
 *The percentages within the boxes show the average 5-year control and survival rates reported by the GPs in 2020 and the colours show the perception of GPs to the extent to which RCA contributed to increase these rates. Australia, Laos, Mongolia, Myanmar and Palau did not provide this information during the online survey*.
 
 ```{r contc3-plot, out.width="100%", fig.cap="RCA impact to increase 5-year survival and control rates by GP."}
-knitr::include_graphics(file.path(dir_plots, "3.criterion/contribution_control.png"))
+knitr::include_graphics(file.path(dir_plots, "3.criterion/contribution_control.pdf"))
 ```
 
 

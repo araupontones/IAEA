@@ -1,5 +1,5 @@
 cli::cli_alert_success("Plot: contribution control")
-cli::cli_alert_info('Saved:in {file.path(dir_plots_RT, "3.criterion/contribution_control.png")}')
+cli::cli_alert_info('Saved:in {file.path(dir_plots_RT, "3.criterion/contribution_control.pdf")}')
 
 #clean main quesitonnaire
 survey <- "iaea_rt"
@@ -11,7 +11,7 @@ param <- parameters(mode = survey,
 
 
 infile <- file.path(param$dir_clean_s, "iaea_rt.rds")
-exfile <- file.path(dir_plots_RT, "3.criterion/contribution_control.png")
+exfile <- file.path(dir_plots_RT, "3.criterion/contribution_control.pdf")
 
 
 
@@ -121,7 +121,7 @@ d_p %>%
 
 
 exfile
-ggsave(exfile,
+ggsave(exfile, device = cairo_pdf,
        last_plot(),
        height = height_plot +2,
        width = width_plot+20,

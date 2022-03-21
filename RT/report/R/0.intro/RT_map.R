@@ -79,7 +79,7 @@ theme(axis.text.y = element_blank()) +
         legend.key.width = unit(.3, 'cm'))
 
 
-map
+
 
 
 
@@ -87,10 +87,10 @@ map
 exdir <- file.path(dir_plots_RT, "0.intro")
 
 
-exfile<-file.path(exdir, "map.png")
+exfile<-file.path(exdir, "map.pdf")
 
 
-ggsave(exfile,
+ggsave(exfile, device = cairo_pdf,
        last_plot(), 
        width = 13.1,
        height = 8.71,

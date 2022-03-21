@@ -1,12 +1,12 @@
 cli::cli_alert_success("Plot # of training centres")
-cli::cli_alert_info(glue('Saved: {file.path(dir_plots_NDT, "1.criterion/training_centres_by_country.png")}'))
+cli::cli_alert_info(glue('Saved: {file.path(dir_plots_NDT, "1.criterion/training_centres_by_country.pdf")}'))
 
 
 
 survey <- "iaea_ndt"
 module <- "inspec"
 #get parameters to import and export file
-exfile <-file.path(dir_plots_NDT, "1.criterion/training_centres_by_country.png")
+exfile <-file.path(dir_plots_NDT, "1.criterion/training_centres_by_country.pdf")
 
 param <- parameters(mode = survey,
                     module = module)
@@ -51,7 +51,7 @@ plot_stacked(data = data_plot,
              xlab = "Number of training centres")
 
 
-ggsave(exfile,
+ggsave(exfile, device = cairo_pdf,
        last_plot(),
        width = width_plot,
        height = height_plot + 1,

@@ -3,7 +3,7 @@ cli::cli_alert_success("Plot number of industries")
 cli::cli_alert_info(glue('Saved: {file.path(dir_plots_NDT, "2.criterion/number_industries.rds")}'))
 
 infile <- file.path(dir_clean_ndt, "practice.rds")
-exfile <- file.path(dir_plots_NDT,"2.criterion/number_industries.png" )
+exfile <- file.path(dir_plots_NDT,"2.criterion/number_industries.pdf" )
 
 
 
@@ -42,7 +42,7 @@ bar_plot(
 #export(text_aws, exfile)
 #exfile
 
-ggsave(exfile,
+ggsave(exfile, device = cairo_pdf,
        last_plot(),
        width = width_plot,
        height = height_plot,

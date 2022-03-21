@@ -1,5 +1,5 @@
 cli::cli_alert_success("Plot RO specialists growth")
-cli::cli_alert_info('Saved:in {file.path(dir_plots_RT, "1.criterion/growth_specialists_perc.png")}')
+cli::cli_alert_info('Saved:in {file.path(dir_plots_RT, "1.criterion/growth_specialists_perc.pdf")}')
 
 #clean main quesitonnaire
 survey <- "iaea_rt"
@@ -10,7 +10,7 @@ param <- parameters(mode = survey,
                     module = module)
 
 
-exfile <- file.path(dir_plots_RT, "1.criterion/growth_specialists_perc.png")
+exfile <- file.path(dir_plots_RT, "1.criterion/growth_specialists_perc.pdf")
 infile <- file.path(param$dir_clean_s, "specialists.rds")
 
 
@@ -60,7 +60,7 @@ geom_text(data = filter(spec2, p_g>0),
             family = font_main)
 
 exfile
-ggsave(exfile,
+ggsave(exfile, device = cairo_pdf,
        last_plot(),
        width = width_bar_rt +2,
        height = height_bar_rt,

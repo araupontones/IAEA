@@ -85,12 +85,10 @@ if(!dir.exists(exdir)){
   dir.create(exdir)
 }
 
-exfile<-file.path(exdir, "map.png")
+exfile<-file.path(exdir, "map.pdf")
 
-ggsave(exfile,
+ggsave(exfile, device = cairo_pdf,
        last_plot(), 
-       width = 13.1,
-       height = 8.71,
        units = 'cm',
        dpi = 360)
 

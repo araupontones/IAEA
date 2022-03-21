@@ -1,10 +1,10 @@
 cli::cli_alert_success("Plot, RCA contribution to RD")
-cli::cli_alert_info(glue('Saved: {file.path(dir_plots_NDT, "2.criterion/contribution_rd.png")}'))
+cli::cli_alert_info(glue('Saved: {file.path(dir_plots_NDT, "2.criterion/contribution_rd.pdf")}'))
 
 #clean main quesitonnaire
 survey <- "iaea_ndt"
 infile <-file.path(dir_clean_ndt, "iaea_ndt.rds")
-exfile <- file.path(dir_plots_NDT, "2.criterion/contribution_rd.png")
+exfile <- file.path(dir_plots_NDT, "2.criterion/contribution_rd.pdf")
 
 
 
@@ -59,7 +59,7 @@ rd_cont %>%
 #export ========================================================================
 exfile
 
-ggsave(exfile,
+ggsave(exfile, device = cairo_pdf,
        last_plot(),
        height = height_plot - 6.5,
        width = width_plot,

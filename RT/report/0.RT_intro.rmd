@@ -10,7 +10,7 @@ Figure: \@ref(fig:map-png) below shows the countries that participated in this s
 
 
 ```{r map-png, out.width="100%", fig.cap="Map of the 20 countries that participated in the online survey."}
-knitr::include_graphics(file.path(dir_plots, "0.intro/map.png"))
+knitr::include_graphics(file.path(dir_plots, "0.intro/map.pdf"))
 ```
 
 The assessment of the social and economic impacts of the RT RCA programme involved pre-defining agreed performance criteria (aspects of social and economic impacts that were the focus of the evaluation) and standards (narratives describing four levels of performance – excellent, good, adequate, and inadequate). These criteria and standards (detailed in Annex) provided a transparent and robust framework for rating the impact of the RT RCA.

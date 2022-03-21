@@ -16,7 +16,7 @@ According to experts who participated in the online survey, **for `r text_impact
 
 ```{r impact-chart, out.width="100%", fig.cap="Contribution of IAEA/RCA activities in achieving general objectives and benefits by GP"}
 
-knitr::include_graphics(file.path(dir_plots,"4.impact/plot_impact.png"))
+knitr::include_graphics(file.path(dir_plots,"4.impact/plot_impact.pdf"))
 
 ```
 
@@ -37,7 +37,7 @@ Finally, Figure \@ref(fig:assessment-chart) shows how every GP evaluated the rol
 
 ```{r assessment-chart, out.width="100%", fig.cap="Contribution of IAEA/RCA activities in achieving general objectives and benefits by GP"}
 
-knitr::include_graphics(file.path(dir_plots,"4.impact/plot_assesment.png"))
+knitr::include_graphics(file.path(dir_plots,"4.impact/plot_assesment.pdf"))
 
 ```
 

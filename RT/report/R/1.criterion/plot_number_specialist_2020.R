@@ -1,5 +1,5 @@
 cli::cli_alert_success("Plot RO specialists")
-cli::cli_alert_info('Saved:in {file.path(dir_plots_RT, "1.criterion/number_specialists_china.png")}')
+cli::cli_alert_info('Saved:in {file.path(dir_plots_RT, "1.criterion/number_specialists_china.pdf")}')
 
 #clean main quesitonnaire
 survey <- "iaea_rt"
@@ -10,7 +10,7 @@ param <- parameters(mode = survey,
                     module = module)
 
 
-exfile <- file.path(dir_plots_RT, "1.criterion/number_specialists_china.png")
+exfile <- file.path(dir_plots_RT, "1.criterion/number_specialists_china.pdf")
 infile <- file.path(param$dir_clean_s, "specialists.rds")
 
 
@@ -56,7 +56,7 @@ spec_plot %>% plot_facet_specialists()
 
 #=================================================================================
 exfile
-ggsave(exfile,
+ggsave(exfile, device = cairo_pdf,
        last_plot(),
        width = width_bar_rt ,
        height = height_bar_rt +3,

@@ -1,9 +1,9 @@
 cli::cli_alert_info("Plot assessment")
-cli::cli_alert_success(glue::glue('saved in {file.path(dir_plots_NDT, "4.impact/plot_assessment.png")}'))
+cli::cli_alert_success(glue::glue('saved in {file.path(dir_plots_NDT, "4.impact/plot_assessment.pdf")}'))
 
 dir_plots_NDT
 
-exfile <- file.path(dir_plots_NDT, "4.impact/plot_assesment.png")
+exfile <- file.path(dir_plots_NDT, "4.impact/plot_assesment.pdf")
 infile <- file.path(dir_clean_ndt, "iaea_ndt.rds")
 
 ip_vars <- impact_vars()$ip_vars
@@ -49,7 +49,7 @@ ipct %>%
 
 exfile
 
-ggsave(exfile,
+ggsave(exfile, device = cairo_pdf,
        last_plot(),
        height = height_plot - 6.5,
        width = width_plot + 4,

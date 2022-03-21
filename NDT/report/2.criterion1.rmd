@@ -21,7 +21,7 @@ Moreover, Figure \@ref(fig:standards-c1-sum) below shows each GP’s levels of p
 
 ```{r standards-c1-sum, out.width="100%", fig.cap="Capacity and capability of the Government Parties (GPs): Performance standard by criterion and country"}
 
-knitr::include_graphics(file.path(dir_plots,"1.criterion/standards_crit1.png"))
+knitr::include_graphics(file.path(dir_plots,"1.criterion/standards_crit1.pdf"))
 
 ```
 
@@ -48,7 +48,7 @@ From the 18 countries that act as recipients of RCA, only Nepal and Myanmar have
 
 ```{r cert-standards, out.width="100%", fig.cap="NDT infrastructure at the national level and assessment standards."}
 
-knitr::include_graphics(file.path(dir_plots, "1.criterion/cert_standards.png"))
+knitr::include_graphics(file.path(dir_plots, "1.criterion/cert_standards.pdf"))
 
 ```
 
@@ -68,7 +68,7 @@ Moreover  **58% of the GPs that are recipients of the programme, perceive that R
 
 ```{r cert-contribution, out.width="100%", fig.cap="Contribution of RCA in GP's infrastructure."}
 
-knitr::include_graphics(file.path(dir_plots, "1.criterion/contribution_RCA_cert.png"))
+knitr::include_graphics(file.path(dir_plots, "1.criterion/contribution_RCA_cert.pdf"))
 
 ```
 
@@ -97,7 +97,7 @@ Laos, Myanmar, and Nepal are considered to have an inadequate performance becaus
 
 ```{r standards-pers-certified, out.width="100%", fig.cap="Personnel certified by methods: standards for self-reliance"}
 
-knitr::include_graphics(file.path(dir_plots,"1.criterion/cert_pers_standards.png"))
+knitr::include_graphics(file.path(dir_plots,"1.criterion/cert_pers_standards.pdf"))
 
 ```
 
@@ -126,7 +126,7 @@ The total number of **certified personnel under the RCA programme** by country, 
 
 ```{r certified-personnel-plot, out.width="100%", fig.cap="Number personnel certified by local NDT training centers as a result of participating in RCA NDT."}
 
-knitr::include_graphics(file.path(dir_plots,"1.criterion/number_certified_personel.png"))
+knitr::include_graphics(file.path(dir_plots,"1.criterion/number_certified_personel.pdf"))
 
 ```
 
@@ -149,7 +149,7 @@ As it can be seen in Figure \@ref(fig:centre-standards). Out of the 18 recipient
 
 ```{r centre-standards, out.width="100%", fig.cap="GP's inspection and training centers: standards for self-reliance"}
 
-knitr::include_graphics(file.path(dir_plots, "1.criterion/centre_standards.png"))
+knitr::include_graphics(file.path(dir_plots, "1.criterion/centre_standards.pdf"))
 
 ```
 
@@ -163,7 +163,7 @@ The white asterisk in the figure below indicates that RCA has facilitated the in
 
 ```{r centres-contribution, out.width="100%", fig.cap="Contribution of the NDT RCA programme to the establishment of local inspection and training centres."}
 
-knitr::include_graphics(file.path(dir_plots, "1.criterion/contribution_centres.png"))
+knitr::include_graphics(file.path(dir_plots, "1.criterion/contribution_centres.pdf"))
 
 ```
 
@@ -176,7 +176,7 @@ Figure  \@ref(fig:centre-by-country) below shows the number of **inspection cent
 
 ```{r centre-by-country, out.width="100%", fig.cap="Number of inspection centres by type of ownership and country"}
 
-knitr::include_graphics(file.path(dir_plots,"1.criterion/inspec_centres_by_country.png"))
+knitr::include_graphics(file.path(dir_plots,"1.criterion/inspec_centres_by_country.pdf"))
 
 ```
 
@@ -185,7 +185,7 @@ Figure  \@ref(fig:trainingcenter-by-country) below shows the number of **trainin
 
 ```{r trainingcenter-by-country, out.width="100%", fig.cap="Number of training centres by type of ownership and country"}
 
-knitr::include_graphics(file.path(dir_plots,"1.criterion/training_centres_by_country.png"))
+knitr::include_graphics(file.path(dir_plots,"1.criterion/training_centres_by_country.pdf"))
 
 ```
 

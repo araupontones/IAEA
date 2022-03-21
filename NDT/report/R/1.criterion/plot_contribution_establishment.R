@@ -7,7 +7,7 @@ cli::cli_alert_info(glue('Saved: {file.path(dir_plots_NDT, "1.criterion/contribu
 survey <- "iaea_ndt"
 module <- "inspection_firms"
 infile <- file.path(dir_indicators_NDT, "1.criterion/indicators_cert.rds")
-exfile <- file.path(dir_plots_NDT, "1.criterion/contribution_RCA_cert.png")
+exfile <- file.path(dir_plots_NDT, "1.criterion/contribution_RCA_cert.pdf")
 
 #get parameters to import and export file
 
@@ -75,7 +75,7 @@ plot_contribution(x = country,
 #export ========================================================================
 exfile
 
-ggsave(exfile,
+ggsave(exfile, device = cairo_pdf,
        last_plot(),
        height = height_plot - 6,
        width = width_plot,

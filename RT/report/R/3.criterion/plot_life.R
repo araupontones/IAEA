@@ -1,5 +1,5 @@
 cli::cli_alert_success("Plot: control rates")
-cli::cli_alert_info('Saved:in {file.path(dir_plots_RT, "3.criterion/life.png")}')
+cli::cli_alert_info('Saved:in {file.path(dir_plots_RT, "3.criterion/life.pdf")}')
 
 #clean main quesitonnaire
 survey <- "iaea_rt"
@@ -11,7 +11,7 @@ param <- parameters(mode = survey,
 
 
 infile <- file.path(param$dir_clean_s, "control.rds")
-exfile <- file.path(dir_plots_RT, "3.criterion/life.png")
+exfile <- file.path(dir_plots_RT, "3.criterion/life.pdf")
 
 
 
@@ -55,7 +55,7 @@ m20 %>% plot_by_year(data_prev = m10,
 
 
 
-ggsave(exfile,
+ggsave(exfile, device = cairo_pdf,
        last_plot(),
        width = width_bar_rt ,
        height = height_bar_rt,

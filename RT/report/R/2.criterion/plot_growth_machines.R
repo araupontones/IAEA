@@ -1,5 +1,5 @@
 cli::cli_alert_success("Plot RO specialists growth")
-cli::cli_alert_info('Saved:in {file.path(dir_plots_RT, "2.criterion/growth_machines.png")}')
+cli::cli_alert_info('Saved:in {file.path(dir_plots_RT, "2.criterion/growth_machines.pdf")}')
 
 #clean main quesitonnaire
 survey <- "iaea_rt"
@@ -10,7 +10,7 @@ param <- parameters(mode = survey,
                     module = module)
 
 
-exfile <- file.path(dir_plots_RT, "2.criterion/growth_machines.png")
+exfile <- file.path(dir_plots_RT, "2.criterion/growth_machines.pdf")
 infile <- file.path(param$dir_clean_s, "machines.rds")
 
 
@@ -47,7 +47,7 @@ bar_plot(db = mach2,
 )+
  geom_vline(xintercept = 0) 
 exfile
-ggsave(exfile,
+ggsave(exfile, device = cairo_pdf,
        last_plot(),
        width = width_bar_rt +2,
        height = height_bar_rt,

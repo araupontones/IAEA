@@ -1,5 +1,5 @@
 cli::cli_alert_success("Plot: waiting improve")
-cli::cli_alert_info('Saved:in {file.path(dir_plots_RT, "2.criterion/waiting_improve.png")}')
+cli::cli_alert_info('Saved:in {file.path(dir_plots_RT, "2.criterion/waiting_improve.pdf")}')
 
 #clean main quesitonnaire
 survey <- "iaea_rt"
@@ -11,7 +11,7 @@ param <- parameters(mode = survey,
 
 
 infile <- file.path(param$dir_clean_s, "waiting.rds")
-exfile <- file.path(dir_plots_RT, "2.criterion/waiting_improve.png")
+exfile <- file.path(dir_plots_RT, "2.criterion/waiting_improve.pdf")
 
 
 my_point <- function(size,
@@ -170,10 +170,10 @@ my_text <- function(data,
   
   exfile
 
-ggsave(exfile,
+ggsave(exfile, device = cairo_pdf,
        last_plot(),
-       width = width_bar_rt ,
-       height = height_bar_rt,
+       width = width_bar_rt +2 ,
+       height = height_bar_rt +1,
        units = "cm",
        dpi = dpi_report
 )

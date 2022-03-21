@@ -1,6 +1,6 @@
 
 cli::cli_alert_success("Plot # trained personnel")
-cli::cli_alert_info('Saved:in {file.path(dir_plots_RT, "1.criterion/number_dep.png")}')
+cli::cli_alert_info('Saved:in {file.path(dir_plots_RT, "1.criterion/number_dep.pdf")}')
 
 
 survey <- "iaea_rt"
@@ -12,7 +12,7 @@ param <- parameters(mode = survey,
                     module = module)
 
 infile <- file.path(param$dir_clean_s, "iaea_rt.rds") #created in clean
-exfile <- file.path(dir_plots_RT, "1.criterion/number_dep.png")
+exfile <- file.path(dir_plots_RT, "1.criterion/number_dep.pdf")
 
 
 
@@ -44,7 +44,7 @@ bar_plot(db = dep,
 
 #export ========================================================================
 exfile
-ggsave(exfile,
+ggsave(exfile, device = cairo_pdf,
        last_plot(),
        width = width_bar_rt,
        height = height_bar_rt,

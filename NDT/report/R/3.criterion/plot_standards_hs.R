@@ -1,9 +1,9 @@
 
 cli::cli_alert_success("Plot standard HS")
-cli::cli_alert_info(glue('Saved: {file.path(dir_plots_NDT, "3.criterion/standards_HS.png")}'))
+cli::cli_alert_info(glue('Saved: {file.path(dir_plots_NDT, "3.criterion/standards_HS.pdf")}'))
 
 infile <- file.path(dir_indicators_NDT, "3.criterion/indicators_hs.rds")
-exfile <- file.path(dir_plots_NDT,"3.criterion/standards_HS.png" )
+exfile <- file.path(dir_plots_NDT,"3.criterion/standards_HS.pdf" )
 
 indicators_hs <- import(infile)
 hs_vars <- criterion_3_vars()$hs_vars
@@ -46,7 +46,7 @@ plot_standards(db = data_plot,
 
 
 #export ========================================================================
-ggsave(exfile,
+ggsave(exfile, device = cairo_pdf,
        last_plot(),
        height = height_standards,
        width = width_standards,

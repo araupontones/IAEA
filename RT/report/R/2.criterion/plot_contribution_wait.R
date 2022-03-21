@@ -1,6 +1,6 @@
 
 cli::cli_alert_success("Plot # contribution wait")
-cli::cli_alert_info('Saved:in {file.path(dir_plots_RT, "2.criterion/contribuion_wait.png")}')
+cli::cli_alert_info('Saved:in {file.path(dir_plots_RT, "2.criterion/contribuion_wait.pdf")}')
 
 
 survey <- "iaea_rt"
@@ -12,7 +12,7 @@ param <- parameters(mode = survey,
                     module = module)
 
 infile <- file.path(param$dir_clean_s, "iaea_rt.rds") #created in clean
-exfile <- file.path(dir_plots_RT, "2.criterion/contribuion_wait.png")
+exfile <- file.path(dir_plots_RT, "2.criterion/contribuion_wait.pdf")
 
 
 less_10 <- import(file.path(dir_indicators_RT, "waiting_less_10days.rds")) %>%
@@ -96,7 +96,7 @@ geom_text(aes(label = label,
 
 #export ========================================================================
 exfile
-ggsave(exfile,
+ggsave(exfile, device = cairo_pdf,
        last_plot(),
        height = height_plot,
        width = width_plot+20,

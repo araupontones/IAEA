@@ -19,7 +19,7 @@ Figure \@ref(fig:map-png) below shows the countries that participated in this st
 
 ```{r map-png, out.width="100%", fig.cap="Map of the 20 countries that participated in the online survey."}
 
-knitr::include_graphics(file.path(dir_plots, "intro/map.png"))
+knitr::include_graphics(file.path(dir_plots, "intro/map.pdf"))
 
 ```
 

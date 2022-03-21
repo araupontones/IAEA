@@ -1,5 +1,5 @@
 cli::cli_alert_success("Plot # certifield personel")
-cli::cli_alert_info('Saved:in {file.path(dir_plots_NDT, "1.criterion/number_certified_personel.png")}')
+cli::cli_alert_info('Saved:in {file.path(dir_plots_NDT, "1.criterion/number_certified_personel.pdf")}')
 
 
 survey <- "iaea_ndt"
@@ -11,7 +11,7 @@ param <- parameters(mode = survey,
                     module = module)
 
 infile <- file.path(param$dir_clean_s, "certified_personel.rds") #created in clean
-exfile <- file.path(dir_plots_NDT, "1.criterion/number_certified_personel.png")
+exfile <- file.path(dir_plots_NDT, "1.criterion/number_certified_personel.pdf")
 
 
 
@@ -80,7 +80,7 @@ ggplot(data = cert_pers,
 
 #save =========================================================================
 
-ggsave(exfile,
+ggsave(exfile, device = cairo_pdf,
   last_plot(),
   width = width_plot,
   height = height_plot,

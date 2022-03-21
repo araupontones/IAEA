@@ -1,6 +1,6 @@
 
 cli::cli_alert_success("Plot # contribution personnel")
-cli::cli_alert_info('Saved:in {file.path(dir_plots_RT, "1.criterion/contribuion_c1.png")}')
+cli::cli_alert_info('Saved:in {file.path(dir_plots_RT, "1.criterion/contribuion_c1.pdf")}')
 
 
 survey <- "iaea_rt"
@@ -12,7 +12,7 @@ param <- parameters(mode = survey,
                     module = module)
 
 infile <- file.path(param$dir_clean_s, "iaea_rt.rds") #created in clean
-exfile <- file.path(dir_plots_RT, "1.criterion/contribuion_c1.png")
+exfile <- file.path(dir_plots_RT, "1.criterion/contribuion_c1.pdf")
 
 
 
@@ -127,7 +127,7 @@ cont_plot %>%
 
 #export ========================================================================
 exfile
-ggsave(exfile,
+ggsave(exfile, device = cairo_pdf,
        last_plot(),
        height = height_plot + 2,
        width = width_plot+20,

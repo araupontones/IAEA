@@ -16,7 +16,7 @@ Moreover, Figure \@ref(fig:standards-c2-sum) below shows the performance standar
 
 ```{r standards-c2-sum, out.width="100%", fig.cap="Increased scope and scale of NDT demand and use: Performance standard by criterion and country"}
 
-knitr::include_graphics(file.path(dir_plots,"2.criterion/standards_crit2.png"))
+knitr::include_graphics(file.path(dir_plots,"2.criterion/standards_crit2.pdf"))
 
 ```
 
@@ -50,7 +50,7 @@ This sub-criterion explores **the extent into which participation in the RCA pro
 
 ```{r standards-aws, out.width="100%", fig.cap="Performance standards: Awareness, interest, and application of NDT technology in the industrial sectors for the QA and QC of industrial components"}
 
-knitr::include_graphics(file.path(dir_plots,"2.criterion/standards_aws.png"))
+knitr::include_graphics(file.path(dir_plots,"2.criterion/standards_aws.pdf"))
 
 ```
 
@@ -86,7 +86,7 @@ The number of industrial sectors in which NDT technology has been applied for qu
 
 ```{r industries, out.width="100%", fig.cap="Number of industrial sectors in which NDT technology has been applied by GP"}
 
-knitr::include_graphics(file.path(dir_plots,"2.criterion/number_industries.png"))
+knitr::include_graphics(file.path(dir_plots,"2.criterion/number_industries.pdf"))
 
 ```
 
@@ -133,7 +133,7 @@ Figure \@ref(fig:standards-rd) shows the GPs' performance in terms of R&D
 
 ```{r standards-rd, out.width="100%", fig.cap="Performance standards: Research and Development"}
 
-knitr::include_graphics(file.path(dir_plots,"2.criterion/standards_RD.png"))
+knitr::include_graphics(file.path(dir_plots,"2.criterion/standards_RD.pdf"))
 
 ```
 
@@ -149,7 +149,7 @@ Figure \@ref(fig:contribution-rd) below shows the extent to which the RCA NDT pr
 
 ```{r contribution-rd, out.width="100%", fig.cap="Extent to which the RCA NDT programme enabled or promoted the initiation of R&D activities related to NDT"}
 
-knitr::include_graphics(file.path(dir_plots,"2.criterion/contribution_rd.png"))
+knitr::include_graphics(file.path(dir_plots,"2.criterion/contribution_rd.pdf"))
 
 ```
 
@@ -160,7 +160,7 @@ knitr::include_graphics(file.path(dir_plots,"2.criterion/contribution_rd.png"))
 
 ```{r train-rd, out.width="100%", fig.cap="Number of personnel trainned in NDT under the RCA NDT programme."}
 
-knitr::include_graphics(file.path(dir_plots,"2.criterion/RD_train.png"))
+knitr::include_graphics(file.path(dir_plots,"2.criterion/RD_train.pdf"))
 
 ```
 <br>
@@ -172,7 +172,7 @@ As can be seen in Figure \@ref(fig:publications-rd), **since 2000 a total of `r 
 
 ```{r publications-rd, out.width="100%", fig.cap="Number of publications related to NDT have been published since 2000 as a result of being part of the RCA NDT programme."}
 
-knitr::include_graphics(file.path(dir_plots,"2.criterion/RD_publications.png"))
+knitr::include_graphics(file.path(dir_plots,"2.criterion/RD_publications.pdf"))
 
 ```
 <br>
@@ -183,7 +183,7 @@ According to respondents **`r text_rd_c$seminars` seminars/conferences related t
 
 ```{r seminars-rd, out.width="100%", fig.cap="Number of seminars/conferences related to NDT have been organised 2000 as a result of being part of the RCA NDT programme."}
 
-knitr::include_graphics(file.path(dir_plots,"2.criterion/RD_seminar.png"))
+knitr::include_graphics(file.path(dir_plots,"2.criterion/RD_seminar.pdf"))
 
 ```
 <br>

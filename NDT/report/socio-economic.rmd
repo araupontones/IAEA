@@ -32,7 +32,7 @@ Figure \@ref(fig:standards-sum) summarises the performance of each GP against th
 
 ```{r standards-sum, out.width="100%", fig.cap="Performance standard by criterion and country"}
 
-knitr::include_graphics(file.path(dir_plots,"intro/standard.png"))
+knitr::include_graphics(file.path(dir_plots,"intro/standard.pdf"))
 
 ```
 

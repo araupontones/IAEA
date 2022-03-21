@@ -10,40 +10,40 @@ param <- parameters(mode = survey,
                     module = module)
 
 
-exfile <- file.path(dir_plots_RT, "2.criterion/population.png")
+exfile <- file.path(dir_plots_RT, "2.criterion/growth_patients.pdf")
 infile <- file.path(param$dir_clean_s, "iaea_rt.rds")
 
 
 
 
-
 #prepare data for plotting
-pop <- import(infile) %>%
-  select(country, mach_rad) %>%
-  mutate(country= fct_reorder(country, mach_rad),
-         label = nums_to_label(mach_rad, "perc"))
-  
+pat <- import(infile) %>%
+  select(country, pat_2000, pat_2020) %>%
+  mutate(grow = per_grow(pat_2000, pat_2020)) %>%
+  filter(!is.na(grow), grow !=Inf) %>%
+mutate(country= fct_reorder(country, grow),
+         label = nums_to_label(grow, "perc"))
 
 
-min(pat2$p_g)
-max(pat2$p_g)
 
-bar_plot(db = pop,
-         x_var = mach_rad,
+
+
+bar_plot(db = pat,
+         x_var = grow,
          y_var = country,
          label = label,
          scale = "perc",
          just = -.2,
-         limits = c(0,111),
-         x_title = "(%) of the population that lives within a radius of 100km from a RT equipment",
+         limits = c(0,450),
+         x_title = "(%) change of cancer patients treated using RT facilities between 2000 and 2020",
          caption = caption_RT
 )
 exfile
 ggsave(exfile,
        last_plot(),
+       device = cairo_pdf,
        width = width_bar_rt +2,
-       height = height_bar_rt,
+       height = height_bar_rt +2,
        units = "cm",
        dpi = dpi_report
 )
-           

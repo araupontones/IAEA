@@ -1,9 +1,9 @@
 
 cli::cli_alert_success("Plot standard awareness")
-cli::cli_alert_info(glue('Saved: {file.path(dir_plots_NDT, "2.criterion/standards_aws.png")}'))
+cli::cli_alert_info(glue('Saved: {file.path(dir_plots_NDT, "2.criterion/standards_aws.pdf")}'))
 
 infile <- file.path(dir_indicators_NDT, "2.criterion/awareness.rds")
-exfile <- file.path(dir_plots_NDT,"2.criterion/standards_aws.png" )
+exfile <- file.path(dir_plots_NDT,"2.criterion/standards_aws.pdf" )
 
 indicators_aws <- import(infile)
 aws_vars <- criterion_2_vars()$awareness_vars
@@ -66,7 +66,7 @@ exfile
 
 
 #export ========================================================================
-ggsave(exfile,
+ggsave(exfile, device = cairo_pdf,
        last_plot(),
        height = height_standards,
        width = width_standards,

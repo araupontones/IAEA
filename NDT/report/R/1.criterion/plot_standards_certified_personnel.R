@@ -1,9 +1,9 @@
 
 cli::cli_alert_success("Plot standard centres")
-cli::cli_alert_info(glue('Saved: {file.path(dir_plots_NDT, "1.criterion/cert_pers_standards.png")}'))
+cli::cli_alert_info(glue('Saved: {file.path(dir_plots_NDT, "1.criterion/cert_pers_standards.pdf")}'))
 
 infile <- file.path(dir_indicators_NDT, "1.criterion/indicators_certified_personel.rds")
-exfile <- file.path(dir_plots_NDT,"1.criterion/cert_pers_standards.png" )
+exfile <- file.path(dir_plots_NDT,"1.criterion/cert_pers_standards.pdf" )
 
 indicators_cert_pers <- import(infile)
 pers_vars <- names(indicators_cert_pers)[!names(indicators_cert_pers) %in% c("country", "cert_pers_total", "cert_pers_standard")]
@@ -47,7 +47,7 @@ plot_standards(db = data_plot,
 
 
 #export ========================================================================
-ggsave(exfile,
+ggsave(exfile, device = cairo_pdf,
        last_plot(),
        height = height_standards,
        width = width_standards,

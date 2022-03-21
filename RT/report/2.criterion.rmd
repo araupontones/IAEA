@@ -15,7 +15,7 @@ This section presents the findings on the contribution of the RT RCA programme t
 
 
 ```{r mach-plot, out.width="100%", fig.cap="Total number of operational RT equipment by GP (linear accelerators and Cobalt 60 machines) by GP between 2000 and 2020."}
-knitr::include_graphics(file.path(dir_plots, "2.criterion/number_machines.png"))
+knitr::include_graphics(file.path(dir_plots, "2.criterion/number_machines.pdf"))
 ```
 
 Figure \@ref(fig:mach-plot) above shows the total number of operational RT equipment (linear accelerators and Cobalt 60 machines) available by GP in 2000, 2010, and 2020. As can be seen in the figure `r txt_mach$count1` is the country where more operational RT equipment is available (`r txt_mach$count1_num` machines) in 2020, followed by `r txt_mach$count2` that has `r txt_mach$count2_num` RT machines, and `r txt_mach$count3` (`r txt_mach$count3_num`). Palau is the only country that reported not to have any operational RT equipment available in their country.
@@ -27,7 +27,7 @@ The largest total increase in treatment machines in the period 2000 to 2020 was 
 Figure \@ref(fig:mach-g) shows the percentage change of operational RT equipment between 2010 and 2020 by GP. 
 
 ```{r mach-g, out.width="100%", fig.cap="Percentage change of operational RT equipment between 2000 and 2020 by GP (linear accelerators and Cobalt 60 machines)."}
-knitr::include_graphics(file.path(dir_plots, "2.criterion/growth_machines.png"))
+knitr::include_graphics(file.path(dir_plots, "2.criterion/growth_machines.pdf"))
 ```
 
 
@@ -44,20 +44,20 @@ In 2020, among all the GPs, `r txt_pat$count1` was the country where more cancer
 Figure \@ref(fig:pat-plot) shows the total number of cancer patients treated using domestic RT facilities by GPs between 2000 and 2020. 
 
 ```{r pat-plot, out.width="100%", fig.cap="Total number of cancer patients treated using domestic RT facilities by GPs between 2000 and 2020."}
-knitr::include_graphics(file.path(dir_plots, "2.criterion/number_patients.png"))
+knitr::include_graphics(file.path(dir_plots, "2.criterion/number_patients.pdf"))
 ```
 
 Figure \@ref(fig:pat-g) shows the percentage change of cancer patients treated using domestic RT facilities by GPs between 2000 and 2020.
 
 ```{r pat-g, out.width="100%", fig.cap="Percentage change of cancer patients treated using domestic RT facilities by GPs between 2000 and 2020."}
-knitr::include_graphics(file.path(dir_plots, "2.criterion/growth_patients.png"))
+knitr::include_graphics(file.path(dir_plots, "2.criterion/growth_patients.pdf"))
 ```
 
 #### Waiting times 
 
 
 ```{r wait-plot, out.width="100%", fig.cap="Proportion of patients that experienced less that 10 days of waiting time by GP and by year."}
-knitr::include_graphics(file.path(dir_plots, "2.criterion/waiting_improve.png"))
+knitr::include_graphics(file.path(dir_plots, "2.criterion/waiting_improve.pdf"))
 ```
 
 Figure \@ref(fig:wait-plot) shows the proportion of patients that experienced less than 10 days of waiting time in 2000 and in 2020 for each of the GPs that provided this information. As can be seen in the Figure, **the proportion of patients that are treated in less than 10 days increased, during this period, for all countries except for Mongolia, Bangladesh, and Pakistan**. The proportion of patients that are treated in less that 10 days in 2000 and 2020 is the same for New Zealand, Singapore, and Sri Lanka. 
@@ -70,7 +70,7 @@ In countries like Cambodia, Philippines, South Korea, and Vietnam more than 80% 
 As can be seen in Figure \@ref(fig:waitfreq-plot) that shows the proportion of patients treated by waiting time and by GP in 2020. The 100% of the patients of South Korea experienced less than 5 days of waiting times. In Vietnam, the proportion of patients that are treated in less than 5 days is 60%. 
 
 ```{r waitfreq-plot, out.width="100%", fig.cap="Proportion of patients treated by waiting time and GP."}
-knitr::include_graphics(file.path(dir_plots, "2.criterion/waiting_freq.png"))
+knitr::include_graphics(file.path(dir_plots, "2.criterion/waiting_freq.pdf"))
 ```
 
 The complete distribution of waiting times in the period 2000 to 2020 is presented in the Annex. 
@@ -85,7 +85,7 @@ Figure \@ref(fig:pop-plot) shows the approximate proportion (%) of the populatio
 
 
 ```{r pop-plot, out.width="100%", fig.cap="Approximate proportion of the population that lives within a radius of 100km from a RT equipment"}
-knitr::include_graphics(file.path(dir_plots, "2.criterion/population.png"))
+knitr::include_graphics(file.path(dir_plots, "2.criterion/population.pdf"))
 ```
 
 ## Contribution of RCA on increasing access to quality radiotherapy
@@ -101,7 +101,7 @@ This section presents the findings on the extent to which RT RCA has contributed
 *In the chart below, the acronyms stand for: Intensity-Modulated Radiation Therapy (IMRT), 3-Dimensional Conformal Radiation Therapy (3D-CRT), 3-Dimensional Image-Guided Brachytherapy (3D-IGBT), and Stereotactic Body Radiation Therapy (SRT).* 
 
 ```{r techC-plot, out.width="100%", fig.cap="Contribution of RCA to introduce RT technologies."}
-knitr::include_graphics(file.path(dir_plots, "2.criterion/contribution_tech.png"))
+knitr::include_graphics(file.path(dir_plots, "2.criterion/contribution_tech.pdf"))
 ```
 
 * **6 out the 19 recipient GPs `r txt_ctech$mach_c` reported that between 2000 and 2020 being part of the RT RCA caused their country to invest in additional RT equipment** (linear accelerators and Cobalt 60 machines).
@@ -114,7 +114,7 @@ knitr::include_graphics(file.path(dir_plots, "2.criterion/contribution_tech.png"
 *Australia, India, Laos, Myanmar, and Palau did not reported information about waiting times during the online survey*.
 
 ```{r waitC-plot, out.width="100%", fig.cap="Contribution of RCA to the decrease in the average waiting time for treatment."}
-knitr::include_graphics(file.path(dir_plots, "2.criterion/contribuion_wait.png"))
+knitr::include_graphics(file.path(dir_plots, "2.criterion/contribuion_wait.pdf"))
 ```
 
 

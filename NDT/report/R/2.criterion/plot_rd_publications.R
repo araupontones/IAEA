@@ -1,10 +1,10 @@
 cli::cli_alert_success("Plot, trained people RD")
-cli::cli_alert_info(glue('Saved: {file.path(dir_plots_NDT, "2.criterion/RD_publications.png")}'))
+cli::cli_alert_info(glue('Saved: {file.path(dir_plots_NDT, "2.criterion/RD_publications.pdf")}'))
 
 #clean main quesitonnaire
 survey <- "iaea_ndt"
 infile <-file.path(dir_indicators_NDT, "2.criterion/RD_long.rds")
-exfile <- file.path(dir_plots_NDT, "2.criterion/RD_publications.png")
+exfile <- file.path(dir_plots_NDT, "2.criterion/RD_publications.pdf")
 
 
 
@@ -44,7 +44,7 @@ exfile
 
 #export===========================================================================
 
-ggsave(exfile,
+ggsave(exfile, device = cairo_pdf,
        last_plot(),
        width = width_plot,
        height = height_plot,

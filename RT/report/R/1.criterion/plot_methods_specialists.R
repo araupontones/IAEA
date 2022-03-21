@@ -1,5 +1,5 @@
 cli::cli_alert_success("Plot RO specialists growth")
-cli::cli_alert_info('Saved:in {file.path(dir_plots_RT, "1.criterion/method_specialists.png")}')
+cli::cli_alert_info('Saved:in {file.path(dir_plots_RT, "1.criterion/method_specialists.pdf")}')
 
 #clean main quesitonnaire
 survey <- "iaea_rt"
@@ -10,7 +10,7 @@ param <- parameters(mode = survey,
                     module = module)
 
 
-exfile <- file.path(dir_plots_RT, "1.criterion/method_specialists.png")
+exfile <- file.path(dir_plots_RT, "1.criterion/method_specialists.pdf")
 infile <- file.path(param$dir_clean_s, "specialists.rds")
 
 #View(spec)
@@ -93,7 +93,7 @@ spec %>%
 
 #export ========================================================================
 exfile
-ggsave(exfile,
+ggsave(exfile, device = cairo_pdf,
        last_plot(),
        height = height_plot - 2,
        width = width_plot+5,

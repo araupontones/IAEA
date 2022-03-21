@@ -1,5 +1,5 @@
 cli::cli_alert_success("Plot standard Criterion 1")
-cli::cli_alert_info(glue('Saved: {file.path(dir_plots_NDT, "1.criterion/standards_crit1.png")}'))
+cli::cli_alert_info(glue('Saved: {file.path(dir_plots_NDT, "1.criterion/standards_crit1.pdf")}'))
 
 
 
@@ -8,7 +8,7 @@ dims <- c("centres", "cert", "certified_personel")
 #infile <- file.path(dir_indicators_NDT, glue("1.criterion/indicators_{x}.rds"))
 
 
-exfile <- file.path(dir_plots_NDT,"1.criterion/standards_crit1.png" )
+exfile <- file.path(dir_plots_NDT,"1.criterion/standards_crit1.pdf" )
 
 #read all indicators  =====================================================
 
@@ -42,7 +42,7 @@ data_plot <- files_app %>% data_plot_standards_sum(ind_vct = ind_vct)
 
 exfile
 
-ggsave(exfile,
+ggsave(exfile, device = cairo_pdf,
        last_plot(),
        height = height_plot - 5,
        width = width_plot,
