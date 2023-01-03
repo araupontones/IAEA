@@ -21,7 +21,7 @@ infile <- file.path(param$dir_clean_s, "specialists.rds")
 
 #prepare data for plotting
 spec2 <- import(infile) %>%
-  filter(indicator == "Total") 
+  filter(indicator == "Total") %>%
   group_by(country, year) %>%
   summarise(Total = sum(value, na.rm = T)) %>%
   mutate(p_g = per_grow(lag(Total,1), Total),
@@ -32,9 +32,6 @@ spec2 <- import(infile) %>%
   mutate(country = fct_reorder(country, p_g),
          label_null = "   ")
 
-View(spec2)
-min(spec2$p_g)
-max(spec2$p_g)
 
 bar_plot(db = spec2,
          x_var = p_g,
@@ -59,7 +56,7 @@ geom_text(data = filter(spec2, p_g>0),
             size = 3,
             family = font_main)
 
-exfile
+
 ggsave(exfile, device = cairo_pdf,
        last_plot(),
        width = width_bar_rt +2,

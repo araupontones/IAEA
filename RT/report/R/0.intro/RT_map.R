@@ -19,13 +19,19 @@ clean_main <- import(importfile) %>%
   select(country) %>%
   mutate(responded = "Yes")
 
-names(clean_main)
 
 
 countries_RCA <- import(file.path(dir_reference, "countries.xlsx")) %>%
   select(country = Country)
 
-shape <- world_sf <- import(file.path(dir_reference, "world_sf.rds")) 
+
+
+
+
+
+shape <- world_sf <- import(file.path(dir_reference, "world_sf.rds")) %>%
+  mutate(iaea = ifelse(country == "Taiwan", TRUE, iaea))
+
 
 
 #x_nudge <- c("Thailand")
@@ -38,7 +44,9 @@ data_plot <- clean_main %>%
                                T ~ "No")) %>%
   right_join(shape, by = "country") %>%
   mutate(responded = case_when(!is.na(responded) ~ responded,
+                               country == "Taiwan" ~ "Yes",
                                T ~ "Not RCA")) %>%
+  
   
   sf::st_as_sf() 
 
